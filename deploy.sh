@@ -13,6 +13,7 @@ mv dist/* ./
 mv dist/.* ./
 rmdir dist
 
+git add -A
 git commit -am "Update"
 git push
 
