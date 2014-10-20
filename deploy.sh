@@ -19,4 +19,5 @@ git push
 
 git checkout master
 git pull
+git reset --hard HEAD
 ./install.sh
