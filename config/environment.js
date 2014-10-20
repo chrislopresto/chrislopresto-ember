@@ -40,7 +40,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.locationType = 'hash'; // Because we're hosting on GitHub Pages
   }
 
   return ENV;
