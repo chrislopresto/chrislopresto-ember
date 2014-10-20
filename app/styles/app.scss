@@ -1,6 +1,15 @@
-html, body {
-  margin: 10px;
+@import "bourbon";
+
+body,
+html {
+  // margin: 10px;
   font-family: 'Lato', sans-serif;
+}
+
+html {
+  height: 100%;
+  @include background-size(cover);
+  @include background(linear-gradient(white, #eee, #ccc));
 }
 
 a {
