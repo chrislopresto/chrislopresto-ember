@@ -1,0 +1,63 @@
+@import 'compass';
+
+body,
+html {
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  color: #008cba;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  color: #008cba;
+  text-decoration: underline;
+}
+
+hr {
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.25rem 0 1.1875rem;
+  height: 0;
+}
+
+.spacer {
+  background: #0d8fdc;
+  width: 90%;
+  height: 80px;
+}
+
+.social-items {
+  list-style-type: none;
+  display: inline;
+  padding: 0;
+
+  li {
+    display: inline;
+    margin: 0 2px;
+  }
+}
+
+// social
+$brand-colors: (
+  twitter: #00aced,
+  facebook: #3b5998,
+  instagram: #92634f,
+  linkedin: #007bb6,
+  rdio: #0090D5,
+  youtube: #cd201f
+);
+
+.social {
+  color: #666;
+  font-size: 1.4rem;
+}
+
+@each $brand, $brand-color in $brand-colors {
+  a.#{$brand}:focus,
+  a.#{$brand}:hover {
+    color: $brand-color;
+  }
+}
