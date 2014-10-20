@@ -1,0 +1,28 @@
+html, body {
+  margin: 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  color: #008cba;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  color: #008cba;
+  text-decoration: underline;
+}
+
+hr {
+  border: solid #dddddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.25rem 0 1.1875rem;
+  height: 0;
+}
+
+.spacer {
+  background: #0d8fdc;
+  width: 90%;
+  height: 80px;
+}

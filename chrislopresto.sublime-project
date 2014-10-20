@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+      "file_exclude_patterns": [
+      ],
+			"folder_exclude_patterns": [
+        "bower_components",
+        "dist",
+        "node_modules",
+        "tmp"
+      ],
+      "follow_symlinks": true,
+			"path": "."
+		}
+	]
+}
