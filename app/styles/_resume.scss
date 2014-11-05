@@ -1,0 +1,95 @@
+$resume-padding: 30px;
+
+body {
+  padding: 0;
+  margin: 0;
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.resume {
+  color: $md-grey-800;
+
+  .header {
+    background: $md-teal-400;
+    min-height: 160px;
+    position: relative;
+
+    .name {
+      font-size: 60px;
+      position: absolute;
+      bottom: 20px;
+      left: $resume-padding;
+    }
+
+    .first-name {
+      color: $md-grey-700;
+    }
+    .last-name {
+      color: $md-grey-1000;
+    }
+
+  }
+
+  .callout {
+    font-family: 'Codystar';
+    font-size: 12px;
+    color: $md-grey-1000;
+    position: absolute;
+    bottom: 10px;
+    right: $resume-padding;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $md-grey-800;
+    padding-bottom: 8px;
+    margin-top: 0;
+    font-weight: normal
+  }
+
+  h1 {
+    border-bottom: solid 2px $md-light-blue-800;
+    width: 40%;
+  }
+
+  h2 {
+    border-bottom: solid 2px $md-light-blue-600;
+    width: 30%;
+  }
+
+  h3 {
+    border-bottom: solid 2px $md-light-blue-400;
+    width: 20%;
+  }
+
+  .resume-body {
+    padding: $resume-padding;
+  }
+
+  .social-items {
+    float: right;
+    font-size: .8rem;
+    padding: 15px 10px;
+    margin: 0 0 20px 20px;
+    border: solid 1px $md-teal-400;
+    border-radius: 2px;
+
+    .fa {
+      padding-right: 3px;
+    }
+
+    li {
+      display: block;
+    }
+  }
+
+  .social {
+    font-size: .8rem;
+  }
+}
+

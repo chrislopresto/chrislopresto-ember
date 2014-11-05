@@ -8,6 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.resource('music');
   this.resource('technology');
+  this.resource('resume');
 });
 
 export default Router;
