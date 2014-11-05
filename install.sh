@@ -3,3 +3,4 @@
 rm -rf vendor node_modules tmp
 bower install
 npm install
+git reset --hard HEAD
