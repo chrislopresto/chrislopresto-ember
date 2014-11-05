@@ -1,9 +1,3 @@
-import Ember from 'ember';
+import Site from './site';
 
-var IndexRoute = Ember.Route.extend({
-  model: function() {
-    return ['music', 'technology'];
-  }
-});
-
-export default IndexRoute;
+export default Site.extend({});;

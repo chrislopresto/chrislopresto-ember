@@ -1,5 +1,5 @@
-import Ember from 'ember';
+import Site from './site';
 
-export default Ember.Route.extend({
+export default Site.extend({
   titleToken: 'Music'
 });
