@@ -3,6 +3,7 @@ machine:
     version: 0.10.21
 dependencies:
   pre:
+    - gem install compass
     - npm install -g bower
   override:
     - npm i
