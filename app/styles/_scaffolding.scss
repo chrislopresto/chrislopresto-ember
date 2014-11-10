@@ -2,6 +2,33 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,700,900,500,400italic);
 @import url(http://fonts.googleapis.com/css?family=Codystar);
 
+$susy: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+  container: auto,
+  container-position: center,
+  columns: 12,
+  gutters: .25,
+  column-width: false,
+  global-box-sizing: content-box,
+  last-flow: to,
+  debug: (
+    image: hide,
+    color: rgba(#808080, .25),
+    output: background,
+    toggle: top right,
+  ),
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
+
 body,
 html {
   font-family: 'Lato', sans-serif;
