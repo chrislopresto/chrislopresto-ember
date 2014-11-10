@@ -5,6 +5,8 @@ dependencies:
   pre:
     - gem install compass
     - npm install -g bower
-  override:
-    - npm i
-    - bower i
+    - bower install
+general:
+  branches:
+    ignore:
+      - gh-pages
