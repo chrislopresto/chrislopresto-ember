@@ -6,7 +6,7 @@ dependencies:
     - gem install --pre sass-css-importer
     - gem install --pre compass
     - npm install -g bower
-    - bower install
+    - bower install -F
 general:
   branches:
     ignore:

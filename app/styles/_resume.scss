@@ -1,4 +1,4 @@
-$resume-padding: 30px;
+$resume-padding: 40px;
 
 body {
   font-size: 15px;
@@ -61,6 +61,7 @@ body {
   h2 {
     border-bottom: solid 2px $md-teal-600;
     width: 30%;
+    margin-top: 2.2em;
   }
 
   h3 {
@@ -90,7 +91,7 @@ body {
   }
 
   .resume-body {
-    padding: $resume-padding;
+    padding: 0 $resume-padding;
   }
 
   .social-items {
