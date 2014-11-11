@@ -14,40 +14,159 @@
       <li><a class='social twitter' target='_blank' href='https://twitter.com/chrislopresto'>{{unbound fa-icon 'twitter-square'}} @chrislopresto</a></li>
       <li><a class='social github' target='_blank' href='https://github.com/chrislopresto'>{{unbound fa-icon 'github-square'}} chrislopresto</a></li>
       <li><a class='social linkedin' target='_blank' href='https://www.linkedin.com/in/chrislopresto/'>{{unbound fa-icon 'linkedin-square'}} chrislopresto</a></li>
-      <li><a class='social' href='#'>{{unbound fa-icon 'phone-square'}} +1-347-470-7796</a></li>
+      <li><a class='social' href='#'>{{unbound fa-icon 'phone-square'}} +1-732-470-7796</a></li>
       <li><a class='social' href='mailto:chris@chrislopresto.com'>{{unbound fa-icon 'envelope'}} chris@chrislopresto.com</a></li>
       <li><br>55 W 74th St, Apt 1C<br>New York, NY 10023</li>
     </ul>
 
     <h1>Introduction</h1>
     <p>
-      Many things. Many things. Many things. Many things. Many things. Many things.
-      Many things. Many things. Many things. Many things. Many things. Many things.
-      Many things. Many things. Many things. Many things. Many things. Many things.
+      My name is Chris LoPresto. I enjoy building software. I am an engineer, a CTO, a team leader, a co-founder, and a musician.  I believe resumes should tell stories. I believe email is where information goes to die.
     </p>
 
-    <h2>Work</h2>
-    <p>
-      Many things. Many things. Many things. Many things. Many things. Many things.
-      Many things. Many things. Many things. Many things. Many things. Many things.
-      Many things. Many things. Many things. Many things. Many things. Many things.
-    </p>
+    <h1>Work</h1>
+    <p>Here's a rundown of things I've been a part of, starting with the most recent.</p>
 
-    <h3>Thing</h3>
-    <p>
-      Many things. Many things. Many things. Many things. Many things. Many things.
-      Many things. Many things. Many things. Many things. Many things. Many things.
-      Many things. Many things. Many things. Many things. Many things. Many things.
-    </p>
+    <h2>Plyfe</h2>
+    <div class='work-item-overview'>
+      <div class='when'>September 2011 - Present</div>
+      <div class='synopsis'>
+        <div class='learn'>Where I learned about co-founding a startup, product development, user experience, and company communication</div>
+        <div class='role'>as <span class='title'>CTO &amp; Co-Founder</span></div>
+      </div>
+    </div>
 
-    <h3>Thing</h3>
-    <p>
-      Many things. Many things. Many things. Many things. Many things. Many things.
-      Many things. Many things. Many things. Many things. Many things. Many things.
-      Many things. Many things. Many things. Many things. Many things. Many things.
-    </p>
+    <p>Plyfe is a marketing platform that allows brands to publish interactive experiences to their web properties. Customers use the Plyfe builder tool to create embeddable widgets for personality quizzes, video polls, trivia, Instagram galleries, and the like. The platform provides real-time data analysis and reporting of user activity.</p>
+    <p>As the technical co-founder, I started building Plyfe from scratch in September 2011. We have continously deployed our web platform to Amazon cloud infrastructure since that time. We built up a team of 8 - 10 engineers that runs one-week sprints and continously integrates features using GitHub Flow (a modified form of git-flow).</p>
+    <p>Plyfe widgets, a dynamically composed suite of Ember.js applications, communicate with versioned Plyfe APIs that adhere to the JSON API spec. A dynamic theme API allows customers to customize the look and feel of their widgets (no CSS files actually touch a disk). Plyfe environments are automatically provisioned with Chef via Amazon OpsWorks APIs. Manual operations commands can be triggered in Slack channels.</p>
 
-    <h3>Education</h3>
+    <h4>Technologies</h4>
+    <div class='things'>Ruby. Rails. Ember.js. SCSS. Chef. Redis. MySQL. NGINX. Git. Amazon Web Services: OpsWorks, EC2, RDS, S3, CloudFront, ElastiCache.</div>
+
+    <h4>Services</h4>
+    <div class='things'>GitHub. Asana. Slack. Travis CI. Code Climate. Mixpanel. Pusher. Social APIs: Facebook, Twitter, Instagram, Foursquare, LinkedIn, Google.</div>
+
+    <h2>InRhythm</h2>
+    <div class='work-item-overview'>
+      <div class='when'>December 2010 - August 2011</div>
+      <div class='synopsis'>
+        <div class='learn'>Where I consulted on software processes and client projects</div>
+        <div class='role'>as <span class='title'>Director of Product Development</span></div>
+      </div>
+    </div>
+
+    <p>During gaps in my music touring schedule, I helped InRhythm establish processes for their project pipeline. We built out an internal project framework, set up continuous integration and build monitoring, and brought the sprint process online. I also provided technical diligence services for some of their clients.</p>
+
+    <h4>Technologies</h4>
+    <div class='things'>ASP.NET MVC. Jenkins. Scrumy (pre-Trello).</div>
+
+    <h2>News Corp</h2>
+    <div class='work-item-overview'>
+      <div class='when'>June 2010 - September 2010</div>
+      <div class='synopsis'>
+        <div class='learn'>Where I consulted on Skiff IP acquisition and related system integrations</div>
+      </div>
+    </div>
+
+    <p>I consulted for a few months on the content ingestion and publishing systems for Project Alesia, a digital news platform News Corp was developing at the time. News Corp pulled the plug on the entire project in October 2010.</p>
+
+
+    <h2>Skiff</h2>
+    <div class='work-item-overview'>
+      <div class='when'>May 2008 - June 2010</div>
+      <div class='synopsis'>
+        <div class='learn'>Where I learned about team leadership, ePubs, and the publishing industry</div>
+        <div class='role'>as <span class='title'>Director of Content Publishing</span></div>
+      </div>
+    </div>
+
+    <p>Skiff developed a very slick 11.5 inch e-reader as well as a content publishing system that delivered newspapers and magazines to devices wirelessly. The devices' large display size coupled with a proprietary ePub rendering engine enabled us to design content that evoked the look and feel of each publication. So the New York Times looked like the New York Times. The Washington Post looked like the Washington Post. etc.</p>
+    <p>I led a team of 15 engineers and designers in New York that built an analytical template engine capable of automatically generating daily ePub newspapers. We ingested newspaper feeds (RSS, NewsML, etc.) each morning and analyzed the content to yield the best possible paginated layout on the fly. We developed a template control framework that powered image galleries, navigation, embedded content, tables of contents... all within ePubs.</p>
+    <p>The Skiff e-reader garnered buzz at CES in January 2010 but sadly never saw the light of day. I purchased an iPad in April 2010. Skiff was acquired by News Corp in June 2010.</p>
+
+    <h4>Technologies</h4>
+    <div class='things'>Proprietary ePub rendering engine. Subset of CSS. ASP.NET. ALT.NET tools such as NHibernate and Castle Windsor. Hudson. Screen scraping. Subversion.</div>
+
+    <h2>Microdesk</h2>
+    <div class='work-item-overview'>
+      <div class='when'>April 2005 - May 2008</div>
+      <div class='synopsis'>
+        <div class='learn'>Where I learned about project management, system integrations, and the Patriot Missile System</div>
+        <div class='role'>as a <span class='title'>Lead Software Engineer &amp; Project Manager</span></div>
+      </div>
+    </div>
+
+    <p>This was my first job in New York. Microdesk has a software team that specializes in geospatial projects and Autodesk customization. I worked as a software engineer and also began to manage projects here. Customers ranged from utility companies and manucturers to government agencies and defense contractors. The team was very talented, and we tackled some very interesting problems.</p>
+    <p>Raytheon asked us to transform Patriot Missile System electrical schematics (AutoCAD documents) into an interactive user manual for soldiers performing maintenance. We performed topological analysis of the circuitry and implemented an interactive user interface to search for and navigate along electrical signals.</p>
+    <p>Ipswich Bay Glass asked us to build a plugin for Autodesk Inventor to help design glass curtain walls as well as the instruction sets for the CNC machines that cut the (Lego-style) pieces to size.</p>
+    <p>The Vermont Electric Power Company asked us to provide real-time visualizations of where their helicopters and road crews were dispatched.</p>
+
+    <h4>Technologies</h4>
+    <div class='things'>AutoCAD. SVG. MapGuide. .NET Forms. ASP.NET. IBM Maximo. CVS.</div>
+
+    <h2>Fantastic Damage</h2>
+    <div class='work-item-overview'>
+      <div class='when'>April 2005 - May 2008</div>
+      <div class='synopsis'>
+        <div class='learn'>Where I learned about starting a business, web application development, and customer relationships</div>
+        <div class='role'>as a <span class='title'>Co-Founder &amp; Software Engineer</span></div>
+      </div>
+    </div>
+
+    <p>My buddy Oliver Delgado and I first collaborated in 2002 when my band needed a website. We began to take on web development projects and formed Fantastic Damage in 2003. At a time when most websites considered Flash intros (remember those?) a good idea, we developed aesthetically-pleasing web applications as well as a CMS that enabled customers to customize their own websites. This was a novel idea back then. </p>
+    <p>We also developed a proprietary office system with real-time reporting data analysis for a mortgage company.</p>
+
+    <h4>Technologies</h4>
+    <div class='things'>HTML. CSS. JavaScript. ASP.NET. Classic ASP. Shared web hosting.</div>
+
+    <h2>MBNA</h2>
+    <div class='work-item-overview'>
+      <div class='when'>August 2002 - March 2004</div>
+      <div class='synopsis'>
+        <div class='learn'>Where I learned about team membership, manipulation of big datasets, security and regulations, and the benefits and importance of a healthy corporate culture</div>
+        <div class='role'>as a <span class='title'>Software Engineer</span></div>
+      </div>
+    </div>
+
+    <p>This was my first job out of school. I worked on a small team in the finance sector. We developed financial data processing workflows for the US, UK, and Ireland divisions. We also maintained a Classic ASP intranet web application.</p>
+
+    <h4>Technologies</h4>
+    <div class='things'>Microsoft SQL Server. DTS. Classic ASP. SourceSafe (these were olden times).</div>
+
+    <blockquote>If you fully expand the acronyms in **MBNA America Bank, N.A.** you end up with Maryland Bank National Association America Bank National Association.</blockquote>
+
+    <h2>Music</h2>
+
+    <p>I grew up playing piano and have a jazz performance degree. I play several other instruments and have worked as a freelance session musician with independent and major label recording artists.</p>
+
+    <h4>Hugo</h4>
+    <div class='when'>March 2010 - August 2011</div>
+
+    <p>In February 2010, Epic Records assembled a band for Roc Nation recording artist Hugo. I played keyboards and sang background vocals. We toured the US with bands like The Script and One Eskimo, playing in iconic venues throughout the country. We also performed in one of the Olympic arenas in Beijing.</p>
+
+    <h4>Highlights</h4>
+    <ul>
+      <li>Late Night With David Letterman</li>
+      <li>Jimmy Kimmel Live!</li>
+      <li>X Factor / US Season 1 - Piano for Male Semifinalists</li>
+      <li>Hennessy Art Of Mixing / MTV Asia</li>
+      <li>CBS This Morning</li>
+    </ul>
+
+    <h2>Elegant and Tasteful</h2>
+    <p>One evening several years ago I was out at a pub discussing old Fresh Prince episodes with some good friends, as you do. When we stumbled upon the phrase "elegant and tasteful," I immediately registered <a href='http://elegantandtasteful.com'>elegantandtasteful.com</a>. If we work together, the invoices will say <em>Elegant and Tasteful</em> on them.</p>
+
+    <h2>Miscellaneously, I...</h2>
+
+    <ul>
+      <li>am an Eagle Scout</li>
+      <li>rode a private elevator with a pope</li>
+      <li>have visited 46 of the 50 states</li>
+      <li>swam a mile in Beijing</li>
+      <li>insist on the Oxford comma</li>
+    </ul>
+
+    <h1>Education</h1>
     <div class='education-item'>
       <div class='logo'>
         <img src='/assets/images/logo_rutgers.png' alt=''>
@@ -56,8 +175,8 @@
         <h4 class='rutgers'>Rutgers University</h6>
         <p>New Brunswick, NJ</p>
         <p>
-          Bachelor of Science in <strong>Computer Science</strong><br>
-          Bachelor of Music (piano) in <strong>Jazz Studies</strong>
+          Bachelor of Science in <span class='major'>Computer Science</span><br>
+          Bachelor of Music (piano) in <span class='major'>Jazz Studies</span>
         </p>
       </div>
       <div class='when'>1998 - 2002</div>

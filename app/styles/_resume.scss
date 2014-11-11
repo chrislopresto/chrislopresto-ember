@@ -1,10 +1,11 @@
 $resume-padding: 30px;
 
 body {
-  padding: 0;
-  margin: 0;
+  font-size: 15px;
+  line-height: 1.3em;
   margin-top: 0;
-  font-size: 14px;
+  margin: 0;
+  padding: 0;
 }
 
 .resume {
@@ -16,10 +17,10 @@ body {
     position: relative;
 
     .name {
+      bottom: 40px;
       font-size: 60px;
-      position: absolute;
-      bottom: 20px;
       left: $resume-padding;
+      position: absolute;
     }
 
     .first-name {
@@ -32,11 +33,11 @@ body {
   }
 
   .callout {
+    bottom: 10px;
+    color: $md-grey-1000;
     font-family: 'Codystar';
     font-size: 12px;
-    color: $md-grey-1000;
     position: absolute;
-    bottom: 10px;
     right: $resume-padding;
   }
 
@@ -47,31 +48,45 @@ body {
   h5,
   h6 {
     color: $md-grey-800;
+    font-weight: normal;
+    margin-bottom: 4px;
     padding-bottom: 8px;
-    margin-top: 0;
-    font-weight: normal
   }
 
   h1 {
-    border-bottom: solid 2px $md-light-blue-800;
+    border-bottom: solid 2px $md-teal-800;
     width: 40%;
   }
 
   h2 {
-    border-bottom: solid 2px $md-light-blue-600;
+    border-bottom: solid 2px $md-teal-600;
     width: 30%;
   }
 
   h3 {
-    border-bottom: solid 2px $md-light-blue-400;
+    border-bottom: solid 2px $md-teal-400;
     width: 20%;
   }
 
   h4 {
-    text-transform: uppercase;
+    color: $md-teal-400;
     font-family: 'Roboto';
     font-weight: bold;
-    margin-bottom: 0;
+    margin: 0 0 2px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: $md-teal-400;
+    text-decoration: none;
+  }
+
+  a:active,
+  a:focus,
+  a:hover {
+    color: $md-teal-400;
+    text-decoration: underline;
   }
 
   .resume-body {
@@ -79,12 +94,12 @@ body {
   }
 
   .social-items {
+    border-radius: 2px;
+    border: solid 1px $md-teal-400;
     float: right;
     font-size: .8rem;
-    padding: 15px 10px;
     margin: 0 0 20px 20px;
-    border: solid 1px $md-teal-400;
-    border-radius: 2px;
+    padding: 15px 10px;
 
     .fa {
       padding-right: 3px;
@@ -93,16 +108,83 @@ body {
     li {
       display: block;
     }
+
+    li:before {
+      content: '';
+    }
   }
 
   .social {
     font-size: .8rem;
   }
+
+  p {
+    margin: .8em 0;
+  }
+
+  blockquote {
+    border-left: solid 2px $md-grey-200;
+    color: $md-grey-500;
+    font-family: 'Roboto';
+    font-size: 10px;
+    font-style: italic;
+    margin-left: 0;
+    max-width: 50%;
+    padding: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: .5em 0;
+  }
+
+  li:before {
+    color: $md-teal-400;
+    content: "■";
+    padding-right: 4px;
+  }
+}
+
+.things {
+  margin: 0 0 8px;
+}
+
+.when {
+  color: $md-grey-700;
+  font-family: 'Roboto';
+  font-size: 11px;
+  font-weight: bold;
+  margin-top: 6px;
+  text-transform: uppercase;
+}
+
+.major,
+.title {
+  color: $md-grey-800;
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 1px;
+}
+
+.work-item-overview {
+  .synopsis {
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  .learn {
+    font-style: italic;
+  }
+
+  .role {
+    margin-top: 4px;
+  }
 }
 
 .education-item {
   @include full;
-  margin: 10px 0;
+  margin: 20px 0;
 
   .logo {
     @include span(2 at 1 of 12);
@@ -116,8 +198,13 @@ body {
     @include span(8 at 3 of 12);
   }
 
+  .major {
+
+  }
+
   .when {
     @include span(last 2 of 12);
+    margin-top: 0;
   }
 
   p {

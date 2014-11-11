@@ -3,7 +3,8 @@ machine:
     version: 0.10.21
 dependencies:
   pre:
-    - gem install compass
+    - gem install --pre sass-css-importer
+    - gem install --pre compass
     - npm install -g bower
     - bower install
 general:
