@@ -1,5 +1,20 @@
 $resume-padding: 40px;
 
+// widths
+$width-mobile-portrait: 320px;
+$width-mobile-landscape: 500px;
+$width-tablet: 768px;
+
+$width-container-desktop: 1400px;
+$width-container-tablet:  700px;
+$width-container-mobile:  300px;
+
+// breakpoints
+$breakpoint-desktop: $width-tablet+1;
+$breakpoint-tablet:  $width-mobile-portrait+1 $width-tablet;
+$breakpoint-mobile-portrait:  max-width $width-mobile-portrait;
+$breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
+
 body {
   font-size: 15px;
   line-height: 1.3em;
@@ -10,6 +25,7 @@ body {
 
 .resume {
   color: $md-grey-800;
+  min-width: 300px;
 
   .header {
     background: $md-teal-400;
@@ -21,6 +37,11 @@ body {
       font-size: 60px;
       left: $resume-padding;
       position: absolute;
+
+      @include breakpoint($breakpoint-mobile-landscape) {
+        font-size: 40px;
+        left: $resume-padding - 20;
+      }
     }
 
     .first-name {
@@ -101,6 +122,11 @@ body {
     font-size: .8rem;
     margin: 0 0 20px 20px;
     padding: 15px 10px;
+
+    @include breakpoint($breakpoint-mobile-landscape) {
+      float: left;
+      margin: 0 0 20px;
+    }
 
     .fa {
       padding-right: 3px;
