@@ -15,6 +15,16 @@ $breakpoint-tablet:  $width-mobile-portrait+1 $width-tablet;
 $breakpoint-mobile-portrait:  max-width $width-mobile-portrait;
 $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
 
+.page-break {
+  @media print {
+    page-break-before: always;
+    padding-bottom: $resume-padding;
+  }
+  @media screen {
+    display: none;
+  }
+}
+
 body {
   font-size: 15px;
   line-height: 1.3em;
