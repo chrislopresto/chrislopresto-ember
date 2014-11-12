@@ -172,15 +172,20 @@ body {
   }
 
   ul {
-    list-style-type: none;
+    list-style-type: square;
     padding-left: 0;
-    margin: .5em 0;
+    margin: .5em 0 .5em 20px;
+    color: $md-teal-400;
   }
 
-  li:before {
-    color: $md-teal-400;
-    content: "■";
-    padding-right: 4px;
+  li {
+    padding: 2px 0;
+  }
+
+  li span {
+    color: $md-grey-800;
+    display: block;
+    margin-left: -6px;
   }
 }
 
