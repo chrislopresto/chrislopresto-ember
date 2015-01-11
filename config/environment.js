@@ -19,6 +19,12 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.contentSecurityPolicy = {
+    'font-src': "'self' http://fonts.gstatic.com",
+    'connect-src': "'self' *",
+    'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
