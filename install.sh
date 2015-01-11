@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-rm -rf vendor node_modules tmp
-bower install
-npm install
+rm -rf node_modules bower_components dist tmp
+ember install
 git reset --hard HEAD
