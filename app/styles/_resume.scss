@@ -55,7 +55,7 @@ body {
     }
 
     .first-name {
-      color: $md-grey-700;
+      color: $md-grey-50;
     }
     .last-name {
       color: $md-grey-900;
@@ -92,7 +92,7 @@ body {
   h2 {
     border-bottom: solid 2px $md-teal-600;
     width: 30%;
-    margin-top: 2.2em;
+    margin-top: .5em;
     white-space: nowrap;
   }
 
@@ -213,7 +213,7 @@ body {
 .work-item-overview {
   .synopsis {
     font-size: 14px;
-    padding: 20px;
+    padding: 10px 20px;
   }
 
   .learn {
