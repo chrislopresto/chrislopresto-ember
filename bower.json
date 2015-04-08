@@ -13,10 +13,10 @@
     "ember-qunit-notifications": "0.0.7",
     "qunit": "~1.17.1",
     "font-awesome": "~4.3.0",
-    "susy": "~2.2.2",
     "material-colors": "~1.0.0",
-    "normalize.scss": "3.0.2+normalize.3.0.2",
     "compass-breakpoint": "~2.5.0",
-    "ember-cli-moment-shim": "~0.0.3"
+    "ember-cli-moment-shim": "~0.0.3",
+    "normalize.css": "~3.0.3",
+    "susy": "~2.2.2"
   }
 }

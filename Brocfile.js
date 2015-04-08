@@ -5,11 +5,6 @@ var pickFiles = require('broccoli-static-compiler');
 
 var app = new EmberApp({
   emberCliFontAwesome: { includeFontAwesomeAssets: false },
-  compassOptions: {
-    importPath: [
-      process.cwd() + '/bower_components'
-    ]
-  }
 });
 
 // Use `app.import` to add additional libraries to the generated

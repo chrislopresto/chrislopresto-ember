@@ -27,7 +27,7 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
 
 body {
   font-size: 15px;
-  line-height: 1.3em;
+  line-height: 1.3rem;
   margin-top: 0;
   margin: 0;
   padding: 0;
@@ -81,19 +81,21 @@ body {
     color: $md-grey-800;
     font-weight: normal;
     margin-bottom: 4px;
-    padding-bottom: 8px;
   }
 
   h1 {
     border-bottom: solid 2px $md-teal-800;
     width: 40%;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
   }
 
   h2 {
     border-bottom: solid 2px $md-teal-600;
     width: 30%;
-    margin-top: .5em;
+    margin-top: 2rem;
     white-space: nowrap;
+    padding-bottom: .6rem;
   }
 
   h3 {
@@ -157,7 +159,7 @@ body {
   }
 
   p {
-    margin: .8em 0;
+    margin: .8rem 0;
   }
 
   blockquote {
@@ -174,7 +176,7 @@ body {
   ul {
     list-style-type: square;
     padding-left: 0;
-    margin: .5em 0 .5em 20px;
+    margin: .5rem 0 .5rem 20px;
     color: $md-teal-400;
   }
 
