@@ -9,6 +9,7 @@ Router.map(function() {
   this.resource('music');
   this.resource('technology');
   this.resource('resume');
+  this.route('blog');
 });
 
 export default Router;

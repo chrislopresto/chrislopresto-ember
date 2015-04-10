@@ -1,18 +1,19 @@
 <div class='site'>
-  <h1 id='title'>{{#link-to 'index'}}Chris LoPresto{{/link-to}}</h1>
-
   <div class='menu-spacer'>
     <div class='menu'>
-
       <ul class='site-sections'>
+        <li><span class='menu-title'>Chris LoPresto</span></li>
         <li>{{#link-to 'index'}}{{unbound fa-icon 'home'}}{{/link-to}}</li>
         <li>{{#link-to 'music'}}{{unbound fa-icon 'music'}}{{/link-to}}</li>
         <li>{{#link-to 'technology'}}{{unbound fa-icon 'laptop'}}{{/link-to}}</li>
+        <li>{{#link-to 'blog'}}{{unbound fa-icon 'paragraph'}}{{/link-to}}</li>
       </ul>
     </div>
   </div>
 
-  {{outlet}}
+  <div class='site-content'>
+    {{outlet}}
+  </div>
 
   <hr>
 
@@ -23,5 +24,7 @@
     <li><a class='social github' target='_blank' href='https://github.com/chrislopresto'>{{unbound fa-icon 'github-square'}}</a></li>
     <li><a class='social rdio' target='_blank' href='https://www.rdio.com/people/chrislopresto/'>{{unbound fa-icon 'music'}}</a></li>
     <li><a class='social linkedin' target='_blank' href='https://www.linkedin.com/in/chrislopresto/'>{{unbound fa-icon 'linkedin-square'}}</a></li>
+    <li>{{#link-to 'resume' class='social'}}{{unbound fa-icon 'briefcase'}}{{/link-to}}</li>
   </ul>
+  <div class='footer'>{{unbound fa-icon 'copyright'}} {{moment now 'YYYY' ''}} Chris LoPresto</div>
 </div>
