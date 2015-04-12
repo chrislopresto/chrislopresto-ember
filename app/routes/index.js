@@ -1,3 +1,4 @@
 import Site from './site';
 
-export default Site.extend({});
+export default Site.extend({
+});
