@@ -30,6 +30,7 @@
     "ember-cli-htmlbars": "0.7.4",
     "ember-cli-ic-ajax": "0.1.1",
     "ember-cli-inject-live-reload": "^1.3.0",
+    "ember-cli-mirage": "0.0.24",
     "ember-cli-qunit": "0.3.9",
     "ember-cli-sass": "^3.2.2",
     "ember-cli-uglify": "1.0.1",
@@ -37,7 +38,8 @@
     "ember-document-title": "1.1.10",
     "ember-export-application-global": "^1.0.2",
     "ember-moment": "1.1.1",
-    "ember-normalize": "0.0.2"
+    "ember-normalize": "0.0.2",
+    "markdown-code-highlighting": "0.0.2"
   },
   "dependencies": {
     "ember-moment": "^1.1.1"

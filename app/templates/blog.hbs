@@ -1,2 +1,4 @@
 {{#document-title}}Blog{{/document-title}}
-<p>Chris has thoughts on things.</p>
+{{#each article in model}}
+  {{blog-article article=article}}
+{{/each}}

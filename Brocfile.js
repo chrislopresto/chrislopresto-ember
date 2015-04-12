@@ -7,6 +7,8 @@ var app = new EmberApp({
   emberCliFontAwesome: { includeFontAwesomeAssets: false },
 });
 
+app.import("bower_components/highlightjs/styles/tomorrow-night-eighties.css");
+
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
