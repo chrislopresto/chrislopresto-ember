@@ -20,6 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
+    "broccoli-flatiron": "0.0.0",
     "broccoli-static-compiler": "^0.2.1",
     "ember-cli": "^0.2.2",
     "ember-cli-app-version": "0.3.3",
@@ -43,5 +44,10 @@
   },
   "dependencies": {
     "ember-moment": "^1.1.1"
+  },
+  "ember-addon": {
+    "paths": [
+      "lib/article-markdown"
+    ]
   }
 }
