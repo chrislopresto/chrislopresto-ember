@@ -1,12 +1,10 @@
 machine:
   node:
-    version: 0.10.21
+    version: 0.10.34
 dependencies:
   pre:
-    - gem install --pre sass-css-importer
-    - gem install --pre compass
     - npm install -g bower
-    - bower install -F
+    - bower install
 general:
   branches:
     ignore:
