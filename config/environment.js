@@ -46,8 +46,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.locationType = 'hash'; // Because we're hosting on GitHub Pages
-
     // Use mirage in production while faking an API
     ENV['ember-cli-mirage'] = ENV['ember-cli-mirage'] || {};
     ENV['ember-cli-mirage'].force = true;

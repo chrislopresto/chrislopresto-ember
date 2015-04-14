@@ -1,10 +1,12 @@
 /* global require, module */
-
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 var pickFiles = require('broccoli-static-compiler');
 
 var app = new EmberApp({
   emberCliFontAwesome: { includeFontAwesomeAssets: false },
+  fingerprint: {
+    prepend: 'https://s3.amazonaws.com/chrislopresto-assets/'
+  }
 });
 
 app.import("bower_components/highlightjs/styles/tomorrow-night-eighties.css");
