@@ -9,6 +9,17 @@ cache:
   directories:
     - node_modules
 
+env:
+  matrix:
+    - EMBER_CHANNEL=release
+    - EMBER_CHANNEL=beta
+    - EMBER_CHANNEL=canary
+
+matrix:
+  allow_failures:
+    - env: EMBER_CHANNEL=beta
+    - env: EMBER_CHANNEL=canary
+
 before_install:
   - "npm config set spin false"
   - "npm install -g npm@^2"
@@ -19,7 +30,7 @@ install:
   - bower install
 
 script:
-  - npm test
+  - ./scripts/ember-try.sh
 
 notifications:
   slack:

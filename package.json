@@ -40,10 +40,8 @@
     "ember-export-application-global": "^1.0.2",
     "ember-moment": "1.1.1",
     "ember-normalize": "0.0.2",
+    "ember-try": "0.0.4",
     "markdown-code-highlighting": "0.0.2"
-  },
-  "dependencies": {
-    "ember-moment": "^1.1.1"
   },
   "ember-addon": {
     "paths": [
