@@ -5,7 +5,7 @@ var pickFiles = require('broccoli-static-compiler');
 var app = new EmberApp({
   emberCliFontAwesome: { includeFontAwesomeAssets: false },
   fingerprint: {
-    prepend: 'https://s3.amazonaws.com/chrislopresto-assets/'
+    prepend: 'https://s3.amazonaws.com/chrislopresto.com-assets/'
   }
 });
 
