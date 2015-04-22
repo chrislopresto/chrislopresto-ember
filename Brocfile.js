@@ -1,6 +1,6 @@
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
-var pickFiles = require('broccoli-static-compiler');
+var funnel = require('broccoli-funnel');
 
 var app = new EmberApp({
   emberCliFontAwesome: { includeFontAwesomeAssets: false },
@@ -12,7 +12,7 @@ var app = new EmberApp({
 app.import("bower_components/highlightjs/styles/tomorrow-night-eighties.css");
 
 app.import('bower_components/font-awesome/css/font-awesome.css');
-var fontAwesome = pickFiles('bower_components/font-awesome/fonts/', {
+var fontAwesome = funnel('bower_components/font-awesome/fonts/', {
   srcDir: '/',
   // files: isn't strictly necessary (if left out will load all files), but leaving in to be explicit.
   files: [
