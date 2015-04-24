@@ -17,8 +17,8 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
 
 .page-break {
   @media print {
-    page-break-before: always;
     padding-bottom: $resume-padding;
+    page-break-before: always;
   }
   @media screen {
     display: none;
@@ -49,6 +49,7 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
     .first-name {
       color: $md-grey-50;
     }
+
     .last-name {
       color: $md-grey-900;
     }
@@ -77,17 +78,17 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
 
   h1 {
     border-bottom: solid 2px $md-teal-800;
-    width: 40%;
     margin-top: 2rem;
     padding-bottom: 1rem;
+    width: 40%;
   }
 
   h2 {
     border-bottom: solid 2px $md-teal-600;
-    width: 30%;
     margin-top: 2rem;
-    white-space: nowrap;
     padding-bottom: .6rem;
+    white-space: nowrap;
+    width: 30%;
   }
 
   h3 {
@@ -121,8 +122,8 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
   }
 
   .social-items {
-    border-radius: 2px;
     border: solid 1px $md-teal-400;
+    border-radius: 2px;
     float: right;
     font-size: .8rem;
     margin: 0 0 20px 20px;
@@ -166,21 +167,22 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
   }
 
   ul {
-    list-style-type: square;
-    padding-left: 0;
-    margin: .5rem 0 .5rem 20px;
     color: $md-teal-400;
+    list-style-type: square;
+    margin: .5rem 0 .5rem 20px;
+    padding-left: 0;
   }
 
   li {
     padding: 2px 0;
+
+    span {
+      color: $md-grey-800;
+      display: block;
+      margin-left: -6px;
+    }
   }
 
-  li span {
-    color: $md-grey-800;
-    display: block;
-    margin-left: -6px;
-  }
 }
 
 .things {
@@ -235,10 +237,6 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
     @include span(8 at 3 of 12);
   }
 
-  .major {
-
-  }
-
   .when {
     @include span(last 2 of 12);
     margin-top: 0;
@@ -250,11 +248,10 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
   }
 }
 
-h4.rutgers {
+.rutgers {
   color: $rutgers;
 }
 
-h4.salesianum {
+.salesianum {
   color: $salesianum;
 }
-
