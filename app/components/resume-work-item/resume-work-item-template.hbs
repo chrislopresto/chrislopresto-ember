@@ -1,0 +1,13 @@
+<h2>{{where}}</h2>
+<div class='work-item-overview'>
+  <div class='when'>{{from}} - {{to}}</div>
+  <div class='synopsis'>
+    <div class='learn'>{{learned}}</div>
+    {{#if as}}
+      <div class='role'>as <span class='title'>{{as}}</span></div>
+    {{/if}}
+  </div>
+</div>
+
+{{partial content}}
+{{yield}}

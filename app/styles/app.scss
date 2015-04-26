@@ -7,6 +7,11 @@
 @import 'blog';
 @import 'resume';
 
-@import 'components/vimeo-video';
+@import 'app/components/resume-page-break/resume-page-break';
+@import 'app/components/resume-header/resume-header';
+@import 'app/components/resume-contact-info/resume-contact-info';
+@import 'app/components/resume-work-item/resume-work-item';
+@import 'app/components/resume-education-item/resume-education-item';
+@import 'app/components/vimeo-video/vimeo-video';
 
 @import 'styleguide';

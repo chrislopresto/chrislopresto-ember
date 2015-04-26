@@ -1,0 +1,35 @@
+.resume-education-item {
+  @include full;
+  margin: 20px 0;
+
+  .logo {
+    @include span(2 at 1 of 12);
+
+    img {
+      width: 90%;
+    }
+  }
+
+  .where {
+    @include span(8 at 3 of 12);
+  }
+
+  .when {
+    @include span(last 2 of 12);
+    margin-top: 0;
+  }
+
+  p {
+    margin: 0;
+    padding-bottom: 4px;
+  }
+
+  .rutgers {
+    color: $rutgers;
+  }
+
+  .salesianum {
+    color: $salesianum;
+  }
+}
+

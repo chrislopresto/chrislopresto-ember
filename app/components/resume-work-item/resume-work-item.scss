@@ -1,0 +1,37 @@
+.resume-work-item {
+  .things {
+    margin: 0 0 8px;
+  }
+
+  .when {
+    color: $md-grey-700;
+    font-family: 'Roboto';
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 6px;
+    text-transform: uppercase;
+  }
+
+  .major,
+  .title {
+    color: $md-grey-800;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 1px;
+  }
+
+  .work-item-overview {
+    .synopsis {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+
+    .learn {
+      font-style: italic;
+    }
+
+    .role {
+      margin-top: 4px;
+    }
+  }
+}

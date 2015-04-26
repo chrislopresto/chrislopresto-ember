@@ -1,0 +1,34 @@
+.resume-header {
+  background: $md-teal-400;
+  min-height: 160px;
+  position: relative;
+
+  .name {
+    bottom: 40px;
+    font-size: 60px;
+    left: $resume-padding;
+    position: absolute;
+
+    @include breakpoint($breakpoint-mobile-landscape) {
+      font-size: 40px;
+      left: $resume-padding - 20;
+    }
+  }
+
+  .first-name {
+    color: $md-grey-50;
+  }
+
+  .last-name {
+    color: $md-grey-900;
+  }
+
+  .callout {
+    bottom: 10px;
+    color: $md-grey-900;
+    font-family: 'Codystar';
+    font-size: 12px;
+    position: absolute;
+    right: $resume-padding;
+  }
+}

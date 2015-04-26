@@ -1,0 +1,9 @@
+.resume-page-break {
+  @media print {
+    padding-bottom: $resume-padding;
+    page-break-before: always;
+  }
+  @media screen {
+    display: none;
+  }
+}
