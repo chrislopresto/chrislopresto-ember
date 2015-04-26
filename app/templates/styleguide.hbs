@@ -11,4 +11,39 @@
   <h6>h6 - This Is A Header</h6>
 
   {{vimeo-video}}
+
+  <h2>Resume</h2>
+  {{resume-header}}
+  {{resume-contact-info}}
+  {{#resume-work-item
+    where='Initech'
+    from='March 2015'
+    to='Present'
+    as='Uncertain'
+    learned='Where I deal with the god damn customers so the engineers don\'t have to'
+    }}
+  <p>
+    Shot primarily in Austin, Texas, Office Space has its origins in a series of four animated short films about
+    an office drone named Milton that Mike Judge created, which first aired on Liquid Television and Night After
+    Night with Allan Havey, and later aired on Saturday Night Live.
+  </p>
+
+  <p>
+    The inspiration came from a temp job he once
+    had that involved alphabetizing purchase orders and a job he had as an engineer for three months in the
+    Bay Area during the 1980s, "just in the heart of Silicon Valley and in the middle of that overachiever yuppie
+    thing, it was just awful". The setting of the film reflected a prevailing trend that Judge observed in the
+    United States.
+  </p>
+  {{/resume-work-item}}
+  {{#resume-education-item
+    slug='rutgers'
+    name='Rutgers University'
+    where='New Brunswick, NJ'
+    from='1998'
+    to='2002'
+    }}
+    Bachelor of Science in <span class='major'>Computer Science</span><br>
+    Bachelor of Music (piano) in <span class='major'>Jazz Studies</span>
+  {{/resume-education-item}}
 </div>
