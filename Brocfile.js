@@ -9,13 +9,6 @@ var app = new EmberApp({
   }
 });
 
-// Allow pod templates that aren't named template.hbs
-app._podTemplatePatterns = function() {
-  return this.registry.extensionsForType('template').map(function(extension) {
-    return new RegExp('\.(.+\.)?' + extension + '$');
-  });
-};
-
 app.import("bower_components/highlightjs/styles/tomorrow-night-eighties.css");
 
 app.import('bower_components/font-awesome/css/font-awesome.css');
