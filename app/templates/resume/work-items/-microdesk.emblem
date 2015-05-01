@@ -1,0 +1,14 @@
+p This was my first job in New York. Microdesk has a software team that specializes in geospatial projects and Autodesk customization. I worked as a software engineer and also began to manage projects here. Customers ranged from utility companies and manucturers to government agencies and defense contractors. The team was very talented, and we tackled some very interesting problems.
+
+= resume-page-break
+
+h4 Highlights
+
+ul
+  li: span Raytheon asked us to transform Patriot Missile System electrical schematics (tens of thousands of AutoCAD documents) into a user manual app for soldiers performing maintenance. We performed topological analysis of the circuitry and built interactive tools to search for and navigate along electrical signal paths.
+  li: span Ipswich Bay Glass asked us to build a plugin for Autodesk Inventor to help design glass curtain walls as well as the instruction sets for the CNC machines that cut the (Lego-style) pieces to size.
+  li: span The Vermont Electric Power Company asked us to provide real-time visualizations of where their helicopters and road crews were dispatched.
+
+h4 Technologies
+
+.things AutoCAD. SVG. MapGuide. .NET Forms. ASP.NET. IBM Maximo. CVS.
