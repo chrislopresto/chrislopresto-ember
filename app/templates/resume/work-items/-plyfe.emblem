@@ -1,10 +1,10 @@
-p Plyfe is a marketing platform that allows brands to publish interactive experiences to their web properties. Customers use the Plyfe builder tool to create embeddable widgets for personality quizzes, video polls, trivia, Instagram galleries, and the like. The platform provides real-time data analysis and reporting of user activity.
+p Plyfe is a marketing platform that allows brands to publish interactive experiences to their web properties. Customers use a builder tool to create embeddable cards for things like personality quizzes, video polls, trivia, and Instagram galleries. The platform provides real-time data analysis and reporting of user activity.
 
-p As the technical co-founder, I started building Plyfe from scratch in September 2011. We have continously deployed our web platform to Amazon cloud infrastructure since that time. We built up a team of 8 - 10 engineers that runs one-week sprints and continously integrates features using GitHub Flow (a modified form of git-flow).
+p As the technical co-founder, I started building Plyfe from scratch in September 2011. We continously deployed to Amazon cloud infrastructure since that time. We built up a team of 8 - 10 engineers and ran one-week sprints, continously integrating features using GitHub Flow (a form of git-flow).
 
-p Plyfe widgets, a dynamically composed suite of Ember.js applications, communicate with versioned Plyfe APIs that adhere to the JSON API spec. A dynamic theme API allows customers to customize the look and feel of their widgets (no CSS files actually touch a disk). Plyfe environments are automatically provisioned with Chef via Amazon OpsWorks APIs. We trigger manual operations commands via Slack channels.
+p Plyfe cards, a dynamically composed suite of Ember.js applications, communicate with versioned Plyfe APIs that adhere to the JSON API spec. A dynamic theme API allows customers to customize the look and feel of their cards (no CSS files actually touch a disk). Plyfe environments are automatically provisioned with Chef via Amazon OpsWorks APIs.
 
-h4 Technologies<
+h4 Technologies
 
 .things Ruby. Rails. Ember.js. SCSS. Chef. Redis. MySQL. NGINX. Git. Amazon Web Services: OpsWorks, EC2, RDS, S3, CloudFront, ElastiCache.
 

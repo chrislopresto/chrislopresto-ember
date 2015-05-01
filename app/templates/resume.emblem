@@ -1,0 +1,110 @@
+document-title
+  | Resume
+
+.resume
+
+  resume-header
+
+  .resume-body
+    resume-contact-info
+    partial 'resume/intro'
+    partial 'resume/work'
+
+    resume-work-item [
+      where='Yapp'
+      from='March 2015'
+      to='Present'
+      learned='Where I do Yapp things'
+      content='resume/work-items/yapp' ]
+
+    resume-work-item [
+      where='Symonds & Son'
+      from='September 2014'
+      to='March 2015'
+      learned='Where I consulted on DevOps and learned about NASCAR'
+      content='resume/work-items/symonds-and-son' ]
+
+    resume-page-break
+    resume-work-item [
+      where='Plyfe'
+      from='September 2011'
+      to='September 2014'
+      learned='Where I co-founded a startup and learned about product development, user experience, and company communication'
+      as='CTO & Co-Founder'
+      content='resume/work-items/plyfe' ]
+
+    resume-page-break
+    resume-work-item [
+      where='InRhythm'
+      from='December 2010'
+      to='August 2011'
+      learned='Where I consulted on software processes and client projects'
+      as='Director of Product Development'
+      content='resume/work-items/in-rhythm' ]
+
+    resume-work-item [
+      where='News Corp'
+      from='June 2010'
+      to='September 2010'
+      learned='Where I consulted on Skiff IP acquisition and related system integrations'
+      content='resume/work-items/news-corp' ]
+
+    resume-page-break
+    resume-work-item [
+      where='Skiff'
+      from='May 2008'
+      to='June 2010'
+      learned='Where I learned about team leadership, ePubs, and the publishing industry'
+      as='Director of Content Publishing'
+      content='resume/work-items/skiff' ]
+
+    resume-work-item [
+      where='Microdesk'
+      from='April 2005'
+      to='May 2008'
+      learned='Where I learned about project management, system integrations, and the Patriot Missile System'
+      as='Lead Software Engineer & Project Manager'
+      content='resume/work-items/microdesk' ]
+
+    resume-work-item [
+      where='Fantastic Damage'
+      from='April 2003'
+      to='April 2005'
+      learned='Where I learned about starting a business, web application development, and customer relationships'
+      as='Co-Founder & Software Engineer'
+      content='resume/work-items/fantastic-damage' ]
+
+    resume-page-break
+    resume-work-item [
+      where='MBNA'
+      from='August 2002'
+      to='March 2004'
+      learned='Where I learned about team membership, manipulation of big datasets, security and regulations, and the benefits and importance of a healthy corporate culture'
+      as='Software Engineer'
+      content='resume/work-items/mbna' ]
+
+    partial 'resume/music'
+
+    resume-page-break
+    partial 'resume/elegant-and-tasteful'
+    partial 'resume/miscellany'
+
+    h1 Education
+
+    resume-education-item [
+      slug='rutgers'
+      name='Rutgers University'
+      where='New Brunswick, NJ'
+      from='1998'
+      to='2002' ]
+
+      | Bachelor of Science in <span class='major'>Computer Science</span><br>
+      | Bachelor of Music (piano) in <span class='major'>Jazz Studies</span>
+
+    resume-education-item [
+      slug='salesianum'
+      name='Salesianum School'
+      where='Wilmington, DE'
+      from='1994'
+      to='1998' ]
+      | <em>Tenui Nec Dimittam</em>
