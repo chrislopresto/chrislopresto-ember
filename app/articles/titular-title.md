@@ -1,5 +1,6 @@
 ## ---
 title: A Titular Title
+slug: titular-title
 publishedAt: 2014-04-10
 tags: blogging, ember, hello, world
 ## ---

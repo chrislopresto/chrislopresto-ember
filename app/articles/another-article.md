@@ -1,5 +1,6 @@
 ## ---
 title: Another Article
+slug: another-article
 publishedAt: 2015-03-17
 tags: blogging, ember
 ## ---

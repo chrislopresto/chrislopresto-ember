@@ -9,7 +9,9 @@ Router.map(function() {
   this.route('music');
   this.route('technology');
   this.route('resume');
-  this.route('blog');
+  this.route('blog', function() {
+    this.route('article', { path: '/:slug' });
+  });
   this.route('styleguide');
 });
 

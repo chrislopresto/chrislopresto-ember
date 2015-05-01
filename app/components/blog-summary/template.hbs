@@ -1,0 +1,7 @@
+<div class='blog-summary'>
+  <h1>
+    {{#link-to 'blog.article' article}}{{article.title}}{{/link-to}}
+  </h1>
+  <hr>
+  <article>{{format-markdown article.summary}}</article>
+</div>
