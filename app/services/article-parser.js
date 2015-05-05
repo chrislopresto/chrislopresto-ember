@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import Articles from '../article-markdown';
+import moment from 'moment';
 
 var ARTICLE_METADATA_DELIMITER = '## ---';
 
@@ -35,7 +36,8 @@ export default Ember.Service.extend({
     return {
       title: this.getProperty('title', frontmatter),
       slug: this.getProperty('slug', frontmatter),
-      publishedAt: Date.parse(this.getProperty('publishedAt', frontmatter)),
+      status: this.getProperty('status', frontmatter),
+      publishedAt: moment(this.getProperty('publishedAt', frontmatter)),
       summary: summary,
       body: body
     };

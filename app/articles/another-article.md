@@ -3,6 +3,7 @@ title: Another Article
 slug: another-article
 publishedAt: 2015-03-17
 tags: blogging, ember
+status: draft
 ## ---
 something else about something else and then another thing about another thing.
 Before you go thinking about something else, think about *this*.

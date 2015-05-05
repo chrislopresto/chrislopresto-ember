@@ -3,6 +3,7 @@ title: A Titular Title
 slug: titular-title
 publishedAt: 2014-04-10
 tags: blogging, ember, hello, world
+status: public
 ## ---
 secondary fermentation bright beer anaerobic, fermentation. alpha acid aerobic tulip glass, dry hopping **filter** bottom *fermenting* yeast. ~~biere~~ de garde acid rest bittering hops barleywine sparge infusion. lagering! lambic, becher barrel autolysis racking wit filter real ale.
 ## ---

@@ -1,8 +1,9 @@
 ## ---
 title: Zeitgeisting
 slug: zeitgeisting
-publishedAt: 2015-05-01
+publishedAt: 2015-05-05
 tags: blogging, ember
+status: public
 ## ---
 The time for reflection is in front of us. The time for reflection is in front of us. The time for reflection is in front of us. The time for reflection is in front of us. The time for reflection is in front of us. The time for reflection is in front of us. The time for reflection is in front of us. The time for reflection is in front of us. The time for reflection is in front of us.
 ## ---

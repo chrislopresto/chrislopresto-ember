@@ -1,6 +1,15 @@
 .blog {
   margin: 4rem;
 
+  article {
+    font-size: 1.05rem;
+    margin-top: 1rem;
+  }
+
+  .meta {
+    font-size: .9rem;
+  }
+
   .blog-article {
     margin-bottom: 4rem;
   }

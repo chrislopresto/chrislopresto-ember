@@ -5,6 +5,8 @@
   <div class='meta'>
     <time>{{moment article.publishedAt 'MMM Do, YYYY'}}</time>
   </div>
-  <article>{{format-markdown article.summary}}</article>
-  {{#link-to 'blog.article' article}}Read more{{/link-to}}
+  {{#if showDetails}}
+    <article>{{format-markdown article.summary}}</article>
+    {{#link-to 'blog.article' article}}Read more{{/link-to}}
+  {{/if}}
 </div>
