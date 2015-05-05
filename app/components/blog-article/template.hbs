@@ -1,5 +1,7 @@
 <div class='blog-article'>
   <h1>{{article.title}}</h1>
-  <hr>
+  <div class='meta'>
+    <time>{{moment article.publishedAt 'MMM Do, YYYY'}}</time>
+  </div>
   <article>{{format-markdown article.body}}</article>
 </div>

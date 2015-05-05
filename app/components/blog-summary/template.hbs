@@ -2,7 +2,9 @@
   <h1>
     {{#link-to 'blog.article' article}}{{article.title}}{{/link-to}}
   </h1>
-  <h4>{{moment article.publishedAt 'MMM Do, YYYY'}}</h4>
-  <hr>
+  <div class='meta'>
+    <time>{{moment article.publishedAt 'MMM Do, YYYY'}}</time>
+  </div>
   <article>{{format-markdown article.summary}}</article>
+  {{#link-to 'blog.article' article}}Read more{{/link-to}}
 </div>
