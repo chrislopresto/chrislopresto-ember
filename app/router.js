@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('resume');
   this.route('blog', function() {
     this.route('article', { path: '/:slug' });
+    this.route('archive');
   });
   this.route('styleguide');
 });
