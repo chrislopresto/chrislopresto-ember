@@ -1,12 +1,17 @@
 <div class='blog-summary'>
-  <h1>
-    {{#link-to 'blog.article' article}}{{article.title}}{{/link-to}}
-  </h1>
-  <div class='meta'>
-    <time>{{moment article.publishedAt 'MMM Do, YYYY'}}</time>
-  </div>
-  {{#if showDetails}}
-    <article>{{format-markdown article.summary}}</article>
-    {{#link-to 'blog.article' article}}Read more{{/link-to}}
+  {{#if hasImage}}
+    <img src="{{article.mainImageSrc}}" alt="Japan">
   {{/if}}
+  <div class='summary'>
+    <h1>
+      {{#link-to 'blog.article' article}}{{article.title}}{{/link-to}}
+    </h1>
+    <div class='meta'>
+      <time>{{moment article.publishedAt 'MMM Do, YYYY'}}</time>
+    </div>
+    {{#if showDetails}}
+      <article>{{format-markdown article.summary}}</article>
+      {{#link-to 'blog.article' article}}Read more{{/link-to}}
+    {{/if}}
+  </div>
 </div>

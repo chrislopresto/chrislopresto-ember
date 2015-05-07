@@ -1,5 +1,10 @@
 .blog-summary {
-  margin: 0 0 3rem;
+  margin: 0 0 1rem;
+  @include common-box-shadow;
+
+  .summary {
+    padding: 1rem;
+  }
 
   article {
     margin-top: .5rem;
@@ -7,5 +12,10 @@
     p {
       margin-bottom: .2rem;
     }
+  }
+
+  img {
+    width: 100%;
+    max-width: initial;
   }
 }
