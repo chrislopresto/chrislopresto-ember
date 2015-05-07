@@ -1,10 +1,13 @@
 <div class='site'>
   <div class='menu-spacer'>
-    <div class='menu'>
-      <ul class='site-sections'>
-        <li><span class='menu-title'>Chris LoPresto</span></li>
-        <li>{{#link-to 'index'}}{{unbound fa-icon 'home'}}{{/link-to}}</li>
-      </ul>
+    <div class='site-content'>
+      <div class='menu'>
+        <div class='menu-title'>Chris LoPresto</div>
+        <ul class='site-sections'>
+          <li>{{#link-to 'index'}}{{unbound fa-icon 'home'}}About{{/link-to}}</li>
+          <li>{{#link-to 'blog'}}{{unbound fa-icon 'paragraph'}}Blog{{/link-to}}</li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -12,16 +15,16 @@
     {{outlet}}
   </div>
 
-  <hr>
-
-  <ul class='social-items'>
-    <li><a class='social twitter' target='_blank' href='https://twitter.com/chrislopresto'>{{unbound fa-icon 'twitter-square'}}</a></li>
-    <li><a class='social facebook' target='_blank' href='https://facebook.com/chrislopresto'>{{unbound fa-icon 'facebook-square'}}</a></li>
-    <li><a class='social instagram' target='_blank' href='https://instagram.com/chrislopresto'>{{unbound fa-icon 'instagram'}}</a></li>
-    <li><a class='social github' target='_blank' href='https://github.com/chrislopresto'>{{unbound fa-icon 'github-square'}}</a></li>
-    <li><a class='social rdio' target='_blank' href='https://www.rdio.com/people/chrislopresto/'>{{unbound fa-icon 'music'}}</a></li>
-    <li><a class='social linkedin' target='_blank' href='https://www.linkedin.com/in/chrislopresto/'>{{unbound fa-icon 'linkedin-square'}}</a></li>
-    <li>{{#link-to 'resume' class='social'}}{{unbound fa-icon 'briefcase'}}{{/link-to}}</li>
-  </ul>
-  <div class='footer'>{{unbound fa-icon 'copyright'}} {{moment now 'YYYY' ''}} Chris LoPresto</div>
+  <div class='site-content'>
+    <hr>
+    <ul class='social-items'>
+      <li><a class='social twitter' target='_blank' href='https://twitter.com/chrislopresto'>{{unbound fa-icon 'twitter-square'}}</a></li>
+      <li><a class='social facebook' target='_blank' href='https://facebook.com/chrislopresto'>{{unbound fa-icon 'facebook-square'}}</a></li>
+      <li><a class='social instagram' target='_blank' href='https://instagram.com/chrislopresto'>{{unbound fa-icon 'instagram'}}</a></li>
+      <li><a class='social github' target='_blank' href='https://github.com/chrislopresto'>{{unbound fa-icon 'github-square'}}</a></li>
+      <li><a class='social linkedin' target='_blank' href='https://www.linkedin.com/in/chrislopresto/'>{{unbound fa-icon 'linkedin-square'}}</a></li>
+      <li>{{#link-to 'resume' class='social'}}{{unbound fa-icon 'briefcase'}}{{/link-to}}</li>
+    </ul>
+    <div class='footer'>{{unbound fa-icon 'copyright'}} {{moment now 'YYYY' ''}} Chris LoPresto</div>
+  </div>
 </div>

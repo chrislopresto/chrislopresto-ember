@@ -7,5 +7,6 @@ export default DS.Model.extend({
   body: DS.attr('string'),
   status: DS.attr('string'),
   publishedAt: DS.attr('date'),
-  tags: DS.attr()
+  tags: DS.attr(),
+  mainImageSrc: DS.attr('string')
 });

@@ -1,5 +1,16 @@
 .blog-summary {
-  margin: 0 0 3rem;
+  @include common-box-shadow;
+  margin: 0 0 1rem;
+
+  .summary {
+    padding: 1rem;
+  }
+
+  h1 a:active,
+  h1 a:focus,
+  h1 a:hover {
+    color: $link-color;
+  }
 
   article {
     margin-top: .5rem;
@@ -7,5 +18,10 @@
     p {
       margin-bottom: .2rem;
     }
+  }
+
+  img {
+    max-width: initial;
+    width: 100%;
   }
 }

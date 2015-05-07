@@ -1,12 +1,21 @@
 .blog {
-  margin: 4rem;
+  margin: 1rem 0;
+  max-width: 800px;
 
   article {
     font-size: 1.05rem;
     margin-top: 1rem;
+    text-align: justify;
+  }
+
+  img {
+    @include common-box-shadow;
+    max-width: 800px;
+    width: 100%;
   }
 
   .meta {
+    color: $md-grey-700;
     font-size: .9rem;
   }
 

@@ -37,6 +37,7 @@ export default Ember.Service.extend({
       title: this.getProperty('title', frontmatter),
       slug: this.getProperty('slug', frontmatter),
       status: this.getProperty('status', frontmatter),
+      mainImageSrc: this.getProperty('mainImageSrc', frontmatter),
       publishedAt: moment(this.getProperty('publishedAt', frontmatter)),
       summary: summary,
       body: body

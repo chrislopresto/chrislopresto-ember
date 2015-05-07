@@ -28,6 +28,10 @@ $susy: (
   )
 );
 
+@mixin common-box-shadow {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+}
+
 body,
 html {
   font-family: 'Lato', sans-serif;
@@ -81,13 +85,17 @@ hr {
 
 .menu-spacer {
   background: $md-light-blue-500;
-  height: 4rem;
   position: relative;
   width: 100%;
+  padding-bottom: 5px;
 }
 
 .site-content {
-  padding: .5rem;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 1rem 0 0 1rem;
+  position: relative;
+  width: 100%;
 
   p {
     margin: 0 0 1rem;
@@ -95,11 +103,8 @@ hr {
 }
 
 .menu {
-  bottom: 0;
   color: $alt-color;
   font-size: 1.3rem;
-  left: .5rem;
-  position: absolute;
 
   a {
     color: inherit;
@@ -111,9 +116,7 @@ hr {
       color: $interact-alt-color;
       text-decoration: none;
     }
-
   }
-
 }
 
 .site-sections,
@@ -124,7 +127,7 @@ hr {
 
   li {
     display: inline;
-    margin: 0 1px;
+    // margin-right: .1rem;
   }
 }
 
@@ -133,7 +136,18 @@ hr {
 }
 
 .site-sections {
-  margin: 4px 0;
+  font-size: 1rem;
+  margin: 0 0;
+
+  .fa {
+    font-size: .5rem;
+    margin-right: .1rem;
+  }
+
+  li {
+    margin-right: .5rem;
+    font-size: .9rem;
+  }
 
   .menu-title {
     margin-right: .2rem;
@@ -142,11 +156,12 @@ hr {
 
 .social {
   color: $md-grey-700;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 .footer {
   color: $md-grey-500;
+  font-size: .8rem;
   margin: 0 .5rem;
 }
 
