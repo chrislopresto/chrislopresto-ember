@@ -19,7 +19,7 @@ My New Year's resolution for 2014 was to travel out of the country.
 
 ![Brazil](assets/images/blog/brazil.jpg)
 
-World Cup. Bucket list. [Lionel Messi](http://fivethirtyeight.com/features/lionel-messi-is-impossible/`)
+World Cup. [Lionel Messi](http://fivethirtyeight.com/features/lionel-messi-is-impossible/`)
 
 ### Japan
 

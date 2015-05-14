@@ -23,7 +23,7 @@ test('visiting /blog', function(assert) {
   visit('/blog');
 
   andThen(function() {
-    assert.equal(currentURL(), '/blog');
+    assert.equal(currentPath(), 'blog.index');
   });
 
   andThen(function () {
