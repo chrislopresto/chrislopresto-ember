@@ -24,6 +24,7 @@ matrix:
     - env: EMBER_CHANNEL=canary
 
 before_install:
+  - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
   - "npm config set spin false"
   - "npm install -g npm@^2"
 
@@ -33,7 +34,7 @@ install:
   - bower install
 
 script:
-  - ./scripts/ember-try.sh
+  - npm test
 
 after_success:
   - ./scripts/travis/after-success.sh

@@ -11,6 +11,8 @@ module.exports = function(environment) {
         'ember-routing-htmlbars-improved-actions': true,
         'ember-views-component-block-info': true,
         'ember-htmlbars-component-generation': true
+        // Here you can enable experimental features on an ember canary build
+        // e.g. 'with-controller': true
       }
     },
 
