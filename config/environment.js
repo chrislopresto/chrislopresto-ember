@@ -23,9 +23,12 @@ module.exports = function(environment) {
   };
 
   ENV.contentSecurityPolicy = {
-    'font-src': "'self' http://fonts.gstatic.com",
+    'font-src': "'self' http://fonts.gstatic.com https://fonts.gstatic.com",
     'connect-src': "'self' *",
-    'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
+    'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com https://fonts.googleapis.com",
+    'img-src': "'self' *",
+    'frame-src': "'self' *",
+    'media-src': "'self' *"
   };
 
   ENV.emblemOptions = {

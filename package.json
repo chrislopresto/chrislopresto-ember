@@ -22,6 +22,8 @@
     "broccoli-asset-rev": "^2.0.2",
     "broccoli-flatiron": "0.0.0",
     "broccoli-funnel": "^0.2.3",
+    "broccoli-merge-trees": "^0.2.2",
+    "broccoli-stew": "^0.3.4",
     "ember-cli": "1.13.1",
     "ember-cli-app-version": "0.4.0",
     "ember-cli-babel": "^5.0.0",
@@ -36,25 +38,26 @@
     "ember-cli-inject-live-reload": "^1.3.0",
     "ember-cli-mirage": "yapplabs/ember-cli-mirage#master",
     "ember-cli-qunit": "0.3.15",
-    "ember-cli-sass": "^3.2.2",
     "ember-cli-release": "0.2.3",
+    "ember-cli-sass": "^3.2.2",
     "ember-cli-uglify": "^1.0.1",
     "ember-data": "1.13.5",
     "ember-deploy-redis": "0.0.2",
     "ember-deploy-s3": "0.0.3",
     "ember-deploy-s3-index": "yapplabs/ember-deploy-s3-index#ACL",
     "ember-disable-proxy-controllers": "^1.0.0",
-    "ember-export-application-global": "^1.0.2",
     "ember-document-title": "chrislopresto/ember-document-title#glimmer",
     "ember-export-application-global": "^1.0.2",
     "ember-moment": "1.1.1",
     "ember-normalize": "0.0.2",
+    "ember-reveal-js": "chrislopresto/ember-reveal-js#initial-implementation",
     "ember-try": "0.0.4",
     "markdown-code-highlighting": "0.0.2"
   },
   "ember-addon": {
     "paths": [
-      "lib/article-markdown"
+      "lib/article-markdown",
+      "lib/asset-paths"
     ]
   }
 }

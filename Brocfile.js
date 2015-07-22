@@ -9,7 +9,7 @@ var app = new EmberApp({
   }
 });
 
-app.import("bower_components/highlightjs/styles/tomorrow-night-eighties.css");
+app.import('bower_components/highlightjs/styles/tomorrow-night-eighties.css');
 
 app.import('bower_components/font-awesome/css/font-awesome.css');
 var fontAwesome = funnel('bower_components/font-awesome/fonts/', {

@@ -14,6 +14,10 @@ Router.map(function() {
     this.route('archive');
   });
   this.route('styleguide');
+  this.route('presentations', function() {
+    this.route('demo');
+    this.route('tacos');
+  });
 });
 
 export default Router;
