@@ -1,9 +1,15 @@
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var funnel = require('broccoli-funnel');
+var mergeTrees = require('broccoli-merge-trees');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
+    emberCliFontAwesome: { includeFontAwesomeAssets: false },
+    fingerprint: {
+      prepend: 'https://s3.amazonaws.com/chrislopresto.com-assets/'
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
@@ -19,5 +25,22 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
+  app.import('bower_components/highlightjs/styles/tomorrow-night-eighties.css');
+
+  app.import('bower_components/font-awesome/css/font-awesome.css');
+  var fontAwesomeTree = funnel('bower_components/font-awesome/fonts/', {
+    srcDir: '/',
+    // files: isn't strictly necessary (if left out will load all files), but leaving in to be explicit.
+    files: [
+      'fontawesome-webfont.ttf',
+      'fontawesome-webfont.woff',
+      'fontawesome-webfont.eot',
+      'FontAwesome.otf',
+      'fontawesome-webfont.svg'
+    ],
+    destDir: '/fonts'
+  });
+
+  var appTree = app.toTree();
+  return mergeTrees([appTree, fontAwesomeTree]);
 };
