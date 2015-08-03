@@ -16,7 +16,6 @@ Router.map(function() {
   this.route('styleguide');
   this.route('presentations', function() {
     this.route('demo');
-    this.route('tacos');
   });
 });
 
