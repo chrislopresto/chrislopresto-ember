@@ -3,6 +3,7 @@ import Site from '../site';
 
 export default Site.extend({
   articleParser: Ember.inject.service(),
+  titleToken: 'Archive',
   activate: function() {
     this.get('articleParser').createArticles();
   },
