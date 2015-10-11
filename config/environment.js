@@ -16,20 +16,28 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
-  };
+    },
 
-  ENV.contentSecurityPolicy = {
-    'font-src': "'self' http://fonts.gstatic.com https://fonts.gstatic.com",
-    'connect-src': "'self' *",
-    'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com https://fonts.googleapis.com",
-    'img-src': "'self' *",
-    'frame-src': "'self' *",
-    'media-src': "'self' *"
-  };
+    /* jshint ignore:start */
+    contentSecurityPolicy: {
+      'font-src': "'self' fonts.gstatic.com",
+      'connect-src': "'self' *",
+      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com",
+      'img-src': "'self' *",
+      'frame-src': "'self' *",
+      'media-src': "'self' *"
+    },
+    /* jshint ignore:end */
 
-  ENV.emblemOptions = {
-    blueprints: false
+    emblemOptions: {
+      blueprints: false
+    },
+
+    googleFonts: [
+      'Lato:400,700,400italic',
+      'Roboto:500,900,400italic,700,400',
+      'Codystar'
+    ]
   };
 
   if (environment === 'development') {
