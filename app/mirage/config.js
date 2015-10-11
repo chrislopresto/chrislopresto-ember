@@ -125,7 +125,7 @@ function buildIncluded(db, resourceType, resources, relationshipMap) {
   var inclusionMap = {};
   buildInclusionMap(inclusionMap, db, resourceType, resources, relationshipMap);
   var included = [];
-  Ember.keys(inclusionMap).forEach(function(type) {
+  Object.keys(inclusionMap).forEach(function(type) {
     included = included.concat(Ember.keys(inclusionMap[type]).map(function(id){
       return inclusionMap[type][id];
     }));
