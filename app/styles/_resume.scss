@@ -30,6 +30,9 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
     color: $md-grey-800;
     font-weight: normal;
     margin-bottom: 4px;
+    font-family: Lato, sans-serif;
+    letter-spacing: initial;
+    line-height: 1.3rem;
   }
 
   h1 {
@@ -37,6 +40,7 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
     margin-top: 2rem;
     padding-bottom: 1rem;
     width: 40%;
+    font-size: 2em;
   }
 
   h2 {
@@ -45,6 +49,7 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
     padding-bottom: .6rem;
     white-space: nowrap;
     width: 30%;
+    font-size: 1.5em;
   }
 
   h3 {
@@ -59,6 +64,7 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
     margin: 0 0 2px;
     padding-bottom: 0;
     text-transform: uppercase;
+    font-size: .94rem;
   }
 
   a {
@@ -78,6 +84,8 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
   }
 
   p {
+    font-size: .94rem;
+    line-height: 1.3rem;
     margin: .8rem 0;
   }
 
@@ -90,6 +98,8 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
     margin-left: 0;
     max-width: 50%;
     padding: 20px;
+    line-height: 1.3rem;
+    letter-spacing: initial;
   }
 
   ul {
@@ -97,6 +107,8 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
     list-style-type: square;
     margin: .5rem 0 .5rem 20px;
     padding-left: 0;
+    font-size: .94rem;
+    line-height: 1.3rem;
   }
 
   li {

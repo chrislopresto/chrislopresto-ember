@@ -4,8 +4,8 @@
   {{/link-to}}
 {{/if}}
 <div class='summary'>
-  <h1>
-    {{#link-to 'blog.article' article}}{{article.title}}{{/link-to}}
+  <h1 class='blog-summary-title'>
+    {{#link-to 'blog.article' article class='blog-summary-title-link'}}{{article.title}}{{/link-to}}
   </h1>
   <div class='meta'>
     <time>{{moment article.publishedAt 'MMM Do, YYYY'}}</time>

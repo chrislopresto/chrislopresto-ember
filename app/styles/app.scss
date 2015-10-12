@@ -1,3 +1,4 @@
+@import 'material-design-lite';
 @import "bower_components/font-awesome/scss/font-awesome";
 @import 'bower_components/susy/sass/susy';
 @import 'bower_components/compass-breakpoint/stylesheets/breakpoint';
@@ -8,13 +9,14 @@
 @import 'blog';
 @import 'resume';
 
-@import 'app/components/resume-page-break/styles';
-@import 'app/components/resume-header/styles';
-@import 'app/components/resume-contact-info/styles';
-@import 'app/components/resume-work-item/styles';
-@import 'app/components/resume-education-item/styles';
-@import 'app/components/vimeo-video/styles';
-@import 'app/components/blog-summary/styles';
+@import 'components/resume-page-break';
+@import 'components/resume-header';
+@import 'components/resume-contact-info';
+@import 'components/resume-work-item';
+@import 'components/resume-education-item';
+@import 'components/vimeo-video';
+@import 'components/blog-article';
+@import 'components/blog-summary';
 
 @import 'styleguide';
 

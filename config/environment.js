@@ -18,6 +18,10 @@ module.exports = function(environment) {
       // when it is created
     },
 
+    sassOptions: {
+      includePaths: ['bower_components/material-design-lite/src']
+    },
+
     /* jshint ignore:start */
     contentSecurityPolicy: {
       'font-src': "'self' fonts.gstatic.com",
@@ -36,7 +40,8 @@ module.exports = function(environment) {
     googleFonts: [
       'Lato:400,700,400italic',
       'Roboto:500,900,400italic,700,400',
-      'Codystar'
+      'Codystar',
+      'Material Icons'
     ]
   };
 
