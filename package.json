@@ -64,7 +64,13 @@
   "ember-addon": {
     "paths": [
       "lib/article-markdown",
-      "lib/asset-paths"
+      "lib/asset-paths",
+      "lib/breakpoint-sass"
     ]
+  },
+  "dependencies": {
+    "breakpoint-sass": "^2.6.1",
+    "broccoli-static-compiler": "^0.2.2",
+    "broccoli-unwatched-tree": "^0.1.1"
   }
 }
