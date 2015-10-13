@@ -1,9 +1,12 @@
 .resume-education-item {
-  @include full;
   margin: 20px 0;
 
+  .education-item {
+    @include grid-row;
+  }
+
   .logo {
-    @include span(2 at 1 of 12);
+    @include grid-column(1/6);
 
     img {
       width: 90%;
@@ -11,11 +14,11 @@
   }
 
   .where {
-    @include span(8 at 3 of 12);
+    @include grid-column(4/6);
   }
 
   .when {
-    @include span(last 2 of 12);
+    @include grid-column(1/6);
     margin-top: 0;
   }
 

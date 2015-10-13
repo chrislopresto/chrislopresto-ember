@@ -20,8 +20,8 @@
     "normalize.css": "~3.0.3",
     "pretender": "~0.6.0",
     "qunit": "~1.18.0",
-    "susy": "~2.2.2",
-    "material-design-lite": "~1.0.4"
+    "material-design-lite": "~1.0.4",
+    "bourbon": "4.2.3"
   },
   "resolutions": {
     "font-awesome": "~4.4.0"
