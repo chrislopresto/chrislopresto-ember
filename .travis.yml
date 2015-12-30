@@ -14,9 +14,6 @@ env:
     - EMBER_CHANNEL=release
     - EMBER_CHANNEL=beta
     - EMBER_CHANNEL=canary
-  global:
-    - CHRISLOPRESTO_RODOG_AWS_ACCESS_KEY_ID=AKIAJ6OJOA6AQV2WVFRQ
-    - secure: P8UB5OjQAVtkU10IatlVOldJVkz1P9gXgZnXbcizdAbAz2HHur/k2fwTrUq9XjU391QgUbOa6fPfrljl1s8EyRhn2ukq3l0HvQSNrHAawLLXLeKj5EZbElnmpUEqqthvDNydDUmp0+JUBKacc8HpzIZxJ1GG6sWwKOLLUcOqQEg=
 
 matrix:
   allow_failures:
