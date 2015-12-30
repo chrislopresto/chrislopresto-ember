@@ -1,17 +1,17 @@
 @mixin grid-row($gutter-compensation: -.5rem) {
-  @include display(flex);
-  @include flex(0 1 auto);
-  @include flex-direction(row);
-  @include flex-wrap(wrap);
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
   box-sizing: border-box;
   margin-left: $gutter-compensation;
   margin-right: $gutter-compensation;
 }
 
 @mixin grid-column($percentage: 1/12, $gutter: .5rem, $offset: 0) {
-  @include flex(0 0 auto);
-  @include flex-basis(100% * $percentage);
-  @include flex-grow(1);
+  flex: 0 0 auto;
+  flex-basis: 100% * $percentage;
+  flex-grow: 1;
   box-sizing: border-box;
   max-width: 100% * $percentage;
   padding-left: $gutter;

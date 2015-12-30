@@ -9,6 +9,13 @@ module.exports = function(defaults) {
     },
     fingerprint: {
       prepend: 'https://s3.amazonaws.com/chrislopresto.com-assets/'
+    },
+    autoprefixer: {
+      browsers: ['last 2 ios version'],
+      cascade: false
+    },
+    sassOptions: {
+      includePaths: ['bower_components/material-design-lite/src']
     }
   });
 
