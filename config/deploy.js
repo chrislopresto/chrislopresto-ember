@@ -2,9 +2,6 @@
 'use strict';
 
 module.exports = function(deployTarget) {
-  var appName = 'chrislopresto';
-  var domain = 'chrislopresto.com';
-
   var ENV = {};
   ENV.build = {};
   ENV.gzip = {
@@ -14,8 +11,7 @@ module.exports = function(deployTarget) {
     accessKeyId: process.env.CHRISLOPRESTO_RODOG_AWS_ACCESS_KEY_ID,
     secretAccessKey: process.env.CHRISLOPRESTO_RODOG_AWS_SECRET_ACCESS_KEY,
     bucket: 'chrislopresto.com',
-    region: 'us-east-1',
-    allowOverwrite: true
+    region: 'us-east-1'
   };
   ENV.s3 = {
     accessKeyId: process.env.CHRISLOPRESTO_RODOG_AWS_ACCESS_KEY_ID,

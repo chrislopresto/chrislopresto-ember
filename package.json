@@ -52,18 +52,13 @@
     "ember-cli-sass": "3.3.1",
     "ember-cli-sri": "^1.2.0",
     "ember-cli-uglify": "^1.2.0",
-    "ember-composability": "0.2.1",
     "ember-data": "1.13.13",
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
-    "ember-legacy-views": "0.2.0",
-    "ember-material-lite": "0.1.13",
     "ember-moment": "1.1.1",
-    "ember-new-computed": "1.0.3",
     "ember-normalize": "0.0.2",
     "ember-resolver": "^2.0.3",
     "ember-reveal-js": "chrislopresto/ember-reveal-js#initial-implementation",
-    "ember-truth-helpers": "1.1.0",
     "ember-try": "0.0.4",
     "markdown-code-highlighting": "0.0.2"
   },
@@ -77,6 +72,7 @@
   "dependencies": {
     "breakpoint-sass": "^2.6.1",
     "broccoli-static-compiler": "^0.2.2",
-    "broccoli-unwatched-tree": "^0.1.1"
+    "broccoli-unwatched-tree": "^0.1.1",
+    "ember-inflector": "^1.9.4"
   }
 }

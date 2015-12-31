@@ -13,9 +13,6 @@ module.exports = function(defaults) {
     autoprefixer: {
       browsers: ['last 2 ios version'],
       cascade: false
-    },
-    sassOptions: {
-      includePaths: ['bower_components/material-design-lite/src']
     }
   });
 
