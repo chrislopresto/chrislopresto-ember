@@ -8,6 +8,6 @@ export default Site.extend({
     this.get('articleParser').createArticles();
   },
   model: function() {
-    return this.store.all('article');
+    return this.store.peekAll('article');
   }
 });

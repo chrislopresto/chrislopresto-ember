@@ -8,22 +8,29 @@ sudo: false
 cache:
   directories:
     - node_modules
+    - travis-phantomjs
 
 env:
   matrix:
-    - EMBER_CHANNEL=release
-    - EMBER_CHANNEL=beta
-    - EMBER_CHANNEL=canary
+    - EMBER_CHANNEL=default
+    - EMBER_CHANNEL=ember-release
+    - EMBER_CHANNEL=ember-beta
+    - EMBER_CHANNEL=ember-canary
 
 matrix:
   allow_failures:
-    - env: EMBER_CHANNEL=beta
-    - env: EMBER_CHANNEL=canary
+    - env: EMBER_CHANNEL=ember-release
+    - env: EMBER_CHANNEL=ember-beta
+    - env: EMBER_CHANNEL=ember-canary
 
 before_install:
   - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
   - "npm config set spin false"
   - "npm install -g npm@^2"
+  - mkdir -p travis-phantomjs
+  - wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -O $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+  - tar -xvf $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -C $PWD/travis-phantomjs
+  - export PATH=$PWD/travis-phantomjs:$PATH
 
 install:
   - npm install -g bower
@@ -31,6 +38,7 @@ install:
   - bower install
 
 script:
+  - phantomjs -v
   - npm test
 
 after_success:

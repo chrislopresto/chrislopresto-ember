@@ -39,28 +39,29 @@
     "ember-cli-deploy-s3": "0.2.0",
     "ember-cli-deploy-s3-index": "0.1.1",
     "ember-cli-deploy-slack": "0.0.4",
-    "ember-cli-document-title": "0.2.0",
+    "ember-cli-document-title": "0.3.0",
     "ember-cli-emblem": "0.2.5",
     "ember-cli-font-awesome": "0.1.1",
     "ember-cli-google-fonts": "1.13.0",
     "ember-cli-htmlbars": "^1.0.1",
     "ember-cli-htmlbars-inline-precompile": "^0.3.1",
     "ember-cli-inject-live-reload": "^1.3.1",
-    "ember-cli-mirage": "yapplabs/ember-cli-mirage#master",
+    "ember-cli-mirage": "0.1.11",
+    "ember-cli-moment-shim": "0.7.1",
     "ember-cli-qunit": "^1.1.0",
     "ember-cli-release": "0.2.8",
     "ember-cli-sass": "3.3.1",
     "ember-cli-sri": "^1.2.0",
     "ember-cli-uglify": "^1.2.0",
-    "ember-data": "1.13.13",
+    "ember-data": "2.3.0-beta.5",
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
-    "ember-moment": "1.1.1",
+    "ember-moment": "4.1.0",
     "ember-normalize": "0.0.2",
     "ember-resolver": "^2.0.3",
     "ember-reveal-js": "chrislopresto/ember-reveal-js#initial-implementation",
-    "ember-try": "0.0.4",
-    "markdown-code-highlighting": "0.0.2"
+    "ember-try": "0.0.8",
+    "markdown-code-highlighting": "0.0.6"
   },
   "ember-addon": {
     "paths": [
@@ -72,7 +73,6 @@
   "dependencies": {
     "breakpoint-sass": "^2.6.1",
     "broccoli-static-compiler": "^0.2.2",
-    "broccoli-unwatched-tree": "^0.1.1",
-    "ember-inflector": "^1.9.4"
+    "broccoli-unwatched-tree": "^0.1.1"
   }
 }

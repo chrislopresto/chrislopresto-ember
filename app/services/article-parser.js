@@ -7,7 +7,7 @@ var ARTICLE_METADATA_DELIMITER = '## ---';
 export default Ember.Service.extend({
   store: Ember.inject.service(),
   createArticles() {
-    if (this.get('store').all('article').content.length === 0) {
+    if (this.get('store').peekAll('article').content.length === 0) {
       Ember.$.each(Articles, (_, markdown) => {
         var article = this.parse(markdown);
         this.get('store').createRecord('article', article);

@@ -10,6 +10,6 @@ export default Site.extend({
     this.get('articleParser').createArticles();
   },
   model(params) {
-    return this.store.all('article', { slug: params.slug }).get('firstObject');
+    return this.store.peekAll('article', { slug: params.slug }).get('firstObject');
   }
 });
