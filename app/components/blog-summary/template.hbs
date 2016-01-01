@@ -8,7 +8,7 @@
     {{#link-to 'blog.article' article class='blog-summary-title-link'}}{{article.title}}{{/link-to}}
   </h1>
   <div class='meta'>
-    <time>{{moment article.publishedAt 'MMM Do, YYYY'}}</time>
+    <time>{{moment-format article.publishedAt 'MMM Do, YYYY'}}</time>
   </div>
   {{#if showDetails}}
     <article>{{format-markdown article.summary}}</article>

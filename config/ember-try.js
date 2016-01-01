@@ -1,23 +1,35 @@
-/* global module */
-
+/*jshint node:true*/
 module.exports = {
   scenarios: [
     {
-      name: "beta",
+      name: 'default',
+      dependencies: { }
+    },
+    {
+      name: 'ember-release',
       dependencies: {
-        "ember": "beta"
+        'ember': 'components/ember#release'
+      },
+      resolutions: {
+        'ember': 'release'
       }
     },
     {
-      name: 'canary',
+      name: 'ember-beta',
       dependencies: {
-        "ember": "canary"
+        'ember': 'components/ember#beta'
+      },
+      resolutions: {
+        'ember': 'beta'
       }
     },
     {
-      name: "release",
+      name: 'ember-canary',
       dependencies: {
-        "ember": "1.11.1"
+        'ember': 'components/ember#canary'
+      },
+      resolutions: {
+        'ember': 'canary'
       }
     }
   ]

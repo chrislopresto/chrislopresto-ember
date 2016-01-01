@@ -1,7 +1,7 @@
 <div class='blog-article'>
   <h1 class='blog-article-title'>{{article.title}}</h1>
   <div class='meta'>
-    <time>{{moment article.publishedAt 'MMM Do, YYYY'}}</time>
+    <time>{{moment-format article.publishedAt 'MMM Do, YYYY'}}</time>
   </div>
   <article>{{format-markdown article.body}}</article>
 </div>
