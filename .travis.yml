@@ -11,14 +11,16 @@ cache:
 
 env:
   matrix:
-    - EMBER_CHANNEL=release
-    - EMBER_CHANNEL=beta
-    - EMBER_CHANNEL=canary
+    - EMBER_CHANNEL=default
+    - EMBER_CHANNEL=ember-release
+    - EMBER_CHANNEL=ember-beta
+    - EMBER_CHANNEL=ember-canary
 
 matrix:
   allow_failures:
-    - env: EMBER_CHANNEL=beta
-    - env: EMBER_CHANNEL=canary
+    - env: EMBER_CHANNEL=ember-release
+    - env: EMBER_CHANNEL=ember-beta
+    - env: EMBER_CHANNEL=ember-canary
 
 before_install:
   - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
