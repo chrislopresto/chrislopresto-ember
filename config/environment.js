@@ -18,17 +18,6 @@ module.exports = function(environment) {
       // when it is created
     },
 
-    /* jshint ignore:start */
-    contentSecurityPolicy: {
-      'font-src': "'self' fonts.gstatic.com",
-      'connect-src': "'self' *",
-      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com",
-      'img-src': "'self' *",
-      'frame-src': "'self' *",
-      'media-src': "'self' *"
-    },
-    /* jshint ignore:end */
-
     emblemOptions: {
       blueprints: false
     },
@@ -59,12 +48,6 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
-  }
-
-  if (environment === 'production') {
-    // Use mirage in production while faking an API
-    ENV['ember-cli-mirage'] = ENV['ember-cli-mirage'] || {};
-    ENV['ember-cli-mirage'].force = true;
   }
 
   return ENV;
