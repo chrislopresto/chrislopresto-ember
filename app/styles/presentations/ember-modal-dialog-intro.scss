@@ -4,3 +4,9 @@
   background: #f8efec url('ember-reveal-js/ember-background-shades.svg');
   background-color: #f8efec;
 }
+
+#the-outside-world {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
