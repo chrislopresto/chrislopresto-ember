@@ -1,4 +1,4 @@
-<div id='the-outside-world'></div>
+<div id='the-outside-world' class={{outsideWorldClass}}></div>
 {{#reveal-presentation id='EmberModalDialogIntroPresentation' theme='ember'}}
   <section>
     <h1>Ember Modal Dialog</h1>
@@ -10,9 +10,7 @@
 
   <section>
     {{#ember-wormhole to="the-outside-world"}}
-      {{#if (eq h '1')}}
-        <iframe class="full-iframe" src="http://yapplabs.github.io/ember-modal-dialog/" frameborder="0"></iframe>
-      {{/if}}
+      <iframe class="full-iframe" src="http://yapplabs.github.io/ember-modal-dialog/" frameborder="0"></iframe>
     {{/ember-wormhole}}
   </section>
 {{/reveal-presentation}}

@@ -10,3 +10,13 @@
   width: 100%;
   z-index: 10;
 }
+
+.outside-world-show {
+  z-index: 10;
+  visibility: visible;
+}
+
+.outside-world-hide {
+  visibility: hidden;
+  z-index: -10;
+}
