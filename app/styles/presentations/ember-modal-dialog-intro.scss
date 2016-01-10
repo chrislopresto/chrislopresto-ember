@@ -14,9 +14,12 @@
 .outside-world-show {
   z-index: 10;
   visibility: visible;
+  width: 100%;
 }
 
 .outside-world-hide {
   visibility: hidden;
   z-index: -10;
+  width: 0;
+  height: 0;
 }
