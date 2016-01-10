@@ -3,5 +3,8 @@
   <div class='meta'>
     <time>{{moment-format article.publishedAt 'MMM Do, YYYY'}}</time>
   </div>
+  {{#if article.mainImageSrc}}
+    <img class="blog-article-main-image" src={{article.mainImageSrc}} alt={{article.title}}>
+  {{/if}}
   <article>{{format-markdown article.body}}</article>
 </div>

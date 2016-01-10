@@ -6,11 +6,10 @@
     font-size: 1.05rem;
     margin-top: 1rem;
     text-align: justify;
-    line-height: 1.6;
+    line-height: 1.4;
   }
 
   img {
-    @include common-box-shadow;
     max-width: 800px;
     width: 100%;
   }
