@@ -11,17 +11,29 @@ My New Year's resolution for 2014 was to leave the country. I love to travel in 
 
 ### Canada
 
-My first tactic was to kill two birds with one stone. I had a bunch of work to do with my buddy [Dave Liggat](https://liggat.org/) who lives in Montreal. So we picked a week for me to join his remote work setup from his apartment.
-
 ![Canada](assets/images/blog/canada.jpg)
+<span class="blog-article-image-caption">
+  This flag looks distinctly un-American
+</span>
 
-[Montréal en Lumiere](http://www.montrealenlumiere.com/)
+I was able to kill two birds with one stone on my first trip. I had a bunch of work to do with my buddy [Dave Liggat](https://liggat.org/) who lives in Montreal. So we picked a week for me to join his remote work setup from his apartment.
+
+It was great to pair program in person on some of the trickier issues we were facing at [Plyfe](http://plyfe.com). There's no true substitute for being in the same room with your coworkers. That being said, at Plyfe we worked hard to provide a remote-friendly engineering culture. It was useful and fun to test our communication patterns from the Canadian perspective.
+
+[Photo Album - Canada](https://goo.gl/photos/fGyytuHf3XeEoh577)
 
 ### Brazil
 
 ![Brazil](assets/images/blog/brazil.jpg)
+<span class="blog-article-image-caption">
+  Watching <a href="http://fivethirtyeight.com/features/lionel-messi-is-impossible/" target="_blank">Messi</a> and co outlast Switzerland in the Round of 16 at the World Cup
+</span>
 
-World Cup. [Lionel Messi](http://fivethirtyeight.com/features/lionel-messi-is-impossible/`)
+Summer ventured into bucket list territory. [Louise](http://louisegassman.com) secured tickets to a World Cup match in São Paulo, where our buddy Will works as a US diplomat. We flew over to attend the Argentina Switzerland match in the Round of 16 and spend 10 days traipsing around the city in newly purchased [Havianas](http://us.havaianas.com/).
+
+We watched the US men's team's heartbreaking loss to Belgium with friends in a bar, after which Louise swore off Belgian waffles for a year. We made more diplomat friends, including several from Canada. We went to a pretty fantastic [Coffee Lab](http://coffeelab.com.br/blog/). I bought red pants.
+
+[Photo Album - Brazil](https://goo.gl/photos/nmP77aP7iwatMKjK8)
 
 ### Japan
 
