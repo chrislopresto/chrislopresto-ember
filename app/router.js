@@ -6,17 +6,19 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('music');
-  this.route('technology');
-  this.route('resume');
-  this.route('blog', function() {
-    this.route('article', { path: '/:id' });
-    this.route('archive');
+  this.route('site', { path: '' }, function() {
+    this.route('music');
+    this.route('technology');
+    this.route('blog', function() {
+      this.route('article', { path: '/:id' });
+      this.route('archive');
+    });
   });
   this.route('styleguide');
   this.route('presentations', function() {
     this.route('demo');
   });
+  this.route('resume');
 });
 
 export default Router;

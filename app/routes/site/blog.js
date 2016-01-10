@@ -1,9 +1,8 @@
 import Ember from 'ember';
-import Site from '../site';
 
-export default Site.extend({
+export default Ember.Route.extend({
   articleParser: Ember.inject.service(),
-  titleToken: 'Archive',
+  titleToken: 'Blog',
   activate: function() {
     this.get('articleParser').createArticles();
   },

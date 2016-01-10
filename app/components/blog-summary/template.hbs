@@ -1,17 +1,17 @@
 {{#if hasImage}}
-  {{#link-to 'blog.article' article}}
+  {{#link-to 'site.blog.article' article}}
     <img src={{article.mainImageSrc}} alt={{article.title}}>
   {{/link-to}}
 {{/if}}
 <div class='summary'>
   <h1 class='blog-summary-title'>
-    {{#link-to 'blog.article' article class='blog-summary-title-link'}}{{article.title}}{{/link-to}}
+    {{#link-to 'site.blog.article' article class='blog-summary-title-link'}}{{article.title}}{{/link-to}}
   </h1>
   <div class='meta'>
     <time>{{moment-format article.publishedAt 'MMM Do, YYYY'}}</time>
   </div>
   {{#if showDetails}}
     <article>{{format-markdown article.summary}}</article>
-    {{#link-to 'blog.article' article}}Read more{{/link-to}}
+    {{#link-to 'site.blog.article' article}}Read more{{/link-to}}
   {{/if}}
 </div>
