@@ -34,6 +34,7 @@ export default Ember.Service.extend({
     }
     body = body.replace(`${ARTICLE_METADATA_DELIMITER}\n`, '');
     return {
+      id: this.getProperty('slug', frontmatter),
       title: this.getProperty('title', frontmatter),
       slug: this.getProperty('slug', frontmatter),
       status: this.getProperty('status', frontmatter),

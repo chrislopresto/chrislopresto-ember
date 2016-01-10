@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('technology');
   this.route('resume');
   this.route('blog', function() {
-    this.route('article', { path: '/:slug' });
+    this.route('article', { path: '/:id' });
     this.route('archive');
   });
   this.route('styleguide');
