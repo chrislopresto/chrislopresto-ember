@@ -9,17 +9,18 @@
   position: absolute;
   width: 100%;
   z-index: 10;
+
+  &.the-outside-world-show {
+    z-index: 10;
+    visibility: visible;
+    width: 100%;
+  }
+
+  &.the-outside-world-hide {
+    visibility: hidden;
+    z-index: -10;
+    width: 0;
+    height: 0;
+  }
 }
 
-.outside-world-show {
-  z-index: 10;
-  visibility: visible;
-  width: 100%;
-}
-
-.outside-world-hide {
-  visibility: hidden;
-  z-index: -10;
-  width: 0;
-  height: 0;
-}
