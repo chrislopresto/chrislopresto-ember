@@ -13,9 +13,11 @@ Router.map(function() {
       this.route('article', { path: '/:id' });
       this.route('archive');
     });
+    this.route('talks');
   });
   this.route('styleguide');
   this.route('presentations', function() {
+    this.route('ember-modal-dialog-intro');
     this.route('demo');
   });
   this.route('resume');

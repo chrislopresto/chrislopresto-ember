@@ -1,0 +1,18 @@
+<div id='the-outside-world'></div>
+{{#reveal-presentation id='EmberModalDialogIntroPresentation' theme='ember'}}
+  <section>
+    <h1>Ember Modal Dialog</h1>
+    <h3>An Introduction</h3>
+    <p>
+      <small>Created by {{#link-to 'site'}}Chris LoPresto{{/link-to}} / <a href="https://twitter.com/chrislopresto">@chrislopresto</a></small>
+    </p>
+  </section>
+
+  <section>
+    {{#ember-wormhole to="the-outside-world"}}
+      {{#if (eq h '1')}}
+        <iframe class="full-iframe" src="http://yapplabs.github.io/ember-modal-dialog/" frameborder="0"></iframe>
+      {{/if}}
+    {{/ember-wormhole}}
+  </section>
+{{/reveal-presentation}}
