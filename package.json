@@ -62,6 +62,7 @@
     "ember-reveal-js": "chrislopresto/ember-reveal-js#initial-implementation",
     "ember-truth-helpers": "1.2.0",
     "ember-try": "0.0.8",
+    "highlight.js": "^9.1.0",
     "markdown-code-highlighting": "0.0.6"
   },
   "ember-addon": {
