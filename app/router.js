@@ -19,6 +19,7 @@ Router.map(function() {
   this.route('presentations', function() {
     this.route('ember-modal-dialog-intro');
     this.route('demo');
+    this.route('code');
   });
   this.route('resume');
 });

@@ -1,0 +1,49 @@
+{{#reveal-presentation theme='matca' controls=false backgroundTransition='fade'}}
+  {{#reveal-slide}}
+    <h1>Beat Back The Bits</h1>
+    <h3>A programmer's guide to code type things</h3>
+    <p class="fragment">
+      <small>Created by <a href="http://chrislopresto.com">Chris LoPresto</a> / <a href="http://twitter.com/chrislopresto">@chrislopresto</a></small>
+    </p>
+    {{#reveal-slide-notes}}
+      - Usual intro
+      - Hilarious story about writing code
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+  {{#reveal-slide class="Code"}}
+    <h2 class="Code-header">Looks like we have a hit</h2>
+    <pre class="Code-block hybrid"><code class="ruby" data-monokai data-trim data-noescape>
+        def create_hits
+          @annie = Annie.new options[:env]
+          setup_rturk
+          links = File.readlines(options[:file])
+          links = links.take(options[:limit]) if options[:limit]
+
+          links.each do |event_url|
+            create_hit_from_event_url event_url.gsub(/\s+/, ""),
+                                      options[:reward],
+                                      options[:max_assignments],
+                                      options[:approval_rate]
+          end
+        end
+    </code></pre>
+  {{/reveal-slide}}
+  {{#reveal-slide class="Shout Shout--primaryBase" data-background-transition="fade" data-background-color="#00BCD4"}}
+    <h2 class="Shout-quote">A wise programmer once said something</h2>
+    <div class="Shout-attribution">- A wise programmer</div>
+  {{/reveal-slide}}
+  {{#reveal-slide class="Shout Shout--secondaryBase" data-background-transition="fade" data-background-color="#727272"}}
+    <h2 class="Shout-quote">It is possible... but you may not like it</h2>
+    <div class="Shout-attribution"></div>
+  {{/reveal-slide}}
+  {{#reveal-slide}}
+    <h1 class="frivolous">thanks</h1>
+    <div class="r">
+      <small>
+        <a href="http://chrislopresto.com">chrislopresto.com</a>
+        <br>
+        <a href="http://twitter.com/chrislopresto">@chrislopresto</a>
+      </small>
+    </div>
+  {{/reveal-slide}}
+{{/reveal-presentation}}
