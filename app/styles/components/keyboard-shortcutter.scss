@@ -1,0 +1,45 @@
+.KeyboardCheatSheet-overlay.translucent {
+  background-color: rgba(#000, .5);
+}
+
+.KeyboardCheatSheet {
+  padding: 10px;
+  max-width: 250px;
+  width: 95%;
+
+  &-header {
+    border-bottom: '#ccc';
+    margin: 0;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  &-shortcut {
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    padding-bottom: 5px;
+  }
+
+  &-shortcutKeys {
+    flex-basis: 60px;
+  }
+
+  &-shortcutKey {
+    display: inline-block;
+    padding: 3px 5px;
+    font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    line-height: 10px;
+    color: #555;
+    vertical-align: middle;
+    background-color: #fcfcfc;
+    border: solid 1px #ccc;
+    border-bottom-color: #bbb;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #bbb;
+  }
+
+  &-shortcutFunction {
+    font-size: 12px;
+  }
+}
