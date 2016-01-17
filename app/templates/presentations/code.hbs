@@ -12,21 +12,21 @@
   {{/reveal-slide}}
   {{#reveal-slide class="Code"}}
     <h2 class="Code-header">Looks like we have a hit</h2>
-    <pre class="Code-block hybrid"><code class="ruby" data-monokai data-trim data-noescape>
-        def create_hits
-          @annie = Annie.new options[:env]
-          setup_rturk
-          links = File.readlines(options[:file])
-          links = links.take(options[:limit]) if options[:limit]
+    {{#reveal-code language="ruby"}}
+  def create_hits
+    @annie = Annie.new options[:env]
+    setup_rturk
+    links = File.readlines(options[:file])
+    links = links.take(options[:limit]) if options[:limit]
 
-          links.each do |event_url|
-            create_hit_from_event_url event_url.gsub(/\s+/, ""),
-                                      options[:reward],
-                                      options[:max_assignments],
-                                      options[:approval_rate]
-          end
-        end
-    </code></pre>
+    links.each do |event_url|
+      create_hit_from_event_url event_url.gsub(/\s+/, ""),
+                                options[:reward],
+                                options[:max_assignments],
+                                options[:approval_rate]
+    end
+  end
+    {{/reveal-code}}
   {{/reveal-slide}}
   {{#reveal-slide class="Shout Shout--primaryBase" data-background-transition="fade" data-background-color="#00BCD4"}}
     <h2 class="Shout-quote">A wise programmer once said something</h2>
