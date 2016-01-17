@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$EMBER_CHANNEL" == "default" ]; then
   echo "Deploying to production!"
   ember deploy production
 else
