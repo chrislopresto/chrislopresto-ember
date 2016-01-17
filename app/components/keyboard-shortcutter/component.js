@@ -1,52 +1,58 @@
 import Ember from 'ember';
 import { EKMixin, keyUp } from 'ember-keyboard';
 
-const { computed } = Ember;
-const KEYBOARD_NAVIGATION_MODE_DURATION = 2;
+const { run, on } = Ember;
+const KEYBOARD_NAVIGATION_MODE_DURATION = 2000;
 
 export default Ember.Component.extend(EKMixin, {
   tagName: '',
 
-  showCheatSheet: false,
-  inKeyboardNavigationMode: computed('inKeyboardNavigationModeUntil', function() {
-    return this.get('inKeyboardNavigationModeUntil') >= Date.now();
-  }),
-
-  activateKeyboard: Ember.on('init', function() {
+  activateKeyboard: on('init', function() {
     this.set('keyboardActivated', true);
   }),
 
-  onG: Ember.on(keyUp('g'), function() {
-    let d = new Date();
-    this.set('inKeyboardNavigationModeUntil',
-      d.setSeconds(d.getSeconds() + KEYBOARD_NAVIGATION_MODE_DURATION));
+  onG: on(keyUp('g'), function() {
+    this.enterKeyboardNavigationMode();
   }),
 
-  onB: Ember.on(keyUp('b'), function() {
-    this.handleNavigateTo('site.blog');
+  onB: on(keyUp('b'), function() {
+    this.navigateTo('site.blog');
   }),
 
-  onH: Ember.on(keyUp('h'), function() {
-    this.handleNavigateTo('site.index');
+  onH: on(keyUp('h'), function() {
+    this.navigateTo('site.index');
   }),
 
-  onT: Ember.on(keyUp('t'), function() {
-    this.handleNavigateTo('site.talks');
+  onT: on(keyUp('t'), function() {
+    this.navigateTo('site.talks');
   }),
 
-  onQuestionMark: Ember.on(keyUp('shift+/'), function() {
+  onQuestionMark: on(keyUp('shift+/'), function() {
     this.set('showCheatSheet', true);
   }),
 
-  dismissCheatSheet: Ember.on(keyUp('Escape'), function() {
+  dismissCheatSheet: on(keyUp('Escape'), function() {
     this.set('showCheatSheet', false);
   }),
 
-  handleNavigateTo: function(route) {
-    if (!this.get('inKeyboardNavigationMode')) {
+  leaveKeyboardNavigationMode() {
+    run.cancel(this.get('keyboardNavigationModeTimer'));
+    this.set('keyboardNavigationMode', false);
+  },
+
+  enterKeyboardNavigationMode() {
+    run.cancel(this.get('keyboardNavigationModeTimer'));
+    this.set('keyboardNavigationMode', true);
+    this.set('keyboardNavigationModeTimer', run.later(() => {
+      this.set('keyboardNavigationMode', false);
+    }, KEYBOARD_NAVIGATION_MODE_DURATION));
+  },
+
+  navigateTo(route) {
+    if (!this.get('keyboardNavigationMode')) {
       return;
     }
-    this.set('inKeyboardNavigationModeUntil', Date.now());
+    this.leaveKeyboardNavigationMode();
     Ember.getOwner(this).lookup('route:application').transitionTo(route);
   }
 });
