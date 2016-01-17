@@ -1,0 +1,311 @@
+/**
+ * Material - Cyan Amber (clo) theme for reveal.js.
+ * https://www.materialpalette.com/cyan/amber
+ */
+
+$ColorPalette-colors: (
+  'primary': (
+    'base': #673AB7,
+    'light': #D1C4E9,
+    'dark': #FF4081
+  ),
+  'accent': (
+    'base': #FF4081
+  ),
+  'secondary': (
+    'base': #fff,
+    'light': #B6B6B6,
+  ),
+  'foreground': (
+    'base': #fff
+  ),
+  'background': (
+    'base': #fff,
+    'dark': #673AB7,
+  )
+);
+
+$ColorPalette-baseKey: 'base' !default;
+$ColorPalette-opacities: (
+  'light': 0.8,
+  'dark': 0.4,
+  'darker': 0.3
+);
+
+@function palette-color(
+  $name: 'primary',
+  $variant: $ColorPalette-baseKey,
+  $opacity: 1
+) {
+  $color: null;
+
+  $colorVariants: map-get($ColorPalette-colors, $name);
+
+  @if $colorVariants {
+    $color: map-get($colorVariants, $variant);
+  }
+
+  $alpha: if(type-of($opacity) == 'number', $opacity, map-get($ColorPalette-opacities, $opacity));
+
+  @if $alpha {
+    $color: rgba($color, $alpha);
+  }
+
+  @return $color;
+}
+
+// https://gist.github.com/pascalduez/10011785
+// Capitalize string
+// --------------------------------------------------------------------------------
+// @param [string] $string
+// --------------------------------------------------------------------------------
+// @return [string]
+
+@function capitalize($string) {
+  @return to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
+}
+
+// Alias
+@function str-ucfirst($string) {
+  @return capitalize($string);
+}
+
+
+
+// Uncapitalize string
+// --------------------------------------------------------------------------------
+// @param [string] $string
+// --------------------------------------------------------------------------------
+// @return [string]
+
+@function uncapitalize($string) {
+  @return to-lower-case(str-slice($string, 1, 1)) + str-slice($string, 2);
+}
+
+// Alias
+@function str-lcfirst($string) {
+  @return uncapitalize($string);
+}
+
+
+
+// Capitalize each word in string
+// --------------------------------------------------------------------------------
+// @param [string] $string
+// --------------------------------------------------------------------------------
+// @return [string]
+
+@function str-ucwords($string) {
+  $progress: $string;
+  $result: "";
+
+  $running: true;
+
+  @while $running {
+    $index: str-index($progress, " ");
+    @if $index {
+      $result: $result + capitalize(str-slice($progress, 1, $index));
+      $progress: str-slice($progress, ($index + 1));
+    }
+    @else {
+      $running: false;
+    }
+  }
+
+  @return capitalize($result) + capitalize($progress);
+}
+
+
+
+// Return whether `$value` is contained in `$list`
+// --------------------------------------------------------------------------------
+// @param [list] $list
+// @param [$value] $value
+// --------------------------------------------------------------------------------
+// @return [boolean]
+
+@function contain($list, $value) {
+  @return not not index($list, $value);
+}
+
+
+
+// Camelize string
+// --------------------------------------------------------------------------------
+// @param [string] $string
+// --------------------------------------------------------------------------------
+// @return [string]
+
+@function camelize($string) {
+  $progress: $string;
+  $result: "";
+  $exclude: " ", "-", "–", "—", "_", ",", ";", ":", ".";
+
+  @while str-length($progress) > 0  {
+    $char: str-slice($progress, 1, 1);
+
+    @if contain($exclude, $char) {
+      $progress: capitalize(str-slice($progress, 2, 2)) + str-slice($progress, 3);
+    }
+    @else {
+      $result: $result + $char;
+      $progress: str-slice($progress, 2);
+    }
+ }
+
+  @return $result;
+}
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,600,300italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300,900,100,400italic,300italic,100italic);
+@import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900,700,600,500,300,200);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100,400italic);
+
+// Override theme settings (see ../template/settings.scss)
+// Base settings for all themes that can optionally be
+// overridden by the super-theme
+
+// Background of the presentation
+$backgroundColor: palette-color('background', 'dark');
+
+// Primary/body text
+$mainFont: 'Lato', sans-serif;
+$mainFontSize: 30px;
+$mainColor: palette-color('foreground', 'base');
+
+// Vertical spacing between blocks of text
+$blockMargin: 20px;
+
+// Headings
+$headingMargin: 0 0 $blockMargin 0;
+$headingFont: 'Roboto', sans-serif;
+$headingColor: palette-color('secondary');
+$headingLineHeight: 1.2;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingTextShadow: none;
+$headingFontWeight: normal;
+$heading1TextShadow: $headingTextShadow;
+
+$heading1Size: 2.8em;
+$heading2Size: 2.11em;
+$heading3Size: 1.4em;
+$heading4Size: 1.00em;
+
+// Links and actions
+$linkColor: palette-color('primary', 'dark');
+$linkColorHover: palette-color('primary');
+
+// Text selection
+$selectionBackgroundColor: palette-color('accent');
+$selectionColor: palette-color('primary', 'light');
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+  background: palette-color('background', 'dark');
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.clo.reveal {
+  h1 {
+    color: palette-color('primary', 'dark');
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-weight: 300;
+    text-transform: none;
+  }
+
+  small {
+    font-weight: 300;
+  }
+
+  code {
+    font-family: 'Source Code Pro';
+  }
+
+  .pause-overlay {
+    background: palette-color('foreground');
+  }
+
+  .frivolous {
+    font-family: 'Fredericka the Great';
+    text-transform: lowercase;
+  }
+
+  .r {
+    padding-top: 20px;
+    text-align: right;
+    padding-right: 25%;
+  }
+
+  .Code {
+    &-header {
+      text-align: left;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    &-block {
+      box-shadow: none;
+    }
+  }
+
+  .Shout {
+    h1,
+    h2,
+    h3 {
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+    &-quote {
+    }
+
+    &-attribution {
+      text-align: left;
+      min-height: 1.5em;
+      padding-bottom: 15%;
+    }
+
+    @each $colorKey, $colorVariants in $ColorPalette-colors {
+      @each $variantName, $variantValue in $colorVariants {
+        $shoutModifier: camelize($colorKey + '-' + $variantName);
+        $shoutColor: palette-color('background', 'base');
+        &--#{$shoutModifier} {
+          // background: palette-color($colorKey, $variantName);
+
+          h1,
+          h2,
+          h3 {
+            color: $shoutColor;
+          }
+        }
+
+        &-quote {
+          color: $shoutColor;
+        }
+
+        &-attribution {
+          color: $shoutColor;
+          font-weight: 300;
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+}
