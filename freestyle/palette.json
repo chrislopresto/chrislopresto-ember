@@ -1,0 +1,29 @@
+{
+  "ColorPalette-colors": {
+    "primary": {
+      "name": "purple",
+      "description": "something soundly purplish",
+      "base": "#673AB7",
+      "light": "#D1C4E9",
+      "dark": "#FF4081"
+    },
+    "accent": {
+      "name": "amber",
+      "base": "#FF4081"
+    },
+    "secondary": {
+      "name": "yellow",
+      "base": "#ffeb3b",
+      "light": "#B6B6B6"
+    },
+    "foreground": {
+      "name": "green",
+      "base": "#8bc34a"
+    },
+    "background": {
+      "name": "orange",
+      "base": "#ff5722",
+      "dark": "#673AB7"
+    }
+  }
+}

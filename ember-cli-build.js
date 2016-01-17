@@ -1,8 +1,9 @@
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var jsonImporter = require('node-sass-json-importer');
 
 module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
+  var app = new EmberApp({
     // Add options here
     emberCliFontAwesome: {
       useScss: true
@@ -13,6 +14,12 @@ module.exports = function(defaults) {
     autoprefixer: {
       browsers: ['last 2 ios version'],
       cascade: false
+    },
+    sassOptions: {
+      importer: jsonImporter,
+      includePaths: [
+        'freestyle'
+      ]
     }
   });
 

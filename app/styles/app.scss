@@ -2,7 +2,8 @@
 @import 'ember-modal-dialog/ember-modal-appearance';
 @import 'breakpoint/breakpoint';
 @import "bower_components/font-awesome/scss/font-awesome";
-@import 'bower_components/material-colors/dist/colors';
+@import 'palette.json';
+@import 'material-colors';
 @import 'grid';
 @import 'colors';
 @import 'scaffolding';
@@ -24,5 +25,6 @@
 @import 'styleguide';
 
 @import 'ember-reveal-js';
+@import 'ember-freestyle';
 
 @import 'presentations/ember-modal-dialog-intro';

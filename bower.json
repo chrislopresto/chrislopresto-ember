@@ -12,7 +12,6 @@
     "jquery": "^2.1.4",
     "loader.js": "^3.5.0",
     "marked": "~0.3.5",
-    "material-colors": "~1.0.0",
     "normalize.css": "~3.0.3",
     "qunit": "~1.20.0",
     "pretender": "~0.10.1",

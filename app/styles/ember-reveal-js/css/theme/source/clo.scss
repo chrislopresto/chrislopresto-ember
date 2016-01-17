@@ -3,7 +3,7 @@
  * https://www.materialpalette.com/cyan/amber
  */
 
-$ColorPalette-colors: (
+$CloColorPalette-colors: (
   'primary': (
     'base': #673AB7,
     'light': #D1C4E9,
@@ -25,27 +25,27 @@ $ColorPalette-colors: (
   )
 );
 
-$ColorPalette-baseKey: 'base' !default;
-$ColorPalette-opacities: (
+$CloColorPalette-baseKey: 'base' !default;
+$CloColorPalette-opacities: (
   'light': 0.8,
   'dark': 0.4,
   'darker': 0.3
 );
 
-@function palette-color(
+@function clo-palette-color(
   $name: 'primary',
-  $variant: $ColorPalette-baseKey,
+  $variant: $CloColorPalette-baseKey,
   $opacity: 1
 ) {
   $color: null;
 
-  $colorVariants: map-get($ColorPalette-colors, $name);
+  $colorVariants: map-get($CloColorPalette-colors, $name);
 
   @if $colorVariants {
     $color: map-get($colorVariants, $variant);
   }
 
-  $alpha: if(type-of($opacity) == 'number', $opacity, map-get($ColorPalette-opacities, $opacity));
+  $alpha: if(type-of($opacity) == 'number', $opacity, map-get($CloColorPalette-opacities, $opacity));
 
   @if $alpha {
     $color: rgba($color, $alpha);
@@ -174,12 +174,12 @@ $ColorPalette-opacities: (
 // overridden by the super-theme
 
 // Background of the presentation
-$backgroundColor: palette-color('background', 'dark');
+$backgroundColor: clo-palette-color('background', 'dark');
 
 // Primary/body text
 $mainFont: 'Lato', sans-serif;
 $mainFontSize: 30px;
-$mainColor: palette-color('foreground', 'base');
+$mainColor: clo-palette-color('foreground', 'base');
 
 // Vertical spacing between blocks of text
 $blockMargin: 20px;
@@ -187,7 +187,7 @@ $blockMargin: 20px;
 // Headings
 $headingMargin: 0 0 $blockMargin 0;
 $headingFont: 'Roboto', sans-serif;
-$headingColor: palette-color('secondary');
+$headingColor: clo-palette-color('secondary');
 $headingLineHeight: 1.2;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
@@ -201,17 +201,17 @@ $heading3Size: 1.4em;
 $heading4Size: 1.00em;
 
 // Links and actions
-$linkColor: palette-color('primary', 'dark');
-$linkColorHover: palette-color('primary');
+$linkColor: clo-palette-color('primary', 'dark');
+$linkColorHover: clo-palette-color('primary');
 
 // Text selection
-$selectionBackgroundColor: palette-color('accent');
-$selectionColor: palette-color('primary', 'light');
+$selectionBackgroundColor: clo-palette-color('accent');
+$selectionColor: clo-palette-color('primary', 'light');
 
 // Generates the presentation background, can be overridden
 // to return a background image or gradient
 @mixin bodyBackground() {
-  background: palette-color('background', 'dark');
+  background: clo-palette-color('background', 'dark');
 }
 
 // Theme template ------------------------------
@@ -220,7 +220,7 @@ $selectionColor: palette-color('primary', 'light');
 
 .clo.reveal {
   h1 {
-    color: palette-color('primary', 'dark');
+    color: clo-palette-color('primary', 'dark');
     text-transform: uppercase;
   }
 
@@ -238,7 +238,7 @@ $selectionColor: palette-color('primary', 'light');
   }
 
   .pause-overlay {
-    background: palette-color('foreground');
+    background: clo-palette-color('foreground');
   }
 
   .frivolous {
@@ -281,12 +281,12 @@ $selectionColor: palette-color('primary', 'light');
       padding-bottom: 15%;
     }
 
-    @each $colorKey, $colorVariants in $ColorPalette-colors {
+    @each $colorKey, $colorVariants in $CloColorPalette-colors {
       @each $variantName, $variantValue in $colorVariants {
         $shoutModifier: camelize($colorKey + '-' + $variantName);
-        $shoutColor: palette-color('background', 'base');
+        $shoutColor: clo-palette-color('background', 'base');
         &--#{$shoutModifier} {
-          // background: palette-color($colorKey, $variantName);
+          // background: clo-palette-color($colorKey, $variantName);
 
           h1,
           h2,
