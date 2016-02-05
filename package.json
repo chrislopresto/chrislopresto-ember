@@ -65,7 +65,6 @@
     "ember-reveal-js": "0.1.0",
     "ember-truth-helpers": "1.2.0",
     "ember-try": "0.0.8",
-    "highlight.js": "^9.1.0",
     "mappy-breakpoints": "^0.2.1",
     "markdown-code-highlighting": "0.0.6",
     "node-sass": "sass/node-sass#ec18ef5e0993c8ea53ac247bdd74c471f238326c",
