@@ -1,16 +1,409 @@
-<div id='the-outside-world' class={{outsideWorldClass}}></div>
-{{#reveal-presentation id='EmberModalDialogIntroPresentation' theme='ember'}}
-  <section>
+<div id='the-outside-world'></div>
+{{#reveal-presentation presentation-class='EmberModalDialogIntroPresentation' theme='clo' transition='fade'}}
+  {{#reveal-slide}}
     <h1>Ember Modal Dialog</h1>
     <h3>An Introduction</h3>
     <p>
-      <small>Created by {{#link-to 'site'}}Chris LoPresto{{/link-to}} / <a href="https://twitter.com/chrislopresto">@chrislopresto</a></small>
+      <small>Assembled by {{#link-to 'site'}}Chris LoPresto{{/link-to}} / <a href="https://twitter.com/chrislopresto">@chrislopresto</a></small>
     </p>
-  </section>
 
-  <section>
-    {{#ember-wormhole to="the-outside-world"}}
+    {{#reveal-slide-notes}}
+      - Name
+      - `chrislopresto` everywhere
+      - Yapp, Yapp things
+      - yapplabs related addons: `ember-wormhole`, `ember-tether`
+      - `ember-modal-dialog`
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    <h2 class="InfoHeader">Modal Dialog</h2>
+    <p class="InfoParagraph">
+      A window that forces the user to interact with it before returning to the parent application
+    </p>
+    <div class="InfoDetail">
+      <small>
+        <a href="http://ux.stackexchange.com/questions/12045/what-is-a-modal-dialog-window">ux.stackexchange.com/questions/12045/what-is-a-modal-dialog-window</a>
+      </small>
+    </div>
+
+    {{#reveal-slide-notes}}
+      - Why define?
+      - Risky business UX-wise
+      - Vetoing whatever your user is currently happily doing
+      - Taking them on a round trip
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    <h1>There and Back</h1>
+    <h3>Modal User Interaction</h3>
+    <ul>
+      <li class="fragment">User's focus moves from one place to another... then back</li>
+      <li class="fragment">
+        One place in the DOM to another... then back
+        <ul>
+          <li class="fragment">Modal needs to be displayed on top</li>
+          <li class="fragment">Modal needs to escape the bounds of its parent</li>
+        </ul>
+      </li>
+    </ul>
+
+    {{#reveal-slide-notes}}
+      - As user's focus moves from one place to another, we are actually taking them someplace else in the DOM
+      - Must see modal above all else in ever-escalating z-index battle
+      - Parents just don't understand
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    <h1>This Can Be Annoying</h1>
+    <p>
+      Users love being interrupted as much as developers love being interrupted.
+    </p>
+
+    {{#reveal-slide-notes}}
+      This is all to say modal interactions can be handled poorly or elegantly
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide class="Shout Shout--primaryBase" data-background-transition="fade" data-background-color="#FF4081"}}
+    <h2 class="Shout-quote">Ember Modal Dialog is better than 10 Super Bowls! I don't want to oversell it, judge for yourselves.</h2>
+    <div class="Shout-attribution">-Homer Simpson</div>
+
+    {{#reveal-slide-notes}}
+      The Ember Modal Dialog addon provides components to implement modal dialogs throughout an Ember application using a simple, consistent pattern.
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    <h1 class="CodeHeader">Usage</h1>
+
+    <h4 class='CodeHeader CodeHeader--tight'>Template</h4>
+    {{#reveal-code}}
+  \{{#modal-dialog}}
+    I am a modal dialog
+  \{{/modal-dialog}}
+    {{/reveal-code}}
+
+    <div class='fragment'>
+      {{#modal-dialog renderInPlace=true container-class='emdi-Modal'}}
+        I am a modal dialog
+      {{/modal-dialog}}
+    </div>
+
+    {{#reveal-slide-notes}}
+      - Creating a modal is as simple as adding the modal dialog component to a template in your app
+      - That's it
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    <h1 class="InfoHeader">From the README...</h1>
+    <p class="InfoParagraph">
+      Unlike other modal libraries for Ember, ember-modal-dialog uses our
+      <a href="https://github.com/yapplabs/ember-wormhole" target="_blank">ember-wormhole</a>
+      addon to render a modal structure as a top-level DOM element for layout
+      purposes while retaining its logical position in the Ember view hierarchy.
+    </p>
+    <div class="InfoDetail">
+      <small>
+        <a href="https://github.com/yapplabs/ember-modal-dialog#ember-modal-dialog--" target="_blank">
+          github.com/yapplabs/ember-modal-dialog
+        </a>
+      </small>
+    </div>
+
+    {{#reveal-slide-notes}}
+      - Takes care of DOM things
+      - Uses another addon called `ember-wormhole`
+      - Brags about not diverting us from the Ember view hierarchy
+      - Alludes to other approaches not taken
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    <h1>Why is this better?</h1>
+    <img src="assets/images/presentations/ember-modal-dialog-intro/why-is-this-better.jpg" alt="A well-dressed dog used for comedic rhetorical effect">
+
+    {{#reveal-slide-notes}}
+      Why did we create this addon?
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    <h1>Why is this better?</h1>
+    <div class="fragment">
+      <h6 class="InfoHeader InfoHeader--tight">Simple</h6>
+      <p class="InfoParagraph">No need to render dedicated modal controllers into named outlets in your application template</p>
+    </div>
+    <div class="fragment">
+      <h6 class="InfoHeader InfoHeader--tight">Standard</h6>
+      <p class="InfoParagraph">Regular components with a regular life cycle</p>
+    </div>
+    <div class="fragment">
+      <h6 class="InfoHeader InfoHeader--tight">Composable</h6>
+      <p class="InfoParagraph">Use Ember Modal Dialog components in your own components or addons</p>
+    </div>
+    <div class="fragment">
+      <h6 class="InfoHeader InfoHeader--tight">Flexible</h6>
+      <p class="InfoParagraph">Toggle between different modal components or positioning strategies</p>
+    </div>
+
+    {{#reveal-slide-notes}}
+      - Avoids a lot of boilerplate code
+      - Framework manages life cycle for you
+      - Building blocks for your own components, apps, addons
+      - Component helper to select different implementations, render the component in place in style guides, etc.
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    <h1>Modal Dialog</h1>
+    {{!-- BEGIN-FREESTYLE-USAGE modal-dialog-cta --}}
+      <button class='emdi-ModalToggler' onclick={{action 'toggleModalDialog'}}>
+        Toggle Modal Dialog
+      </button>
+    {{!-- END-FREESTYLE-USAGE --}}
+
+    {{!-- BEGIN-FREESTYLE-USAGE modal-dialog-component --}}
+      {{#if showModalDialog}}
+        {{#modal-dialog translucentOverlay=true close='toggleModalDialog' container-class='emdi-Modal'}}
+          I am a modal-dialog
+        {{/modal-dialog}}
+      {{/if}}
+    {{!-- END-FREESTYLE-USAGE --}}
+
+    <div class='emdi-CodeFragment'>
+      <h4 class='CodeHeader CodeHeader--tight'>Template</h4>
+      {{freestyle-snippet name='modal-dialog-component.hbs'}}
+    </div>
+
+    <div class='emdi-CodeFragment'>
+      {{freestyle-snippet name='modal-dialog-cta.hbs'}}
+    </div>
+
+    <div class='emdi-CodeFragment'>
+      <h4 class='CodeHeader CodeHeader--tight'>Controller</h4>
+      {{freestyle-snippet name='modal-dialog-controller.js'}}
+    </div>
+
+    {{#reveal-slide-notes}}
+      - Button and `modal-dialog` component are in same template, small part of the page
+      - Modal overlay takes over the full viewport
+      - Modal displayed on top
+      - How is this possible?
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    <h1>Ember Wormhole</h1>
+    <h3>Origin Story</h3>
+    <div class="emdi-StoryLine">
+      <div class="emdi-StoryItem fragment">
+        <div class="emdi-StoryItem-text">Kris Selden thought...</div>
+        <img class="emdi-StoryItem-image" src="assets/images/presentations/ember-modal-dialog-intro/kris-selden.jpg" alt="Kris Selden">
+      </div>
+      <div class="emdi-StoryItem fragment">
+        <div class="emdi-StoryItem-text">hey, we could append a morph</div>
+        <img class="emdi-StoryItem-image" src="assets/images/presentations/ember-modal-dialog-intro/morph.jpg" alt="Morph">
+      </div>
+      <div class="emdi-StoryItem fragment">
+        <div class="emdi-StoryItem-text">elsewhere in the DOM.</div>
+        <img class="emdi-StoryItem-image" src="assets/images/presentations/ember-modal-dialog-intro/dom.jpg" alt="DOM">
+      </div>
+    </div>
+    <div class="emdi-StoryLine">
+      <div class="emdi-StoryItem fragment">
+        <div class="emdi-StoryItem-text">Luke Melia thought...</div>
+        <img class="emdi-StoryItem-image" src="assets/images/presentations/ember-modal-dialog-intro/luke-melia.jpg" alt="Luke Melia">
+      </div>
+      <div class="emdi-StoryItem fragment">
+        <div class="emdi-StoryItem-text">cool, we could name it wormhole!</div>
+        <img class="emdi-StoryItem-image" src="assets/images/presentations/ember-modal-dialog-intro/wormhole.jpg" alt="Wormhole">
+      </div>
+    </div>
+
+    {{#reveal-slide-notes}}
+      - The year is 2015
+      - htmlbars
+      - Take a peek under the hood
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    <h1>What's happening?</h1>
+    <img class="emdi-Diagram" src="assets/images/presentations/ember-modal-dialog-intro/modal-dialog.png" alt="Modal Dialog DOM Manipulation">
+
+    {{#reveal-slide-notes}}
+      - `ember-modal-dialog` initializer appends modal container `#modalRootElementId` to the Ember app root element
+      - `modal-dialog` component composes with `ember-wormhole`
+      - `ember-wormhole` moves and removes your modal content over the course of its life cycle
+      - Resultant DOM is similar to that of the old named outlet approach
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    <h1>Favor Simplicity</h1>
+    <ul>
+      <li>Ember Modal Dialog abstracts away DOM manipulation</li>
+      <li>Use modal-dialog component as you would any other component</li>
+      <li>Lean on the framework</li>
+    </ul>
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    <h1>Demo</h1>
+
+    {{#reveal-slide-notes}}
+      Not TED-talky enough
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide data-background="assets/images/presentations/ember-modal-dialog-intro/ted-ed.gif"}}
+    {{#reveal-slide-notes}}
+      - Action-packed gif
+      - Sam Selikoff was nice enough to share
+      - All manner of modals
+      - Facilitates rich set of layered interactions
+      - Tremendous benefit to retaining context within the standard Ember view hierarchy
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide data-background="#eeeeee"}}
+    <img class="emdi-TedEdMobileDemo" src="assets/images/presentations/ember-modal-dialog-intro/ted-ed-mobile.gif" alt="TED Ed Mobile Demo">
+
+    {{#reveal-slide-notes}}
+      - Same area of the app at smaller mobile size
+      - Good for any preserving relationship and context in layered UI
+      - Different style choices
+      - And even different modal component choices
+      - Modals positioned very specifically next to other UI elements
+      - Cling to them as page scrolls
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    {{#reveal-wormhole to="the-outside-world" h="16"}}
+      <iframe class="full-iframe" src="http://yapplabs.github.io/ember-tether/" frameborder="0"></iframe>
+    {{/reveal-wormhole}}
+
+    {{#reveal-slide-notes}}
+      - Hubspot Tether, ember-tether
+      - Live demo from gh-pages app for `ember-tether`
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    <h1>Tether Dialog</h1>
+    {{#reveal-wormhole to="the-outside-world" h="17"}}
+      {{!-- BEGIN-FREESTYLE-USAGE tether-dialog-cta --}}
+        <button class='emdi-ModalToggler emdi-TetherDialogTarget' onclick={{action 'toggleTetherDialog'}}>
+          Toggle Tether Dialog
+        </button>
+      {{!-- END-FREESTYLE-USAGE --}}
+    {{/reveal-wormhole}}
+
+    {{!-- BEGIN-FREESTYLE-USAGE tether-dialog-component --}}
+      {{#if showTetherDialog}}
+        {{#tether-dialog
+            close='toggleTetherDialog'
+            container-class='emdi-Modal'
+            clickOutsideToClose=true
+            hasOverlay=false
+            target='.emdi-TetherDialogTarget'
+            targetAttachment='bottom right'
+            attachment='top left'
+        }}
+          I am a tether-dialog
+        {{/tether-dialog}}
+      {{/if}}
+    {{!-- END-FREESTYLE-USAGE --}}
+
+    <div class='emdi-CodeFragment'>
+      <h4 class='CodeHeader CodeHeader--tight'>Template</h4>
+      {{freestyle-snippet name='tether-dialog-component.hbs'}}
+    </div>
+
+    <div class='emdi-CodeFragment'>
+      {{freestyle-snippet name='tether-dialog-cta.hbs'}}
+    </div>
+
+    <div class='emdi-CodeFragment'>
+      <h4 class='CodeHeader CodeHeader--tight'>Controller</h4>
+      {{freestyle-snippet name='tether-dialog-controller.js'}}
+    </div>
+
+    {{#reveal-slide-notes}}
+      - Separate `tether-dialog` component
+      - Requires `ember-tether`
+      - Button and `tether-dialog` component are in same template, similar setup to `modal-dialog` example
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    <h1>What's happening?</h1>
+    <img class="emdi-Diagram" src="assets/images/presentations/ember-modal-dialog-intro/tether-dialog.png" alt="Tether Dialog DOM Manipulation">
+
+    {{#reveal-slide-notes}}
+      - `tether-dialog` component composes with `ember-tether`
+      - `ember-tether` uses Hubspot Tether to move and remove your modal content over the course of its life cycle
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    {{#reveal-wormhole to="the-outside-world" h="19"}}
       <iframe class="full-iframe" src="http://yapplabs.github.io/ember-modal-dialog/" frameborder="0"></iframe>
-    {{/ember-wormhole}}
-  </section>
+    {{/reveal-wormhole}}
+
+    {{#reveal-slide-notes}}
+      - Live demo from gh-pages app for `ember-modal-dialog`
+      - A bunch of examples
+      - Arguably too many options
+      - Supports Ember 1.10+
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    <h1>Please Help</h1>
+
+    <ul>
+      <li>Improve documentation &amp; live demo</li>
+      <li>Support ARIA</li>
+      <li>Tame CSS</li>
+      <li>Fix known issues</li>
+      <li>Simplify</li>
+    </ul>
+
+    {{#reveal-slide-notes}}
+      - No shortage of work to do
+      - The more the merrier
+      - Reach out on GitHub, Twitter, or the Ember Community Slack
+    {{/reveal-slide-notes}}
+  {{/reveal-slide}}
+
+  {{#reveal-slide}}
+    <h1 class="frivolous">ember-modal-dialog</h1>
+    <div class="r">
+      <small>
+
+        <a href="http://github.com/yapplabs/ember-modal-dialog" target="_blank">
+          github.com/yapplabs/ember-modal-dialog
+        </a>
+        <br>
+        <a href="http://yapplabs.github.io/ember-modal-dialog" target="_blank">
+          yapplabs.github.io/ember-modal-dialog
+        </a>
+        <br>
+        <br>
+        <a href="http://chrislopresto.com" target="_blank">
+          chrislopresto.com
+        </a>
+        <br>
+        <a href="http://twitter.com/chrislopresto" target="_blank">
+          @chrislopresto
+        </a>
+      </small>
+    </div>
+  {{/reveal-slide}}
 {{/reveal-presentation}}
