@@ -8,7 +8,7 @@
     "ember-load-initializers": "0.1.7",
     "ember-qunit-notifications": "0.1.0",
     "font-awesome": "~4.4.0",
-    "highlightjs": "~9.0.0",
+    "highlightjs": "~9.1.0",
     "jquery": "^2.1.4",
     "loader.js": "^3.5.0",
     "marked": "~0.3.5",
@@ -18,9 +18,11 @@
     "lodash": "~3.7.0",
     "Faker": "~3.0.0",
     "moment": ">= 2.8.0",
-    "moment-timezone": ">= 0.1.0"
+    "moment-timezone": ">= 0.1.0",
+    "remarkable": "~1.6.2"
   },
   "resolutions": {
-    "ember": "2.3.0-beta.3"
+    "ember": "2.3.0-beta.3",
+    "highlightjs": "~9.1.0"
   }
 }

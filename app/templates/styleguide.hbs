@@ -1,51 +1,75 @@
-<div class='styleguide'>
+{{#freestyle-guide}}
 
-  <h1>Style Guide</h1>
-  <hr>
-  <h1>h1 - This Is A Header</h1>
-  <h2>h2 - This Is A Header</h2>
-  <h3>h3 - This Is A Header</h3>
-  <h4>h4 - This Is A Header</h4>
-  <h5>h5 - This Is A Header</h5>
-  <h6>h6 - This Is A Header</h6>
-  {{color-palette}}
-  {{freestyle-palette}}
+  {{#freestyle-section name='Resume'}}
 
-  {{vimeo-video}}
-
-  <h2>Resume</h2>
-  {{resume-header}}
-  {{resume-contact-info}}
-  {{#resume-work-item
-    where='Initech'
-    from='March 2015'
-    to='Present'
-    as='Uncertain'
-    learned='Where I deal with the god damn customers so the engineers don\'t have to'
+    {{#freestyle-usage 'resume-work-item'
+        title='Resume Work Item'
+        highlightJsTheme='hybrid'
     }}
-  <p>
-    Shot primarily in Austin, Texas, Office Space has its origins in a series of four animated short films about
-    an office drone named Milton that Mike Judge created, which first aired on Liquid Television and Night After
-    Night with Allan Havey, and later aired on Saturday Night Live.
-  </p>
+      {{#resume-work-item
+          where='Initech'
+          from='March 2015'
+          to='Present'
+          as='Uncertain'
+          learned='Where I deal with the god damn customers so the engineers don\'t have to'
+      }}
+      <p>
+        Shot primarily in Austin, Texas, Office Space has its origins in a series of four animated short films about
+        an office drone named Milton that Mike Judge created, which first aired on Liquid Television and Night After
+        Night with Allan Havey, and later aired on Saturday Night Live.
+      </p>
 
-  <p>
-    The inspiration came from a temp job he once
-    had that involved alphabetizing purchase orders and a job he had as an engineer for three months in the
-    Bay Area during the 1980s, "just in the heart of Silicon Valley and in the middle of that overachiever yuppie
-    thing, it was just awful". The setting of the film reflected a prevailing trend that Judge observed in the
-    United States.
-  </p>
-  {{/resume-work-item}}
-  {{#resume-education-item
-    slug='rutgers'
-    logoSrc='assets/images/logo-rutgers.png'
-    name='Rutgers University'
-    where='New Brunswick, NJ'
-    from='1998'
-    to='2002'
+      <p>
+        The inspiration came from a temp job he once
+        had that involved alphabetizing purchase orders and a job he had as an engineer for three months in the
+        Bay Area during the 1980s, "just in the heart of Silicon Valley and in the middle of that overachiever yuppie
+        thing, it was just awful". The setting of the film reflected a prevailing trend that Judge observed in the
+        United States.
+      </p>
+      {{/resume-work-item}}
+    {{/freestyle-usage}}
+
+    {{#freestyle-usage 'resume-education-item'
+        title='Resume Education Item'
+        highlightJsTheme='hybrid'
     }}
-    Bachelor of Science in <span class='major'>Computer Science</span><br>
-    Bachelor of Music (piano) in <span class='major'>Jazz Studies</span>
-  {{/resume-education-item}}
-</div>
+      {{#resume-education-item
+          slug='rutgers'
+          logoSrc='assets/images/logo-rutgers.png'
+          name='Rutgers University'
+          where='New Brunswick, NJ'
+          from='1998'
+          to='2002'
+      }}
+        Bachelor of Science in <span class='major'>Computer Science</span><br>
+        Bachelor of Music (piano) in <span class='major'>Jazz Studies</span>
+      {{/resume-education-item}}
+    {{/freestyle-usage}}
+
+    {{#freestyle-usage}}
+      {{resume-header}}
+    {{/freestyle-usage}}
+    {{#freestyle-usage}}
+      {{resume-contact-info}}
+    {{/freestyle-usage}}
+
+  {{/freestyle-section}}
+
+  {{#freestyle-section name='Site'}}
+    {{#freestyle-usage}}
+      {{vimeo-video}}
+    {{/freestyle-usage}}
+  {{/freestyle-section}}
+
+  {{#freestyle-section name='Freestyle'}}
+
+    {{#freestyle-usage 'fp' title='Freestyle Palette'}}
+      {{freestyle-palette
+          title='Dummy App Color Palette'
+          description='This component displays the color palette specified in freestyle/palette.json'
+      }}
+    {{/freestyle-usage}}
+
+  {{/freestyle-section}}
+
+{{/freestyle-guide}}

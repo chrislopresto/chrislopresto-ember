@@ -1,5 +1,5 @@
 {
-  "ColorPalette-colors": {
+  "FreestylePalette": {
     "primary": {
       "name": "purple",
       "description": "something soundly purplish",
@@ -21,8 +21,8 @@
       "base": "#8bc34a"
     },
     "background": {
-      "name": "orange",
-      "base": "#ff5722",
+      "name": "white-ish",
+      "base": "#eeeeee",
       "dark": "#673AB7"
     }
   }

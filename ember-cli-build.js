@@ -3,7 +3,7 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 var jsonImporter = require('node-sass-json-importer');
 
 module.exports = function(defaults) {
-  var app = new EmberApp({
+  var app = new EmberApp(defaults, {
     // Add options here
     emberCliFontAwesome: {
       useScss: true
@@ -18,7 +18,8 @@ module.exports = function(defaults) {
     sassOptions: {
       importer: jsonImporter,
       includePaths: [
-        'freestyle'
+        'freestyle',
+        'node_modules/mappy-breakpoints'
       ]
     }
   });
@@ -36,7 +37,8 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  app.import('bower_components/highlightjs/styles/tomorrow-night-eighties.css');
+  app.import(app.bowerDirectory + '/highlightjs/styles/tomorrow-night-eighties.css');
+  app.import(app.bowerDirectory + '/remarkable/dist/remarkable.js');
 
   return app.toTree();
 };

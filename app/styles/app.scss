@@ -1,8 +1,12 @@
+@import 'reset';
+@import 'mixins';
+@import 'breakpoints';
+@import 'palette';
+
 @import 'ember-modal-dialog/ember-modal-structure';
 @import 'ember-modal-dialog/ember-modal-appearance';
 @import 'breakpoint/breakpoint';
 @import "bower_components/font-awesome/scss/font-awesome";
-@import 'palette.json';
 @import 'material-colors';
 @import 'grid';
 @import 'colors';
@@ -12,15 +16,7 @@
 @import 'blog';
 @import 'resume';
 
-@import 'components/resume-page-break';
-@import 'components/resume-header';
-@import 'components/resume-contact-info';
-@import 'components/resume-work-item';
-@import 'components/resume-education-item';
-@import 'components/vimeo-video';
-@import 'components/blog-article';
-@import 'components/blog-summary';
-@import 'components/keyboard-shortcutter';
+@import 'components/all';
 
 @import 'styleguide';
 

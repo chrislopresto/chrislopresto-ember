@@ -59,12 +59,14 @@
     "ember-keyboard": "0.2.4",
     "ember-modal-dialog": "0.8.3",
     "ember-moment": "4.1.0",
-    "ember-normalize": "0.0.2",
+    "ember-normalize": "0.0.9",
+    "ember-remarkable": "2.1.0",
     "ember-resolver": "^2.0.3",
     "ember-reveal-js": "0.1.0",
     "ember-truth-helpers": "1.2.0",
     "ember-try": "0.0.8",
     "highlight.js": "^9.1.0",
+    "mappy-breakpoints": "^0.2.1",
     "markdown-code-highlighting": "0.0.6",
     "node-sass": "sass/node-sass#ec18ef5e0993c8ea53ac247bdd74c471f238326c",
     "node-sass-json-importer": "^1.0.5"
@@ -80,6 +82,6 @@
     "breakpoint-sass": "^2.6.1",
     "broccoli-static-compiler": "^0.2.2",
     "broccoli-unwatched-tree": "^0.1.1",
-    "ember-freestyle": "chrislopresto/ember-freestyle#clean"
+    "ember-freestyle": "chrislopresto/ember-freestyle#layout"
   }
 }
