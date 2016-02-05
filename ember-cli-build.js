@@ -37,8 +37,8 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  app.import(app.bowerDirectory + '/highlightjs/styles/tomorrow-night-eighties.css');
-  app.import(app.bowerDirectory + '/remarkable/dist/remarkable.js');
+  app.import('bower_components/highlightjs/styles/tomorrow-night-eighties.css');
+  app.import('bower_components/remarkable/dist/remarkable.js');
 
   return app.toTree();
 };
