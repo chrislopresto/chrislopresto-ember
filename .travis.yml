@@ -1,7 +1,5 @@
 ---
 language: node_js
-node_js:
-  - "0.12"
 
 sudo: false
 
@@ -38,6 +36,7 @@ install:
   - bower install
 
 script:
+  - node -v
   - phantomjs -v
   - npm test
 
