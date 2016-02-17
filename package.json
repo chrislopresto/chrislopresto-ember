@@ -82,6 +82,6 @@
     "breakpoint-sass": "^2.6.1",
     "broccoli-static-compiler": "^0.2.2",
     "broccoli-unwatched-tree": "^0.1.1",
-    "ember-freestyle": "chrislopresto/ember-freestyle#outside-world"
+    "ember-freestyle": "0.2.6"
   }
 }
