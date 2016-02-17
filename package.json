@@ -62,7 +62,8 @@
     "ember-normalize": "0.0.9",
     "ember-remarkable": "2.1.0",
     "ember-resolver": "^2.0.3",
-    "ember-reveal-js": "0.1.0",
+    "ember-reveal-js": "chrislopresto/ember-reveal-js#kick-the-tires",
+    "ember-tether": "0.2.1",
     "ember-truth-helpers": "1.2.0",
     "ember-try": "0.0.8",
     "mappy-breakpoints": "^0.2.1",
@@ -81,6 +82,6 @@
     "breakpoint-sass": "^2.6.1",
     "broccoli-static-compiler": "^0.2.2",
     "broccoli-unwatched-tree": "^0.1.1",
-    "ember-freestyle": "chrislopresto/ember-freestyle#layout"
+    "ember-freestyle": "chrislopresto/ember-freestyle#outside-world"
   }
 }

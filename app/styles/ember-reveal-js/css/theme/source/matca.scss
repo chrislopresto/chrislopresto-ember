@@ -252,6 +252,12 @@ $selectionColor: matca-palette-color('primary', 'light');
     padding-right: 25%;
   }
 
+  .CodeHeader {
+    text-align: left;
+    width: 90%;
+    margin: 40px auto -15px;
+  }
+
   .Code {
     &-header {
       text-align: left;

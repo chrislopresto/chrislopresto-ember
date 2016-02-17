@@ -19,7 +19,8 @@
     "Faker": "~3.0.0",
     "moment": ">= 2.8.0",
     "moment-timezone": ">= 0.1.0",
-    "remarkable": "~1.6.2"
+    "remarkable": "~1.6.2",
+    "tether": "^1.0.3"
   },
   "resolutions": {
     "ember": "2.3.0-beta.3",
