@@ -23,6 +23,10 @@ export default Ember.Component.extend(EKMixin, {
     this.navigateTo('site.index');
   }),
 
+  onR: on(keyUp('r'), function() {
+    this.navigateTo('resume');
+  }),
+
   onS: on(keyUp('s'), function() {
     this.navigateTo('styleguide');
   }),
