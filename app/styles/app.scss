@@ -21,6 +21,13 @@
 @import 'styleguide';
 
 @import 'ember-reveal-js';
+$breakpoints: map-merge($breakpoints, ('large': 600px));
+
+$FreestyleGuide-color--primary: freestyle-color('primary');
+$FreestyleGuide-color--accent: freestyle-color('accent');
+$FreestyleGuide-color--secondary: freestyle-color('secondary');
+$FreestyleGuide-color--foreground: freestyle-color('foreground');
+$FreestyleGuide-color--background: freestyle-color('background');
 @import 'ember-freestyle';
 
 @import 'presentations/ember-modal-dialog-intro';
