@@ -23,7 +23,7 @@ module.exports = function(environment) {
     },
 
     googleFonts: [
-      'Lato:400,700,400italic',
+      'Raleway:400,300,600,400italic',
       'Roboto:500,900,400italic,700,400',
       'Codystar',
       'Material Icons'

@@ -30,14 +30,14 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
     color: $md-grey-800;
     font-weight: normal;
     margin-bottom: 4px;
-    font-family: Lato, sans-serif;
+    font-family: 'Raleway', sans-serif;
     letter-spacing: initial;
     line-height: 1.3rem;
   }
 
   h1 {
     border-bottom: solid 2px $md-teal-800;
-    margin-top: 2rem;
+    margin-top: 1.9rem;
     padding-bottom: 1rem;
     width: 40%;
     font-size: 2em;
@@ -45,7 +45,7 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
 
   h2 {
     border-bottom: solid 2px $md-teal-600;
-    margin-top: 2rem;
+    margin-top: 1.9rem;
     padding-bottom: .6rem;
     white-space: nowrap;
     width: 30%;
