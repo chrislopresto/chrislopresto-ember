@@ -1,0 +1,12 @@
+<div class="slider-tray {{if readOnly 'read-only'}}">
+
+  {{#each items as |item index|}}
+    <div class="circle {{if (eq index selectedIndex) 'selected'}}
+                       {{if (eq index disabledIndex) 'disabled'}}
+                       {{if item.isProhibition 'prohibition'}}">
+      <div class="text">{{item.label}}</div>
+      <div id="circle-item-detail-{{index}}" class="circle-list-detail"></div>
+    </div>
+  {{/each}}
+
+</div>

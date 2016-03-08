@@ -1,0 +1,23 @@
+{{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-UsageSlide"}}
+  {{presentations/slide-header
+    super="Example"
+    main="UI Elements"
+    sub="Living Style Guide"
+  }}
+  {{#presentations/slide-body columns=3}}
+    {{freestyle-usage-controls showFocus=false}}
+    {{#presentations/slide-column class="lsgdd-ExampleUiElementsSlide-paletteColumn"}}
+      {{#freestyle-usage 'example-uiElements-palette' title='Monegraph Color Palette'}}
+        {{freestyle-palette colors=monegraphPaletteColors title=''}}
+      {{/freestyle-usage}}
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column class="lsgdd-UsageSlide-explanation lsgdd-ExampleUiElementsSlide-buttonsColumn"}}
+      {{lsgdd/example-ui-elements}}
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column}}
+      <div class="lsgdd-TightContainer lsgdd-ExampleUiElementsSlide-resultContainer">
+        <img class="lsgdd-Image u-rounded lsgdd-ExampleUiElementsSlide-result" src="assets/images/presentations/living-style-guide-driven-development/monegraph-form.gif" alt="Auth forms before auth">
+      </div>
+    {{/presentations/slide-column}}
+  {{/presentations/slide-body}}
+{{/reveal-slide}}

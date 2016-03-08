@@ -1,0 +1,27 @@
+{{#reveal-slide scrollable=true class="lsgdd-FreestyleSlide lsgdd-UsageSlide lsgdd-ExampleDataEdgeCasesSlide"}}
+  {{presentations/slide-header
+    super="Example"
+    main="Data Edge Cases"
+    sub="Living Style Guide"
+  }}
+  {{#presentations/slide-body columns=2}}
+    {{freestyle-usage-controls showFocus=false}}
+    {{#presentations/slide-column class="lsgdd-ExampleDataEdgeCasesSlide-problemColumn"}}
+      <div class="lsgdd-ExampleDataEdgeCasesSlide-usageHeader">Initial Implementation</div>
+      {{#freestyle-usage 'dashboard-tile' title='Mockup'}}
+        {{lsgdd/dashboard-tile label='Total Page Views' stat=683}}
+      {{/freestyle-usage}}
+
+      <div class="lsgdd-ExampleDataEdgeCasesSlide-usageHeader">Edge Case</div>
+      {{#freestyle-usage 'dashboard-tile' title='Real Life'}}
+        {{lsgdd/dashboard-tile label='Total Page Views' stat=1425824324 statSize='large'}}
+      {{/freestyle-usage}}
+    {{/presentations/slide-column}}
+
+    {{#presentations/slide-column class="lsgdd-ExampleDataEdgeCasesSlide-solutionColumn"}}
+      <div class="lsgdd-ExampleDataEdgeCasesSlide-usageHeader">Vetted Implementation</div>
+      {{lsgdd/example-data-edge-cases}}
+    {{/presentations/slide-column}}
+
+  {{/presentations/slide-body}}
+{{/reveal-slide}}

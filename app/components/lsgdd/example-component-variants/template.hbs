@@ -1,0 +1,27 @@
+{{#freestyle-collection defaultKey='all' as |collection|}}
+
+  {{#freestyle-variant collection=collection key='picture'}}
+    {{#freestyle-usage 'auction-search-result-picture' title='Picture'}}
+      {{lsgdd/auction-search-result document=documentPicture}}
+    {{/freestyle-usage}}
+  {{/freestyle-variant}}
+
+  {{#freestyle-variant collection=collection key='jewelry'}}
+    {{#freestyle-usage 'auction-search-result-jewelry' title='Jewelry'}}
+      {{lsgdd/auction-search-result document=documentJewelry}}
+    {{/freestyle-usage}}
+  {{/freestyle-variant}}
+
+  {{#freestyle-variant collection=collection key='wine'}}
+    {{#freestyle-usage 'auction-search-result-wine' title='Wine'}}
+      {{lsgdd/auction-search-result document=documentWine}}
+    {{/freestyle-usage}}
+  {{/freestyle-variant}}
+
+  {{#freestyle-variant collection=collection key='transportation'}}
+    {{#freestyle-usage 'auction-search-result-transportation' title='Transportation'}}
+      {{lsgdd/auction-search-result document=documentTransportation}}
+    {{/freestyle-usage}}
+  {{/freestyle-variant}}
+
+{{/freestyle-collection}}

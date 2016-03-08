@@ -1,0 +1,58 @@
+{{#reveal-slide scrollable=true class="lsgdd-FreestyleFeatureSlide lsgdd-FreestyleSlide lsgdd-UsageSlide"}}
+  {{presentations/slide-header
+    super="Ember Freestyle"
+    main="Code Snippets"
+    sub=""
+  }}
+  {{#presentations/slide-body columns=2}}
+    {{#presentations/slide-column}}
+      {{#presentations/slide-list type="small"}}
+        <div class="lsgdd-FreestyleFeatureSlide-explanationLabel">
+          Styleguide.hbs
+        </div>
+        {{#presentations/slide-list-item type="small"}}
+          {{#reveal-code language="handlebars"}}
+  \{{#freestyle-usage "example-codeSnippet-tomsterLogo" jsTitle="Component" usageTitle="Handlebars Snippet That Generated Component" hbsTitle="Component Template" scssTitle="Styles for CSS Animation"
+      title="Tomster Logo"
+  }}
+    \{{lsgdd/tomster-logo party=party}}
+  \{{/freestyle-usage}}
+
+  \{{#freestyle-note 'example-codeSnippet-tomsterLogo:notes'}}
+  ###### Notes
+  - Tomster pops up on hover.
+  - Tomster doesn't like to leave a party.
+  \{{/freestyle-note}}
+
+          {{/reveal-code}}
+        {{/presentations/slide-list-item}}
+
+        {{#presentations/slide-list-item class="lsgdd-FreestyleFeatureSlide-listItem" type="small"}}
+          <ul>
+            <li>Render component alongside handlebars snippet that generated it</li>
+            <li>Automatically via <span class="lsgdd-InlineCode lsgdd-InlineCode--subtle">\{{freestyle-usage}}</span> components</li>
+            <li>Or use <span class="lsgdd-InlineCode lsgdd-InlineCode--subtle">FREESTYLE-USAGE</span> comment delimiters in app code</li>
+          </ul>
+        {{/presentations/slide-list-item}}
+      {{/presentations/slide-list}}
+    {{/presentations/slide-column}}
+
+    {{#presentations/slide-column class="lsgdd-FreestyleFeatureSlide-usage"}}
+      <div class="lsgdd-FreestyleFeatureSlide-explanationLabel">
+        Result
+      </div>
+      {{lsgdd/example-hello-world party=true usageTitle="Handlebars Snippet That Generated Component"}}
+    {{/presentations/slide-column}}
+
+  {{/presentations/slide-body}}
+  {{#presentations/slide-footer}}
+    {{!-- <div class="lsgdd-TightContainer">
+      <img class="lsgdd-Image lsgdd-ObjectivesEmberSlide-image--tomsterBuiltWith" src="assets/images/presentations/tomster-built-with.png" alt="Built With Ember">
+    </div> --}}
+    <div class="lsgdd-TightContainer lsgdd-AppleWatchSlide-credit u-flex100">
+      Inspired by <a href="https://github.com/ef4/ember-code-snippet">ember-code-snippet</a>
+    </div>
+  {{/presentations/slide-footer}}
+  {{#reveal-slide-notes}}
+  {{/reveal-slide-notes}}
+{{/reveal-slide}}

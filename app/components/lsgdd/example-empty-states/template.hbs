@@ -1,0 +1,41 @@
+{{#freestyle-collection defaultKey="no-data" as |collection|}}
+  {{#freestyle-variant
+    collection=collection
+    key='nice-data'
+  }}
+    {{#freestyle-usage 'KeenChart-niceData' title='Installs Chart - Nice Data' usageTitle='Usage'}}
+      {{lsgdd/keen-chart
+        class='r-YappAnalytics-chart'
+        dataSource=deviceInstallsFirstTime
+        chartType='area'
+        header='Device Installs'
+      }}
+    {{/freestyle-usage}}
+  {{/freestyle-variant}}
+  {{#freestyle-variant
+    collection=collection
+    key='no-data'
+  }}
+    {{#freestyle-usage 'KeenChart-noData' title='Installs Chart - No Data' usageTitle='Usage'}}
+      {{lsgdd/keen-chart
+        class='r-YappAnalytics-chart'
+        dataSource=deviceInstallsFirstTimeNoData
+        chartType='area'
+        header='Device Installs - No Data'
+      }}
+    {{/freestyle-usage}}
+  {{/freestyle-variant}}
+  {{#freestyle-variant
+    collection=collection
+    key='waiting'
+  }}
+    {{#freestyle-usage 'KeenChart-waiting' title='Installs Chart - Waiting' usageTitle='Usage'}}
+      {{lsgdd/keen-chart
+        class='r-YappAnalytics-chart'
+        dataSource=waitingDataSource
+        chartType='area'
+        header='Device Installs - Waiting'
+      }}
+    {{/freestyle-usage}}
+  {{/freestyle-variant}}
+{{/freestyle-collection}}

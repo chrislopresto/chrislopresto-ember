@@ -1,0 +1,52 @@
+.offer-composition-overview {
+  @include offer-composition-treatment;
+
+  height: 100% !important;
+  width: 100% !important;
+  background-image:url(/assets/images/presentations/living-style-guide-driven-development/monegraph/monegraph-m-light-bg.svg);
+  background-position:center top;
+  background-size:cover;
+  background-repeat:no-repeat;
+
+  .offer-composition-instructions {
+    @include offer-composition-instructions;
+  }
+
+  .offer-composition-sentence {
+    font-size: 1.8rem !important;
+    margin-top: monegraph-gs(3) !important;
+    padding: 0 monegraph-gs(2/3) !important;
+
+    span {
+      white-space: nowrap;
+    }
+
+    // @include breakpoint($breakpoint-max-height-iphone-5-portrait) {
+    //   font-size: 1.5rem !important;
+    //   margin-top: monegraph-gs(1) !important;
+    // }
+    //
+    // @include breakpoint($breakpoint-max-height-iphone-4-portrait) {
+    //   margin-top: 0 !important;
+    // }
+  }
+
+  span[data-offer-facet] {
+    white-space: nowrap;
+  }
+
+  .offer-composition-facet {
+    background-color: monegraph-palette-color(magenta);
+    border-radius: 10px;
+    color: monegraph-palette-color(white) !important;
+    cursor: pointer;
+    font-weight: normal !important;
+    margin-right: 2px !important;
+    padding: 7px 14px !important;
+    white-space: nowrap;
+
+    &.prohibition {
+      background-color: monegraph-palette-color(red);
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{{#reveal-slide}}
+  {{presentations/slide-header
+    super=""
+    main="Ember Freestyle Overview"
+    sub="Components of a Style Guide"
+  }}
+  {{#presentations/slide-body columns=2}}
+    {{#presentations/slide-column}}
+      {{#presentations/slide-list type="small"}}
+        {{!-- {{#presentations/slide-list-item class="lsgdd-FreestyleOverviewSlide-slideListItem" type="borderless"}}
+          <span class="lsgdd-InlineCode">\{{freestyle-guide}}</span>
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item class="lsgdd-FreestyleOverviewSlide-slideListItem" type="sub"}}
+          <ul>
+            <li>A complete style guide with navigation and focusing controls</li>
+          </ul>
+        {{/presentations/slide-list-item}} --}}
+
+        {{#presentations/slide-list-item class="lsgdd-FreestyleOverviewSlide-slideListItem" type="borderless"}}
+          <span class="lsgdd-InlineCode">\{{freestyle-usage}}</span>
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item class="lsgdd-FreestyleOverviewSlide-slideListItem" type="sub"}}
+          <ul>
+            <li>Render a component alongside the handlebars snippet that generated it</li>
+          </ul>
+        {{/presentations/slide-list-item}}
+
+        {{#presentations/slide-list-item class="lsgdd-FreestyleOverviewSlide-slideListItem" type="borderless"}}
+          <span class="lsgdd-InlineCode">\{{freestyle-menu}}</span>
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item class="lsgdd-FreestyleOverviewSlide-slideListItem" type="sub"}}
+          <ul>
+            <li>Navigation controls inferred from <span class="lsgdd-InlineCode lsgdd-InlineCode--subtle lsgdd-FreestyleOverviewSlide-subtleInlineCode">\{{freestyle-section}}</span> components</li>
+          </ul>
+        {{/presentations/slide-list-item}}
+
+        {{!-- {{#presentations/slide-list-item class="lsgdd-FreestyleOverviewSlide-slideListItem" type="borderless"}}
+          <span class="lsgdd-InlineCode">\{{freestyle-section}}</span>
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item class="lsgdd-FreestyleOverviewSlide-slideListItem" type="sub"}}
+          <ul>
+            <li>Organize components logically for navigation purposes</li>
+          </ul>
+        {{/presentations/slide-list-item}} --}}
+      {{/presentations/slide-list}}
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column}}
+      {{#presentations/slide-list type="small"}}
+        {{#presentations/slide-list-item class="lsgdd-FreestyleOverviewSlide-slideListItem" type="borderless"}}
+          <span class="lsgdd-InlineCode">\{{freestyle-usage-controls}}</span>
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item class="lsgdd-FreestyleOverviewSlide-slideListItem" type="sub"}}
+          <ul>
+            <li>Focus a component or toggle code, notes, and labels</li>
+          </ul>
+        {{/presentations/slide-list-item}}
+
+        {{#presentations/slide-list-item class="lsgdd-FreestyleOverviewSlide-slideListItem" type="borderless"}}
+          <span class="lsgdd-InlineCode">\{{freestyle-collection}}</span>
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item class="lsgdd-FreestyleOverviewSlide-slideListItem" type="sub"}}
+          <ul>
+            <li>Group variants of a component for side-by-side comparison</li>
+          </ul>
+        {{/presentations/slide-list-item}}
+
+      {{/presentations/slide-list}}
+    {{/presentations/slide-column}}
+
+  {{/presentations/slide-body}}
+  {{#presentations/slide-footer}}
+  {{/presentations/slide-footer}}
+  {{#reveal-slide-notes}}
+  {{/reveal-slide-notes}}
+{{/reveal-slide}}

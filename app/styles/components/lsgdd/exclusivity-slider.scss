@@ -1,0 +1,44 @@
+$price-slider-background-color: darken(monegraph-palette-color(light-gray), 10%);
+$price-slider-grip-strips-color: darken(monegraph-palette-color(light-gray), 11%);
+
+.exclusivity-slider {
+  background: monegraph-palette-color(violet);
+  border-radius: 8px;
+  height: 8px !important;
+  margin: monegraph-gs(1/2) 0 !important;
+
+  .noUi-handle {
+    @include monegraph-common-box-shadow;
+    border-radius: 100%;
+    height: 34px !important;
+    top: -14px;
+
+    &:before,
+    &:after {
+      content: '';
+      border-radius: 1px;
+      display: block;
+    }
+
+    &:before {
+      background: transparent;
+      border-left: solid 3px $price-slider-grip-strips-color !important;
+      border-right: solid 3px $price-slider-grip-strips-color !important;
+      height: 14px !important;
+      left: 8px;
+      margin-top: 3px !important;
+      width: 17px;
+    }
+
+    &:after {
+      background: $price-slider-grip-strips-color;
+      height: 19px !important;
+      left: 15px !important;
+      margin-top: 1px !important;
+      width: 3px;
+    }
+  }
+  .noUi-origin {
+    background: $price-slider-background-color;
+  }
+}

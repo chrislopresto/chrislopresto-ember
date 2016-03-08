@@ -1,0 +1,128 @@
+// BEGIN-FREESTYLE-USAGE example-helloWorld-tomsterLogo
+.TomsterLogoContainer {
+  position: relative !important;
+  z-index: 10;
+}
+.TomsterLogo {
+  margin-top: 1em !important;
+  width: 8.875em;
+  height: 5.4375em;
+  display: inline-block;
+  background-image: url("../assets/images/emberconf2016/emberconf-logo.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+// END-FREESTYLE-USAGE
+@media all and (-webkit-min-device-pixel-ratio: 1.5),
+all and (-o-min-device-pixel-ratio: 3 / 2),
+all and (min--moz-device-pixel-ratio: 1.5),
+all and (min-device-pixel-ratio: 1.5) {
+  .TomsterLogo {
+    background-image: url("../assets/images/emberconf2016/emberconf-logo@2x.png");
+    background-size: 100% auto;
+  }
+}
+@media screen and (min-width: 64.0625em) {
+  .TomsterLogo {
+    width: 10.8125em;
+    height: 6.625em;
+  }
+}
+// BEGIN-FREESTYLE-USAGE tomster-logo
+.TomsterLogo::after {
+  content: '';
+  display: block;
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
+  top: -.6em;
+  left: 0.55em;
+  background-image: url("../assets/images/emberconf2016/tomster.png");
+  width: 2.5em;
+  height: 2.5em;
+  background-repeat: no-repeat;
+  -webkit-transform: translateY(1.875em);
+  -khtml-transform: translateY(1.875em);
+  -moz-transform: translateY(1.875em);
+  -ms-transform: translateY(1.875em);
+  -o-transform: translateY(1.875em);
+  transform: translateY(1.875em);
+  -webkit-transition: all 200ms;
+  -khtml-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -ms-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
+// END-FREESTYLE-USAGE
+.TomsterLogo--party::after {
+  -webkit-transition: all 3200ms;
+  -khtml-transition: all 3200ms;
+  -moz-transition: all 3200ms;
+  -ms-transition: all 3200ms;
+  -o-transition: all 3200ms;
+  transition: all 3200ms;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5),
+all and (-o-min-device-pixel-ratio: 3 / 2),
+all and (min--moz-device-pixel-ratio: 1.5),
+all and (min-device-pixel-ratio: 1.5) {
+  .TomsterLogo::after {
+    background-image: url("../assets/images/emberconf2016/tomster@2x.png");
+    background-size: 100% auto;
+  }
+}
+@media screen and (min-width: 64.0625em) {
+  .TomsterLogo::after {
+    width: 3.75em;
+    height: 3.75em;
+    top: -1.4em;
+    left: 0.65em;
+  }
+}
+@media screen and (min-width: 40.0625em) {
+  .TomsterLogo--cameo::after,
+  .TomsterLogo:hover::after {
+    display: block;
+    opacity: 1;
+    -webkit-transform: translateY(0em);
+    -khtml-transform: translateY(0em);
+    -moz-transform: translateY(0em);
+    -ms-transform: translateY(0em);
+    -o-transform: translateY(0em);
+    transform: translateY(0em);
+    -webkit-transition: all 200ms;
+    -khtml-transition: all 200ms;
+    -moz-transition: all 200ms;
+    -ms-transition: all 200ms;
+    -o-transition: all 200ms;
+    transition: all 200ms;
+  }
+}
+// .pre-launch .logo::after {
+//   display: none;
+// }
+// .pre-launch .TomsterLogo:hover::after {
+//   display: none;
+// }
+// @media all and (-ms-high-contrast: none),
+// (-ms-high-contrast: active) {
+//   .TomsterLogo::after,
+//   .TomsterLogo:hover::after {
+//     display: none;
+//   }
+// }
+// @media screen and (min-width: 40.0625em) {
+//   .pre-launch .global-nav .logo {
+//     width: 10.8125em;
+//     height: 6.625em;
+//     max-width: 100%;
+//     position: relative;
+//   }
+// }
+// @media screen and (min-width: 40.0625em) and (min-width: 40.0625em) {
+//   .pre-launch .global-nav .logo {
+//     left: 0;
+//   }
+// }

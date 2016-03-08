@@ -1,0 +1,9 @@
+{{#if document.auction_house_name}}
+  <div>{{document.auction_house_name}}
+    {{!--TODO set format in global moment config--}}
+    {{#if document.sale_date}}on {{moment-format document.sale_date "dddd, MMMM D, YYYY"}}{{/if}}
+  </div>
+{{/if}}
+<div>
+  {{sale-link-text document}}
+</div>

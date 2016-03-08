@@ -1,0 +1,58 @@
+{{#tooltip-on-parent place="right"}}
+  <div class="tooltip--statusTooltip">
+    {{#if data.document.similar_artworks}}
+      <div class="tooltip-row">
+        <i class="icon icon--similarObjects {{if (eq hoverAt "similarObjects") "active"}}"></i>
+        <span>Has similar lots</span>
+      </div>
+    {{/if}}
+    {{#if data.document.status}}
+      {{#if (eq data.document.status 'Unsold')}}
+        <div class="tooltip-row">
+          <i class="icon icon--unsold {{if (eq hoverAt "status") "active"}}"></i>
+          <span>{{data.saleStatus}} lot</span>
+        </div>
+      {{else if (eq data.document.status 'Not Yet Available')}}
+          <div class="tooltip-row">
+            <i class="icon icon--notAvailable {{if (eq hoverAt "status") "active"}}"></i>
+            <span>{{data.saleStatus}} lot</span>
+          </div>
+      {{else if (eq data.document.status 'Not Published')}}
+          <div class="tooltip-row">
+            <i class="icon icon--notPublished {{if (eq hoverAt "status") "active"}}"></i>
+            <span>{{data.saleStatus}} lot</span>
+          </div>
+      {{else if (eq data.document.status 'Withdrawn')}}
+        <div class="tooltip-row">
+          <i class="icon icon--withdrawn {{if (eq hoverAt "status") "active"}}"></i>
+          <span>{{data.saleStatus}} lot</span>
+        </div>
+      {{else if (eq data.document.status 'Amended')}}
+          <div class="tooltip-row">
+            <i class="icon icon--amended {{if (eq hoverAt "status") "active"}}"></i>
+            <span>{{data.saleStatus}} lot</span>
+          </div>
+      {{/if}}
+    {{/if}}
+    <div class="tooltip-row">
+      {{#if data.document.is_premium_price}}
+        <i class="icon icon--premiumPrice {{if (eq hoverAt "price") "active"}}"></i>
+        <span>Premium price</span>
+      {{else}}
+        <i class="icon icon--hammerPrice {{if (eq hoverAt "price") "active"}}"></i>
+        <span>Hammer price</span>
+      {{/if}}
+    </div>
+    {{#if data.priceDiff}}
+      <div class="tooltip-row">
+        {{#if (gte data.priceDiff 0)}}
+          <i class="icon icon--soldHigher {{if (eq hoverAt "diff") "active"}}"></i>
+          <span>Sold {{data.priceDiff}}% higher than high estimate</span>
+        {{else}}
+          <i class="icon icon--soldLower {{if (eq hoverAt "diff") "active"}}"></i>
+          <span>Sold {{abs-number data.priceDiff}}% lower than low estimate</span>
+        {{/if}}
+      </div>
+    {{/if}}
+  </div>
+{{/tooltip-on-parent}}

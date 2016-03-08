@@ -16,12 +16,16 @@
 @import 'blog';
 @import 'resume';
 
-@import 'components/all';
+@import 'vendor/cssgram/cssgram';
 
 @import 'styleguide';
 
 @import 'ember-reveal-js';
+// ember-freestyle
 $breakpoints: map-merge($breakpoints, ('large': 600px));
+// Collectrium auction-search-result
+$breakpoints: map-merge($breakpoints, ('wide': 1200px));
+$breakpoints: map-merge($breakpoints, ('mega': 1400px));
 
 $FreestyleGuide-color--primary: freestyle-color('primary');
 $FreestyleGuide-color--accent: freestyle-color('accent');
@@ -31,3 +35,9 @@ $FreestyleGuide-color--background: freestyle-color('background');
 @import 'ember-freestyle';
 
 @import 'presentations/ember-modal-dialog-intro';
+@import 'presentations/living-style-guide-driven-development/print';
+@import 'presentations/living-style-guide-driven-development/theme';
+@import 'presentations/living-style-guide-driven-development/slides';
+@import 'presentations/living-style-guide-driven-development/styles';
+
+@import 'components/all';

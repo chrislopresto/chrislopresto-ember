@@ -1,0 +1,203 @@
+// $grid-unit-size is the basis for layout alignment, padding, margins, etc.
+// throughout the CSS codebase.
+$monegraph-grid-unit-size: 30px;
+
+// The monegraph-gs() function allows us to specify sizes in terms of grid units
+// throughout the CSS codebase.
+//
+// USAGE
+// =====
+// .thing {
+//   padding: monegraph-gs() monegraph-gs(.5); // equivalent to padding: 30px 15px;
+// }
+@function monegraph-gs($n: 1) {
+  @return $n * $monegraph-grid-unit-size;
+}
+
+$monegraphPalette: (
+  white: #ffffff,
+  black: #000000,
+  light-gray: #eeeeee,
+  medium-light-gray: #bbbbbb,
+  wills-hair-gray: #dddddd,
+  medium-gray: #888888,
+  dark-gray: #414142,
+  magenta: #a9218e,
+  violet: #5861a9,
+  blue: #008ccc,
+  teal: #009786,
+  green: #57b947,
+  lime: #bed12b,
+  red: #ff3300
+);
+
+@function monegraph-palette-color($color) {
+  @return map-get($monegraphPalette, $color);
+}
+
+$monegraph-common-border: solid 1px lighten(monegraph-palette-color(light-gray), 2);
+@mixin monegraph-common-border {
+  border: $monegraph-common-border !important;
+}
+
+$white-alpha-010: rgba(255,255,255, .10);
+
+$black-alpha-010: rgba(0,0,0, .10);
+$black-alpha-015: rgba(0,0,0, .15);
+$black-alpha-025: rgba(0,0,0, .25);
+$black-alpha-040: rgba(0,0,0, .4);
+
+@mixin monegraph-common-box-shadow {
+  box-shadow: 0px 2px 4px 0px $black-alpha-025;
+}
+
+$monegraph-font-stack: 'ApexRounded-Book', Helvetica, sans-serif;
+
+$monegraph-font-weight-medium: 500;
+
+@mixin monegraph-font-weight-medium {
+  font-weight: $monegraph-font-weight-medium !important;
+}
+
+@mixin monegraph-tip {
+  position: absolute;
+  top: 0;
+  font-size: .75rem !important;
+  font-weight: 500 !important;
+  text-align: center;
+  border-radius: 60%;
+  padding-top: 3px !important;
+  color: monegraph-palette-color(light-gray);
+  background-color: monegraph-palette-color(dark-gray);
+  height: monegraph-gs(2/3);
+  width: monegraph-gs(2/3);
+  // @include transition(top 200ms);
+  &.raise {
+    top: monegraph-gs(-1/3);
+  }
+  &.minimum {
+    left: monegraph-gs(1);
+    &:before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      transform: translateX(4px) scaleX(1.4);
+      top: 9px;
+      border: 10px solid monegraph-palette-color(dark-gray);
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+    }
+  }
+  &.maximum {
+    right: monegraph-gs(1);
+    &:before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      transform: translateX(4px) scaleX(1.5);
+      top: 9px;
+      right: 9px;
+      border: 10px solid monegraph-palette-color(dark-gray);
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+@mixin monegraph-center-vertically {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+@mixin offer-composition-instructions {
+  color: monegraph-palette-color(black);
+  font-size: 1.75rem !important;
+  margin: 0 auto !important;
+  padding: monegraph-gs(1/3) 0 !important;
+  text-align: center;
+
+  // @include breakpoints(
+  //   $breakpoint-max-height-iphone-4-portrait
+  //   $breakpoint-max-height-iphone-5-portrait
+  //   $breakpoint-max-height-iphone-6-portrait
+  // ) {
+  //   font-size: 1.5rem;
+  //   padding: 0;
+  //   margin-bottom: 0;
+  // }
+}
+
+@mixin offer-composition-treatment {
+  color: monegraph-palette-color(black);
+  font-size: 2rem !important;
+  line-height: 4rem !important;
+  min-width: monegraph-gs(10) !important;
+
+  // @include breakpoint($breakpoint-max-height-iphone-5-portrait) {
+  //   font-size: 1.7rem;
+  //   line-height: 3.4rem;
+  // }
+}
+
+.facet-editor {
+  background-color: monegraph-palette-color(light-gray);
+  height: 100% !important;
+}
+
+$monegraph-loader-colors: (green, violet, magenta, teal, white, medium-gray, medium-light-gray);
+.monegraph-loader {
+  @each $color in $monegraph-loader-colors {
+    $value: map-get($monegraphPalette, $color);
+    &.#{$color} {
+      fill: $value;
+
+      .monegraph-loader-icon {
+        color: $value;
+
+        path {
+          fill: $value;
+        }
+      }
+    }
+  }
+
+  @include monegraph-center-vertically;
+  position: relative;
+
+  fill: monegraph-palette-color(light-gray); // Default
+
+  .monegraph-loader-svg {
+    margin: 0 auto;
+  }
+
+  .monegraph-loader-icon-container {
+    @include monegraph-center-vertically;
+    width: 100%;
+    position: absolute;
+  }
+  .monegraph-loader-icon {
+    width: 100%;
+    text-align: center;
+    color: monegraph-palette-color(light-gray); // Default
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    path {
+      fill: monegraph-palette-color(light-gray); // Default
+    }
+
+    &:before {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .monegraph-icon {
+    margin-right: 0;
+    margin-top: 1px;
+  }
+}

@@ -1,0 +1,17 @@
+{{#freestyle-collection title='Yapp Hints' as |collection|}}
+  {{#freestyle-variant collection=collection key='forever' class='FreestyleCollection-variant'}}
+    {{#freestyle-usage "example-animations-yappHintForever" title="Pulse Forever" usageTitle="Template" scssTitle="CSS Pulse Animation" class="lsgdd-ExampleAnimationsSlide-usage"}}
+      {{lsgdd/hint-callout}}
+    {{/freestyle-usage}}
+  {{/freestyle-variant}}
+  {{#freestyle-variant collection=collection key='12s' class='FreestyleCollection-variant'}}
+    {{#freestyle-usage "example-animations-yappHint" title="Pulse For 12 Seconds" class="lsgdd-ExampleAnimationsSlide-usage" usageTitle="Template"}}
+      {{lsgdd/hint-callout pulseFor=12}}
+    {{/freestyle-usage}}
+  {{/freestyle-variant}}
+  {{#freestyle-variant collection=collection key='nope' class='FreestyleCollection-variant'}}
+    {{#freestyle-usage "example-animations-yappHint" title="No Pulse" class="lsgdd-ExampleAnimationsSlide-usage" usageTitle="Template"}}
+      {{lsgdd/hint-callout isPulsing=false}}
+    {{/freestyle-usage}}
+  {{/freestyle-variant}}
+{{/freestyle-collection}}

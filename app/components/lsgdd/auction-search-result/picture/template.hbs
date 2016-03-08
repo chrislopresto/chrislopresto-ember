@@ -1,0 +1,33 @@
+{{#if document.artist_name}}
+  <div class="AuctionSearchResult-artist">
+    {{document.artist_name}} ({{display-date-range document.artist_birth_date document.artist_death_date}})
+  </div>
+  <div class="AuctionSearchResult-catalog">
+    {{#if document.artwork_title}}
+      <div class="AuctionSearchResult-title">
+        <span>{{document.artwork_title}}</span>{{#if document.artwork_creation}}, {{document.artwork_creation}}{{/if}}
+      </div>
+    {{/if}}
+    {{#if document.artwork_materials}}
+      {{truncate-multiline text=document.artwork_materials truncate=truncate showButton=false lines=2}}
+    {{/if}}
+    {{#if document.artwork_measurements}}
+      {{document.artwork_measurements}}
+    {{/if}}
+    {{#if document.artwork_edition}}
+      {{document.artwork_edition}}
+    {{/if}}
+  </div>
+{{else}}
+  <div class="AuctionSearchResult-artist">
+    {{document.artwork_title}}{{#if document.artwork_creation}}, {{document.artwork_creation}}{{/if}}
+  </div>
+  <div class="AuctionSearchResult-catalog">
+    {{#if document.artwork_materials}}
+      {{truncate-multiline text=document.artwork_materials truncate=truncate showButton=false lines=2}}
+    {{/if}}
+    {{#if document.artwork_measurements}}
+      {{document.artwork_measurements}}
+    {{/if}}
+  </div>
+{{/if}}

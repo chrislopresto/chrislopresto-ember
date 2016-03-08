@@ -1,0 +1,28 @@
+// HACK: Work around lack of vertical centering whenprinting
+// https://github.com/hakimel/reveal.js/issues/458
+.print-pdf {
+  .RevealSlide {
+    &-content {
+      position: relative !important;
+      &--centeredVertically {
+        padding-top: 20%;
+      }
+    }
+  }
+
+  .SlideFooter {
+    // TODO: Position footers individually as necessary
+    bottom: -25%;
+  }
+
+  .SlideColumn,
+  .SlideList {
+    margin: 0;
+  }
+
+  .lsgdd {
+    &-Quote-text {
+      margin: 0;
+    }
+  }
+}

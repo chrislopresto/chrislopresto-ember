@@ -1,0 +1,62 @@
+{{#freestyle-collection defaultKey='100px' class="lsgdd-ExampleEphemeralSlide-collection" as |collection|}}
+  {{#freestyle-variant
+    collection=collection
+    key='normal'
+  }}
+    {{#freestyle-usage 'monegraph-loaders' title='Monegraph Loaders'}}
+      {{lsgdd/monegraph-loader}}
+      {{lsgdd/monegraph-loader class="green"}}
+      {{lsgdd/monegraph-loader class="violet"}}
+      {{lsgdd/monegraph-loader class="magenta"}}
+      {{lsgdd/monegraph-loader class="teal"}}
+      {{lsgdd/monegraph-loader class="medium-gray"}}
+      {{lsgdd/monegraph-loader class="medium-light-gray"}}
+    {{/freestyle-usage}}
+  {{/freestyle-variant}}
+  {{#freestyle-variant
+    collection=collection
+    key='icon'
+  }}
+    {{#freestyle-usage 'monegraph-loaders-icon' title='Monegraph Loaders'}}
+      {{lsgdd/monegraph-loader showIcon=true}}
+      {{lsgdd/monegraph-loader showIcon=true class="green"}}
+      {{lsgdd/monegraph-loader showIcon=true class="violet"}}
+      {{lsgdd/monegraph-loader showIcon=true class="magenta"}}
+      {{lsgdd/monegraph-loader showIcon=true class="teal"}}
+      {{lsgdd/monegraph-loader showIcon=true class="medium-gray"}}
+      {{lsgdd/monegraph-loader showIcon=true class="medium-light-gray"}}
+    {{/freestyle-usage}}
+  {{/freestyle-variant}}
+  {{#freestyle-variant
+    collection=collection
+    key='100px'
+  }}
+    {{#freestyle-usage 'monegraph-loaders-100px' title="Loader - With Icon"}}
+      {{lsgdd/monegraph-loader class="medium-light-gray" size="100px" showIcon=true}}
+      {{lsgdd/monegraph-loader class="magenta" size="100px" showIcon=true}}
+    {{/freestyle-usage}}
+  {{/freestyle-variant}}
+  {{#freestyle-variant
+    collection=collection
+    key='dev'
+  }}
+    {{#freestyle-usage 'monegraph-loaders-large' title="Loader - Size: 300px, Duration: 3s"}}
+      {{lsgdd/monegraph-loader duration="3s" size="300px" class="magenta" showIcon=true}}
+    {{/freestyle-usage}}
+  {{/freestyle-variant}}
+{{/freestyle-collection}}
+{{#freestyle-note 'monegraph-loaders:notes'}}
+The monegraph-loader component can be used with the following colors in the
+Monegraph color palette: green, violet, magenta, teal, white, medium-gray, medium-light-gray.
+{{/freestyle-note}}
+{{#freestyle-note 'monegraph-loaders-icon:notes'}}
+Specify `showIcon=true` to include the monegraph icon in the center of the spinner.
+{{/freestyle-note}}
+{{#freestyle-note 'monegraph-loaders-100px:notes'}}
+Optionally specify a `size` property in pixels.
+{{/freestyle-note}}
+{{#freestyle-note 'monegraph-loaders-large:notes'}}
+Optionally specify a `duration` property in seconds.
+
+**NOTE:** This huge size and long duration make it much easier to make design tweaks.
+{{/freestyle-note}}

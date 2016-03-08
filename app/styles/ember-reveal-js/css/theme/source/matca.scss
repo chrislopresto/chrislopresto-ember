@@ -5,16 +5,16 @@
 
 $MatcaColorPalette-colors: (
   'primary': (
-    'base': #00BCD4,
-    'light': #B2EBF2,
-    'dark': #0097A7
+    'base': #00bcd4,
+    'light': #b2ebf2,
+    'dark': #0097a7
   ),
   'accent': (
-    'base': #FFC107
+    'base': #ffc107
   ),
   'secondary': (
     'base': #727272,
-    'light': #B6B6B6,
+    'light': #b6b6b6,
   ),
   'foreground': (
     'base': #212121
@@ -164,7 +164,6 @@ $MatcaColorPalette-opacities: (
 
 // Include theme-specific fonts
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,600,300italic,700italic);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300,900,100,400italic,300italic,100italic);
 @import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great);
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900,700,600,500,300,200);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100,400italic);
@@ -186,7 +185,7 @@ $blockMargin: 20px;
 
 // Headings
 $headingMargin: 0 0 $blockMargin 0;
-$headingFont: 'Roboto', sans-serif;
+$headingFont: 'Raleway', sans-serif;
 $headingColor: matca-palette-color('secondary');
 $headingLineHeight: 1.2;
 $headingLetterSpacing: normal;
@@ -233,6 +232,11 @@ $selectionColor: matca-palette-color('primary', 'light');
     font-weight: 300;
   }
 
+  pre {
+   margin: 0;
+   width: 100%;
+  }
+
   code {
     font-family: 'Source Code Pro';
   }
@@ -267,50 +271,6 @@ $selectionColor: matca-palette-color('primary', 'light');
 
     &-block {
       box-shadow: none;
-    }
-  }
-
-  .Shout {
-    h1,
-    h2,
-    h3 {
-      text-transform: uppercase;
-      text-align: left;
-    }
-
-    &-quote {
-    }
-
-    &-attribution {
-      text-align: left;
-      min-height: 1.5em;
-      padding-bottom: 15%;
-    }
-
-    @each $colorKey, $colorVariants in $MatcaColorPalette-colors {
-      @each $variantName, $variantValue in $colorVariants {
-        $shoutModifier: camelize($colorKey + '-' + $variantName);
-        $shoutColor: matca-palette-color('background', 'base');
-        &--#{$shoutModifier} {
-          // background: matca-palette-color($colorKey, $variantName);
-
-          h1,
-          h2,
-          h3 {
-            color: $shoutColor;
-          }
-        }
-
-        &-quote {
-          color: $shoutColor;
-        }
-
-        &-attribution {
-          color: $shoutColor;
-          font-weight: 300;
-          font-style: italic;
-        }
-      }
     }
   }
 

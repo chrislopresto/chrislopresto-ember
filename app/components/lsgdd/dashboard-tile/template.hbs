@@ -1,0 +1,14 @@
+<div class='DashboardTile-content DashboardTile-content--{{color}} {{if (eq stat 0) "DashboardTile-content--noData"}}'>
+  <div class='DashboardTile-label'>
+    {{label}}
+  </div>
+  <div class='DashboardTile-stat DashboardTile-stat--{{statSize}}'>
+    {{#if (eq stat 0)}}
+      <div class="DashboardTile-noData">
+        We haven't received any data yet
+      </div>
+    {{else}}
+      {{format-number stat}}
+    {{/if}}
+  </div>
+</div>

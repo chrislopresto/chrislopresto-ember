@@ -1,0 +1,30 @@
+{{#reveal-slide scrollable=true class="lsgdd-FreestyleSlide lsgdd-UsageSlide lsgdd-MonstersSlide"}}
+  {{presentations/slide-header
+    super="Example"
+    main="Hello World"
+    sub="Living style guide"
+  }}
+  {{#presentations/slide-body columns=2}}
+    {{#presentations/slide-column class="lsgdd-UsageSlide-explanation"}}
+      {{freestyle-usage-controls showFocus=false}}
+      <div class="lsgdd-UsageSlide-explanationLabel">
+        Console
+      </div>
+      <div class="lsgdd-InlineCode">
+        ember g route styleguide
+      </div>
+      <div class="lsgdd-UsageSlide-explanationLabel">
+        styleguide.hbs
+      </div>
+      {{#reveal-code language="handlebars"}}
+  \{{lsgdd/tomster-logo}}
+      {{/reveal-code}}
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column class="lsgdd-UsageSlide-usage"}}
+      <div class="lsgdd-UsageSlide-explanationLabel">
+        Result
+      </div>
+      {{lsgdd/example-hello-world usageTitle="Styleguide.hbs"}}
+    {{/presentations/slide-column}}
+  {{/presentations/slide-body}}
+{{/reveal-slide}}

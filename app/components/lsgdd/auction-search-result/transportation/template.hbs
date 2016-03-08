@@ -1,0 +1,8 @@
+<div class="AuctionSearchResult-artist">
+  {{document.artwork_title}}
+</div>
+<div class="AuctionSearchResult-catalog">
+  {{#if description}}
+    {{truncate-multiline text=description truncate=truncate showButton=false lines=2}}
+  {{/if}}
+</div>

@@ -1,0 +1,13 @@
+<div class='offer-composition-instructions'>Set a price for your work</div>
+<div class='price-editor-entry'>
+  <div class='price-editor-input-container'>
+    <label for='price-editor-input'>Tap To Edit</label>
+    <span class='price-editor-watermark'>$</span>
+    {{input type="text"
+            class='price-editor-input'
+            pattern="[0-9]*"
+            type="number"
+            value=inputValue
+            focus-in="didFocusPriceField"}}
+  </div>
+</div>

@@ -1,0 +1,64 @@
+{{#reveal-slide scrollable=true class="lsgdd-FreestyleSlide lsgdd-UsageSlide lsgdd-MonstersSlide"}}
+  {{presentations/slide-header
+    super="Freestyle Usage"
+    main="Varying Data"
+    sub="Resume Education Item"
+  }}
+  {{#presentations/slide-body columns=2}}
+    {{#presentations/slide-column class="lsgdd-UsageSlide-explanation"}}
+      <h3>Here we go</h3>
+      {{freestyle-usage-controls showFocus=false}}
+      {{#presentations/slide-list}}
+        {{#presentations/slide-list-item}}ok ok ok ok ok{{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item}}ok ok ok ok ok{{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item}}ok ok ok ok ok{{/presentations/slide-list-item}}
+      {{/presentations/slide-list}}
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column class="lsgdd-UsageSlide-usage"}}
+      {{#freestyle-collection title='Education Items' defaultKey='rutgers' as |collection|}}
+
+        {{#freestyle-variant
+            collection=collection
+            key='rutgers'
+            class='FreestyleCollection-variant'
+        }}
+          {{#freestyle-usage 'resume-education-item'
+              title='Resume Education Item'
+          }}
+            {{#resume-education-item
+                slug='rutgers'
+                logoSrc='assets/images/logo-rutgers.png'
+                name='Rutgers University'
+                where='New Brunswick, NJ'
+                from='1998'
+                to='2002'
+            }}
+              Bachelor of Science in <span class='major'>Computer Science</span><br>
+              Bachelor of Music (piano) in <span class='major'>Jazz Studies</span>
+            {{/resume-education-item}}
+          {{/freestyle-usage}}
+        {{/freestyle-variant}}
+        {{#freestyle-variant
+            collection=collection
+            key='monsters'
+            class='FreestyleCollection-variant'
+        }}
+          {{#freestyle-usage 'resume-education-item'
+              title='Resume Education Item'
+          }}
+            {{#resume-education-item
+              slug='monsters'
+              logoSrc='assets/images/logo-monsters-university-cropped.png'
+              name='Monsters University'
+              where='Monstropolis'
+              from='1992'
+              to='1992'
+            }}
+            Attended School of Scaring before being expelled
+            {{/resume-education-item}}
+          {{/freestyle-usage}}
+        {{/freestyle-variant}}
+      {{/freestyle-collection}}
+    {{/presentations/slide-column}}
+  {{/presentations/slide-body}}
+{{/reveal-slide}}

@@ -1,0 +1,24 @@
+{{#reveal-slide scrollable=true class="lsgdd-FreestyleSlide lsgdd-UsageSlide"}}
+  {{presentations/slide-header
+    super=""
+    main="Style Guide"
+    sub="A Set of Design Standards for an Application"
+  }}
+  {{#presentations/slide-body columns=2}}
+  {{freestyle-usage-controls showFocus=false}}
+    {{#presentations/slide-column class="lsgdd-UsageSlide-explanation lsgdd-ExampleDesignStandardsSlide-palette"}}
+      {{!-- <div class="lsgdd-ExampleDesignStandardsSlide-usageHeader">
+        U.S. Web Design Standards
+      </div> --}}
+      <div class="lsgdd-TightContainer">
+        <img class="lsgdd-Image u-rounded" src="assets/images/presentations/living-style-guide-driven-development/usds-visual-style.png" alt="U.S. Web Design Standards">
+      </div>
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column class="lsgdd-UsageSlide-explanation lsgdd-ExampleDesignStandardsSlide-typeface"}}
+      {{!-- <div class="lsgdd-DesignStandardsSlide-usageHeader">
+        Living Style Guide Rendition
+      </div> --}}
+      {{lsgdd/example-design-standards}}
+    {{/presentations/slide-column}}
+  {{/presentations/slide-body}}
+{{/reveal-slide}}

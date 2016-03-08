@@ -1,0 +1,21 @@
+<div class="AuctionSearchResult-image">
+  <img src={{asset.medium}} class="AuctionSearchResult-objectImage" crossOrigin="Anonymous">
+  <div class="AuctionSearchResult--lotCheck">
+    <span class="checkWrap">
+      {{input type='checkbox' checked=isChecked}}
+      <span class="checkImitation"></span>
+    </span>
+  </div>
+</div>
+<div class="AuctionSearchResult-left">
+  {{component resultComponentPath document=document truncate=true}}
+  {{lsgdd/auction-search-result/sale-section document=document class="AuctionSearchResult-saleInfo"}}
+</div>
+{{lsgdd/auction-search-result/financials-section
+  document=document
+  soldCurrency=soldCurrency
+  estimationCurrency=estimationCurrency
+  class="AuctionSearchResult-right"
+}}
+{{!#link-to 'lot' document.id (query-params c=c f=f r=r m=m s=s l=l order_by=order_by) class="DetailLotInfo_link"}}
+{{!/link-to}}

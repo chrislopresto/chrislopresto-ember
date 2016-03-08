@@ -1,0 +1,76 @@
+<div class='offer-composition-instructions'>Tap on labels to edit</div>
+
+<div class="offer-composition-sentence">
+  <span data-offer-facet='i-want-to'>I&nbsp;want&nbsp;to</span>
+  {{#if offerComposition.isTransferOnly}}
+    <span data-offer-facet='contractType'>{{offerComposition.contractType}}</span>
+  {{else}}
+    <a {{action 'setActiveFacet' 'contractType'}} class='offer-composition-facet allow-click' data-offer-facet='contractType'>{{offerComposition.contractType}}</a>
+  {{/if}}
+  {{~#if (not isRegistering)}}
+    {{~#if offerComposition.canSublicense}}
+      {{#if offerComposition.isTransferringAnEdition}}
+        <span data-offer-facet='this'>an edition of</span>
+      {{/if}}
+      <span data-offer-facet='this'>{{#if multipleWorks}}these{{else}}this{{/if}}</span>&nbsp;<a {{action 'setActiveFacet' 'exclusivity'}} class='offer-composition-facet allow-click' data-offer-facet='exclusivity'>{{offerComposition.exclusivity}}</a>
+    {{else if offerComposition.isAnEdition}}
+      <span data-offer-facet='this'>an edition of {{#if multipleWorks}}these{{else}}this{{/if}}</span>
+    {{else}}
+      {{#if offerComposition.isTransferringAnEdition}}
+        <span data-offer-facet='this'>an edition of</span>
+      {{/if}}
+      <span data-offer-facet='this'>{{#if multipleWorks}}these{{else}}this{{/if}}</span>
+      <span>{{offerComposition.exclusivity}}</span>
+    {{/if~}}
+    {{~#if offerComposition.canAmendTitle}}
+      <a {{action 'setActiveFacet' 'classification'}} class='offer-composition-facet allow-click' data-offer-facet='classification'>{{offerComposition.classification}}{{if multipleWorks "s"}}</a>
+    {{else}}
+      <span>{{offerComposition.classification}}{{if multipleWorks "s"}}</span>
+    {{/if~}}
+    {{~#if (and multipleMedia aggregateMedia)}}
+      <span data-offer-facet="collection" class="collection">collection ({{work.mediaCollection.length}})</span>
+    {{/if~}}
+  {{else}}
+    <span data-offer-facet='this'>{{#if multipleWorks}}these{{else}}this{{/if}}</span>
+    <span>{{offerComposition.classification}}{{if multipleWorks "s"}}</span>
+    {{~#if (and multpleMedia aggregateMedia)}}
+      <span class="collection">collection ({{work.mediaCollection.length}})</span>
+    {{/if~}}
+  {{/if~}}
+  {{#if isSelling}}
+    <span data-offer-facet='for'>for</span>&nbsp;<a {{action 'setActiveFacet' 'price'}} class='offer-composition-facet allow-click' data-offer-facet='price'>${{offerComposition.price}}</a>
+    {{if multipleWorks " each"}}
+  {{/if}}
+
+  {{~#if (not isRegistering)}}
+    <span data-offer-facet='that-the-owner'>that&nbsp;the&nbsp;owner</span>&nbsp;
+    {{~#if (eq offerComposition.exclusivity 'unlimited')}}
+      <span data-offer-facet='cannot-resell'>cannot&nbsp;resell&nbsp;&amp;</span>
+    {{else}}
+      <span data-offer-facet='can-resell'>can&nbsp;resell&nbsp;&amp;</span>
+    {{/if~}}
+    {{~#if offerComposition.canTransferRemix}}
+      {{~#if allowRemix}}
+        <a {{action 'setActiveFacet' 'remix'}} class='offer-composition-facet allow-click' data-offer-facet='can-remix'>can&nbsp;remix</a>
+      {{else}}
+        <a {{action 'setActiveFacet' 'remix'}} class='offer-composition-facet prohibition allow-click' data-offer-facet='cannot-remix'>cannot&nbsp;remix</a>
+      {{/if~}}
+    {{else}}
+      {{~#if allowRemix}}
+        <span>can&nbsp;remix</span>
+      {{else}}
+        <span>cannot&nbsp;remix</span>
+      {{/if~}}
+    {{/if~}}
+  {{/if~}}
+  {{~#if (eq offerComposition.contractType 'transfer')}}
+    <span data-offer-facet='to-recipient'>to</span>
+    <a {{action 'setActiveFacet' 'recipient'}} data-offer-facet='recipient' class="offer-composition-facet {{unless offerComposition.isRecipientValid 'prohibition'}}">
+    {{~#if offerComposition.recipient}}
+      {{offerComposition.recipient}}
+    {{else}}
+      &lt;specify&nbsp;recipient&gt;
+    {{/if}}
+    </a>
+  {{/if~}}
+</div>

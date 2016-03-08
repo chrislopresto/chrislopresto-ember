@@ -1,0 +1,34 @@
+{{#reveal-slide class="lsgdd-ComposingWithComponentsSlide"}}
+  {{presentations/slide-header
+    super=""
+    main="Composing With Components"
+    sub="A Profitable Prerequisite"
+  }}
+  {{#presentations/slide-body columns=1 display="flex"}}
+    {{#presentations/slide-list class="lsgdd-TightContainer"}}
+      {{#presentations/slide-list-item class="lsgdd-ComposingWithComponentsSlide-listItem" type="borderless"}}
+        <b>Web Component</b><br>
+        A grouping of related HTML, CSS, and JavaScript that performs a common function
+      {{/presentations/slide-list-item}}
+      {{#presentations/slide-list-item type="sub"}}
+        <ul>
+          <li>Encapsulates behavior, appearance, and structure</li>
+          {{!-- <li>Modern JavaScript frameworks all provide an implementation</li> --}}
+          <li>Self-contained and reusable</li>
+        </ul>
+      {{/presentations/slide-list-item}}
+      {{#presentations/slide-list-item class="lsgdd-ComposingWithComponentsSlide-listItem" type="borderless"}}
+        <span class="fragment" data-fragment-index="1">
+          Modern JavaScript frameworks like Reembular.js provide an implementation
+        </span>
+      {{/presentations/slide-list-item}}
+    {{/presentations/slide-list}}
+  {{/presentations/slide-body}}
+  {{#presentations/slide-footer}}
+    <div class="lsgdd-TightContainer fragment" data-fragment-index="1">
+      <img class="lsgdd-Image u-rounded lsgdd-ComposingWithComponentsSlide-image--reembular" src="assets/images/presentations/living-style-guide-driven-development/reembular.png" alt="One framework to rule them all">
+    </div>
+  {{/presentations/slide-footer}}
+  {{#reveal-slide-notes}}
+  {{/reveal-slide-notes}}
+{{/reveal-slide}}

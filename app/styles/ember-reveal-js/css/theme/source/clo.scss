@@ -289,49 +289,4 @@ $selectionColor: clo-palette-color('primary', 'light');
       box-shadow: none;
     }
   }
-
-  .Shout {
-    h1,
-    h2,
-    h3 {
-      text-transform: uppercase;
-      text-align: left;
-    }
-
-    &-quote {
-    }
-
-    &-attribution {
-      text-align: left;
-      min-height: 1.5em;
-      padding-bottom: 15%;
-    }
-
-    @each $colorKey, $colorVariants in $CloColorPalette-colors {
-      @each $variantName, $variantValue in $colorVariants {
-        $shoutModifier: camelize($colorKey + '-' + $variantName);
-        $shoutColor: clo-palette-color('background', 'base');
-        &--#{$shoutModifier} {
-          // background: clo-palette-color($colorKey, $variantName);
-
-          h1,
-          h2,
-          h3 {
-            color: $shoutColor;
-          }
-        }
-
-        &-quote {
-          color: $shoutColor;
-        }
-
-        &-attribution {
-          color: $shoutColor;
-          font-weight: 300;
-          font-style: italic;
-        }
-      }
-    }
-  }
-
 }

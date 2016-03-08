@@ -1,0 +1,21 @@
+{{#reveal-slide scrollable=true class="lsgdd-FreestyleSlide lsgdd-UsageSlide lsgdd-ExampleAnimationsSlide"}}
+  {{presentations/slide-header
+    super="Example"
+    main="Animations"
+    sub="Living style guide"
+  }}
+  {{#presentations/slide-body columns=2}}
+    {{#presentations/slide-column class="lsgdd-UsageSlide-explanation"}}
+      {{freestyle-usage-controls showFocus=false}}
+      {{#if showExampleAnimationsHint}}
+        {{lsgdd/example-animations}}
+        {{!-- <button type="button" class="lsgdd-Button lsgdd-ExampleAnimationsSlide-resetButton" onclick={{action 'resetPulse'}}>Reset Pulse</button> --}}
+      {{/if}}
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column class="lsgdd-UsageSlide-usage"}}
+      <div class="lsgdd-TightContainer lsgdd-ExampleAnimationsSlide-resultContainer">
+        <img class="lsgdd-Image lsgdd-ExampleAnimationsSlide-result" src="assets/images/presentations/living-style-guide-driven-development/yapp-hinty.gif" alt="It looks like you're trying to publish a Yapp">
+      </div>
+    {{/presentations/slide-column}}
+  {{/presentations/slide-body}}
+{{/reveal-slide}}

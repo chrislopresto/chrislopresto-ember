@@ -1,0 +1,195 @@
+$hint-callout-animation-speed: 3s;
+$hint-callout-animation-iteration-count: infinite;
+$hint-callout-dot-diameter: 20px;
+$hint-callout-dot-border-width: $hint-callout-dot-diameter * .085;
+$hint-callout-dot-border-radius: $hint-callout-dot-diameter * 1.5;
+$hint-callout-dot-shadow-width: $hint-callout-dot-diameter * .05;
+
+$hint-callout-pulse-diameter-multiplier: 2;
+$hint-callout-pulse-offset-multiplier: ($hint-callout-pulse-diameter-multiplier - 1) * -.5;
+$hint-callout-pulse-diameter: $hint-callout-dot-diameter * $hint-callout-pulse-diameter-multiplier;
+$hint-callout-pulse-border-radius: $hint-callout-pulse-diameter * 1.5;
+$hint-callout-pulse-offset: $hint-callout-dot-diameter * $hint-callout-pulse-offset-multiplier;
+$hint-callout-pulse-width: $hint-callout-dot-diameter * .2;
+$hint-callout-pulse-shadow-width: $hint-callout-dot-diameter * .35;
+
+$hint-callout-pulse-animation-name: 'hint-callout-pulse';
+$hint-callout-not-pulsing-animation-name: 'hint-callout-not-pulsing';
+
+$hint-callout-size: $hint-callout-dot-diameter + $hint-callout-pulse-width + $hint-callout-pulse-shadow-width;
+$hint-callout-z-index: 40;
+
+$hint-callout-background-color: #fff;
+$hint-callout-color: #00bcd4;
+
+@mixin hint-callout-keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin hint-callout-animation($name, $speed, $count) {
+  -webkit-animation: #{$name} $speed ease-out;
+  -moz-animation: #{$name} $speed ease-out;
+  animation: #{$name} $speed ease-out;
+  -webkit-animation-iteration-count: $count;
+  -moz-animation-iteration-count: $count;
+  animation-iteration-count: $count;
+}
+
+@mixin hint-callout-boundary-positioning {
+  height: $hint-callout-pulse-diameter;
+  width: $hint-callout-pulse-diameter;
+  position: absolute;
+  top: $hint-callout-pulse-offset;
+  left: $hint-callout-pulse-offset;
+}
+
+.hint-callout-modal {
+  width: 300px;
+
+  p {
+    margin: 1rem 0;
+    line-height: 1.1rem;
+  }
+}
+
+.hint-callout {
+  position: relative;
+  // HACK top/left
+  top: 10px;
+  left: 10px;
+
+  .dot {
+    width: $hint-callout-dot-diameter;
+    height: $hint-callout-dot-diameter;
+    border: $hint-callout-dot-border-width solid rgba($blue, 0.3);
+    border-radius: $hint-callout-dot-border-radius;
+    background-color: rgba($hint-callout-background-color, 0.8);
+    z-index: $hint-callout-z-index;
+    position: absolute;
+    box-shadow: 0px 0px $hint-callout-dot-shadow-width $blue;
+    cursor: pointer;
+  }
+
+  // BEGIN-FREESTYLE-USAGE example-animations-yappHintForever
+  .pulse {
+    @include hint-callout-boundary-positioning;
+    cursor: pointer;
+    border: $hint-callout-pulse-width solid $hint-callout-background-color;
+    background: transparent;
+    border-radius: $hint-callout-pulse-border-radius;
+    z-index: $hint-callout-z-index;
+    opacity: 0;
+    box-shadow: inset 0px 0px $hint-callout-pulse-shadow-width $blue, 0px 0px $hint-callout-pulse-shadow-width $blue;
+
+    &.pulsing {
+      @include hint-callout-animation($hint-callout-pulse-animation-name, $hint-callout-animation-speed, infinite);
+    }
+
+    &.not-pulsing {
+      @include hint-callout-animation($hint-callout-not-pulsing-animation-name, $hint-callout-animation-speed * .8,  1);
+      transform: scale(1);
+      opacity: 0.99;
+    }
+  }
+  // END-FREESTYLE-USAGE
+
+  .hint-callout-content {
+    // border: solid 2px #ffc107;
+    border-radius: 5px;
+    padding: .5rem !important;
+    // background-color: #b6b6b6;
+    font-size: 1rem;
+    position: relative;
+    top: 0;
+    left: 10px;
+    display: inline-block;
+  }
+
+  .boundary {
+    @include hint-callout-boundary-positioning;
+  }
+
+  @include hint-callout-keyframes($hint-callout-not-pulsing-animation-name) {
+    0% {
+      transform: scale(0);
+      opacity: 0.0;
+    }
+    25% {
+      transform: scale(0.5);
+      opacity: 0.0;
+    }
+    50% {
+      transform: scale(0.6);
+      opacity: 0.3;
+    }
+    70% {
+      transform: scale(0.7);
+      opacity: 0.5;
+    }
+    85% {
+      transform: scale(0.85);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @include hint-callout-keyframes($hint-callout-pulse-animation-name) {
+    0% {
+      transform: scale(0);
+      opacity: 0.0;
+    }
+    25% {
+      transform: scale(0.4);
+      opacity: 0.0;
+    }
+    50% {
+      transform: scale(0.8);
+      opacity: 0.3;
+    }
+    70% {
+      transform: scale(0.95);
+      opacity: 0.5;
+    }
+    85% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 0.0;
+    }
+  }
+}
+
+.hint-callout-opt-out {
+  float: left;
+  margin: 1rem 1rem 2rem 0;
+  padding: 5px 0;
+  color: $hint-callout-color;
+
+  label,
+  input {
+    cursor: pointer;
+  }
+}
+
+.hint-callout-confirm-button,
+.feature-modal.ember-modal-panel .yapp-button.hint-callout-confirm-button {
+  float: right;
+  margin: 1rem 0 2rem;
+  width: 80px;
+}
