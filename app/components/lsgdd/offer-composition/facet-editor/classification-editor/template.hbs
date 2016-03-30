@@ -1,0 +1,35 @@
+<div class='offer-composition-instructions'>Classify your work</div>
+
+<div class="classification-container {{if showClassificationList 'list'}}">
+  {{#each options as |option index|}}
+    <div class="classification-item">
+      {{#if canChangeClassification}}
+        <div {{action 'update' option.value}}
+             {{action 'update' option.value on='touchStart'}} data-facet-value="{{string-dasherize option.value}}"
+              class="allow-click circle classification-circle {{if (eq currentValue option.value) 'selected'}}">
+          <span class='offer-composition-facet-option classification-editor-{{string-dasherize option.value}} icon-classify-{{string-dasherize option.value}}'>
+            {{option.label}}
+          </span>
+        </div>
+        <span class="description">{{option.description}}</span>
+        {{#if (eq currentValue option.value)}}
+          {{#ember-wormhole to="facet-option-description"}}
+            {{liquid-bind option.description use="crossFade"}}
+          {{/ember-wormhole}}
+        {{/if}}
+      {{else}}
+        <span class="classification-circle {{if (eq option.value currentValue) 'selected'}}">
+          <span class='offer-composition-facet-option classification-editor-{{string-dasherize option.value}} icon-classify-{{string-dasherize option.value}}'>
+            {{option.label}}
+          </span>
+        </span>
+      {{/if}}
+    </div>
+  {{/each}}
+  {{#unless canChangeClassification}}
+  <div class="classification-not-editable">
+    You do not possess the right to change the classification.
+  </div>
+  {{/unless}}
+  <div id="facet-option-description" class="{{unless canChangeClassification 'not-editable'}}"></div>
+</div>

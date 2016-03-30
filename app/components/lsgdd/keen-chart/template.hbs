@@ -1,0 +1,49 @@
+<div class="KeenChart-content">
+  <div class="KeenChart-header">
+    {{header}}
+
+    {{#if allowExport}}
+      <div class='KeenChart-exportBox' {{action "export"}}>
+        <span class="KeenChart-exportBoxText">Download to .CSV</span>
+        <span class='yappicons-font icon-download download'></span>
+      </div>
+    {{/if}}
+
+    {{#if hasPartialData}}
+      <div class="KeenChart-partialDataWarning" onclick={{action 'toggleShowPartialDataMessage' this}}></div>
+    {{/if}}
+  </div>
+  <div class="js-KeenChart-placeholder KeenChart-container"></div>
+  <div class="KeenChart-timestamp">
+    Updated at {{moment-format updatedAt 'MMMM DD, YYYY hh:mm:ss'}}
+  </div>
+  {{#if error}}
+    <div class="KeenChart-error">
+      {{error}}
+    </div>
+  {{/if}}
+  {{#if isEmpty}}
+    <div class="KeenChart-emptyContainer">
+      <div class="KeenChart-emptyContent">
+        <div class="KeenChart-emptyHeader">No Data Available</div>
+        <div class="KeenChart-emptyMessage">{{dataSource.emptyMessage}}
+      </div>
+      </div>
+    </div>
+  {{/if}}
+</div>
+{{#if showPartialDataMessage}}
+  {{#tether-dialog
+    target=partialDataMessageTarget
+    targetAttachment='middle center'
+    attachment='middle center'
+    translucentOverlay=false
+    close='toggleShowPartialDataMessage'
+    container-class="KeenChart-partialDataMessage"
+  }}
+    <div class='KeenChart-partialDataMessageHeader'>Partial Data Warning</div>
+    This chart includes time before February 27, 2016, when Yapp
+    began full data collection. Certain usage statistics, including app views
+    and page views, are not available before that date.
+  {{/tether-dialog}}
+{{/if}}

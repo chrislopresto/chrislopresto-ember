@@ -1,0 +1,58 @@
+<div class='offer-composition-instructions'>Set edition size</div>
+
+{{#if offerComposition.expressedSublicense}}
+<p class='exclusivity-instructions'>Since this work was previously offered with a {{expressedSublicenseName}} license, you may only choose between exclusive and {{expressedSublicenseName}} edition sizes.</p>
+{{/if}}
+{{lsgdd/circle-list items=exclusivityChoices
+              initialChoice=initialChoiceIndex
+              selectedIndex=selectedIndex
+              disabledIndex=disabledIndex
+              readOnly=(not offerComposition.canSublicense)}}
+
+{{#ember-wormhole to="circle-item-detail-1"}}
+  {{#if offerComposition.previousEditionSize}}
+    {{offerComposition.previousEditionSize}}
+  {{else}}
+    {{input type="text"
+            class='exclusivity-editor-input'
+            pattern="[0-9]*"
+            type="number"
+            value=editionSize
+            focus-out="didFocusOutLimitedEditionField"
+    }}
+  {{/if}}
+{{/ember-wormhole}}
+
+<p class='exclusivity-instructions'>
+  {{#if (eq exclusivityType 'exclusive')}}
+    You transfer the title of the work
+    <span class="highlight">
+      {{#if (eq expressedSublicenseName 'limited edition')}}
+        and remaining unsold editions
+      {{else if (eq expressedSublicenseName 'unlimited')}}
+        and ability to sell unlimited editions
+      {{/if}}
+    </span>
+    to the buyer as well as other rights as outlined in the classification. You relinquish the ability to sell rights to the work.
+  {{else if (eq exclusivityType 'limited edition')}}
+    You create a specified number of editions for this work that are sold individually. The buyer of an edition can resell the edition they purchase.
+  {{else if (eq exclusivityType 'unlimited')}}
+    You retain exclusive ownership of the rights and grant the buyer the ability to download the source files for use as outlined in the classification.
+  {{/if}}
+</p>
+
+{{#if (and offerComposition.canSublicense (not offerComposition.expressedSublicense))}}
+<div class="slider-container">
+  <div class="minimum tip {{if raiseExclusiveTip 'raise'}}">1</div>
+  <div class="exclusive slider-label">Exclusive</div>
+  <div class="maximum tip {{if raiseUnlimitedTip 'raise'}}">∞</div>
+  <div class="open-edition slider-label">Unlimited</div>
+  {{lsgdd/exclusivity-slider start=sliderEditionSize
+                       slide=(action 'exclusivitySliderIsSliding')
+                       change=(action 'exclusivitySliderHasChanged')}}
+</div>
+{{/if}}
+
+{{#unless offerComposition.canSublicense}}
+  <p class='exclusivity-instructions prohibit-phrase cant-set-eclusivity'>You do not possess the right to modify the edition size.</p>
+{{/unless}}

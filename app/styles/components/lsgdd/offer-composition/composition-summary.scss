@@ -1,0 +1,29 @@
+.offer-composition-summary {
+  color: monegraph-palette-color(dark-gray);
+  font-size: 20px !important;
+  font-weight: normal !important;
+  padding: monegraph-gs(2/3) !important;
+
+  span {
+    white-space: nowrap;
+  }
+
+  // @include breakpoint($breakpoint-max-height-iphone-5-portrait) {
+  //   font-size: 18px !important;
+  // }
+
+  .offer-composition-facet {
+    @include monegraph-font-weight-medium;
+    color: monegraph-palette-color(magenta);
+    border-radius: 5px;
+    white-space: nowrap;
+
+    &.prohibition {
+      color: monegraph-palette-color(red);
+    }
+  }
+
+  span[data-offer-facet] {
+    white-space: nowrap;
+  }
+}

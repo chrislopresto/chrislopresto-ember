@@ -1,29 +1,28 @@
 {
   "FreestylePalette": {
     "primary": {
-      "name": "purple",
-      "description": "something soundly purplish",
-      "base": "#673AB7",
-      "light": "#D1C4E9",
-      "dark": "#FF4081"
+      "name": "cyan",
+      "base": "#00BCD4",
+      "light": "#B2EBF2",
+      "dark": "#0097A7"
     },
     "accent": {
       "name": "amber",
-      "base": "#FF4081"
+      "base": "#FFC107"
     },
     "secondary": {
-      "name": "yellow",
-      "base": "#ffeb3b",
+      "name": "gray",
+      "base": "#727272",
       "light": "#B6B6B6"
     },
     "foreground": {
-      "name": "green",
-      "base": "#8bc34a"
+      "name": "dark gray",
+      "base": "#212121"
     },
     "background": {
       "name": "white-ish",
-      "base": "#eeeeee",
-      "dark": "#673AB7"
+      "base": "#ffffff",
+      "dark": "#eeeeee"
     }
   }
 }

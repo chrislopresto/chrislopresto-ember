@@ -1,0 +1,60 @@
+$contract-type-animation-duration: .3s;
+
+@mixin contract-type-facet-option-content {
+  background-color: transparent;
+  border: solid 2px monegraph-palette-color(magenta) !important;
+  border-radius: 10px;
+  color: monegraph-palette-color(magenta);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.8rem !important;
+  font-weight: normal !important;
+  margin-bottom: monegraph-gs(1/3) !important;
+  padding: 7px 14px !important;
+  white-space: nowrap;
+}
+
+.liquid-animating {
+  .contract-type-facet-option {
+    @include contract-type-facet-option-content;
+  }
+  .contract-type-facet-option:not(.selected) {
+    visibility: hidden;
+  }
+}
+
+.facet-editor.contract-type-editor {
+  color: monegraph-palette-color(dark-gray);
+  line-height: initial !important;
+  min-width: monegraph-gs(10) !important;
+
+  .offer-composition-instructions {
+    @include offer-composition-instructions;
+  }
+
+  .facet-editor-body {
+    padding: monegraph-gs(1/3) !important;
+  }
+
+  .contract-type-options {
+    margin: monegraph-gs(1/3) 0 0 monegraph-gs(1/3) !important;
+  }
+
+  .contract-type-facet-option {
+    @include contract-type-facet-option-content;
+    // @include transition(background-color $contract-type-animation-duration, color $contract-type-animation-duration);
+
+    // @include breakpoint($breakpoint-max-height-iphone-5-portrait) {
+    //   font-size: 1.6rem !important;
+    // }
+
+    &.selected {
+      background-color: monegraph-palette-color(magenta);
+      color: monegraph-palette-color(white);
+    }
+  }
+
+  .offer-composition-facet-cta {
+    cursor: pointer;
+  }
+}

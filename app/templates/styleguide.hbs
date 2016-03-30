@@ -49,6 +49,22 @@
       {{/resume-education-item}}
     {{/freestyle-usage}}
 
+    {{#freestyle-usage 'resume-education-item'
+        title='Resume Education Item'
+        highlightJsTheme='hybrid'
+    }}
+      {{#resume-education-item
+          slug='monsters'
+          logoSrc='assets/images/logo-monsters-university-cropped.png'
+          name='Monsters University'
+          where='Monstropolis'
+          from='1992'
+          to='1992'
+      }}
+        Attended School of Scaring before being expelled
+      {{/resume-education-item}}
+    {{/freestyle-usage}}
+
     {{#freestyle-usage}}
       {{resume-header}}
     {{/freestyle-usage}}

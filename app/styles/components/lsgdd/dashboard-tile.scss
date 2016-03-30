@@ -1,0 +1,67 @@
+// TODO: Move mixin to yapp-ember-kit
+@mixin yapp-palette-rule-suit($rule: color, $colors: map-keys($yappPalette), $complement: false) {
+  @each $color in $colors {
+    $value: yapp-palette($color);
+    // @if $complement {
+    //   $value: palette-complement($color);
+    // }
+    &--#{$color} {
+      #{$rule}: $value;
+    }
+  }
+}
+
+.DashboardTile {
+  width: 240px;
+  font-family: 'Roboto' !important;
+  margin-bottom: 1rem !important;
+
+  &-content {
+    border-radius: 10px !important;
+    color: yapp-palette(white);
+    height: 160px;
+    padding: 1rem !important;
+    text-align: center;
+
+    @include yapp-palette-rule-suit(background-color);
+
+    &--noData {
+      background-color: #eeeeee !important;
+      color: #212121 !important;
+    }
+  }
+
+  &-label {
+    font-size: 1.1rem !important;
+  }
+
+  &-noData {
+    font-weight: normal !important;
+    padding-top: 1.8rem !important;
+    font-size: 1.1rem !important;
+    line-height: 1.1rem !important;
+  }
+
+  &-stat {
+    font-weight: bold !important;
+    height: 100px !important;
+    line-height: 5rem !important;
+    padding-top: .5rem !important;
+
+    &--large {
+      font-size: 4rem !important;
+    }
+
+    &--medium {
+      font-size: 3rem !important;
+      // HACK
+      margin-top: 5px !important;
+    }
+
+    &--small {
+      font-size: 2rem !important;
+      // HACK
+      margin-top: 10px !important;
+    }
+  }
+}

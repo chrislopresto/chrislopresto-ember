@@ -1,0 +1,39 @@
+{{#reveal-slide}}
+  {{presentations/slide-header
+    super="Super Header Thoughts"
+    main="A Meaningful Headline"
+    sub="Something else appropriate here"
+  }}
+  {{#presentations/slide-body columns=2}}
+    {{#presentations/slide-column}}
+      <h4>Thing One</h4>
+      <p>
+        Something about thing one
+
+        {{#presentations/slide-list}}
+          {{#presentations/slide-list-item}}It's big{{/presentations/slide-list-item}}
+          {{#presentations/slide-list-item}}It's great{{/presentations/slide-list-item}}
+          {{#presentations/slide-list-item}}It's a bird{{/presentations/slide-list-item}}
+        {{/presentations/slide-list}}
+      </p>
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column}}
+      <h4>Thing Two</h4>
+      {{#reveal-code language="ruby"}}
+def create_hits
+  @annie = Annie.new options[:env]
+  setup_rturk
+  links = File.readlines(options[:file])
+  links = links.take(options[:limit]) if options[:limit]
+
+  links.each do |event_url|
+    create_hit_from_event_url event_url.gsub(/\s+/, ""),
+    options[:reward],
+    options[:max_assignments],
+    options[:approval_rate]
+  end
+end
+      {{/reveal-code}}
+    {{/presentations/slide-column}}
+  {{/presentations/slide-body}}
+{{/reveal-slide}}

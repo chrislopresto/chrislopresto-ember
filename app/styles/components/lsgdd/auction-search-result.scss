@@ -1,0 +1,583 @@
+/**
+ Usage:
+ <i class="icon icon--sold"></i>
+**/
+
+.icon {
+  display: inline-block;
+  margin-left: 0;
+  @include mappy-bp(wide) {
+    margin-left: 7px;
+  }
+  &:before {
+    content: '';
+    width: 14px !important;
+    height: 14px !important;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    background-image: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/gavel-sprite.png);
+    background-repeat: no-repeat;
+    @include mappy-bp(wide) {
+      display: inline-block;
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), not all {
+      background-image: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/gavel-sprite@2x.png);
+      background-repeat: no-repeat;
+      background-size: 150px 1400px;
+    }
+  }
+  &--similarObjects {
+    &:before {
+      background-position: -18px -869px;
+    }
+    &:hover, &.active {
+      &:before {
+        background-position: -68px -869px;
+      }
+    }
+  }
+  &--unsold {
+    &:before {
+      background-position: -20px -467px;
+    }
+    &:hover, &.active {
+      &:before {
+        background-position: -70px -467px;
+      }
+    }
+  }
+  &--notAvailable {
+    &:before {
+      background-position: -18px -1218px;
+    }
+    &:hover, &.active {
+      &:before {
+        background-position: -68px -1218px;
+      }
+    }
+  }
+  &--notPublished {
+    &:before {
+      background-position: -18px -1268px;
+    }
+    &:hover, &.active {
+      &:before {
+        background-position: -68px -1268px;
+      }
+    }
+  }
+  &--withdrawn {
+    &:before {
+      background-position: -20px -768px;
+    }
+    &:hover, &.active {
+      &:before {
+        background-position: -70px -768px;
+      }
+    }
+  }
+  &--amended {
+    &:before {
+      background-position: -18px -1319px;
+    }
+    &:hover, &.active {
+      &:before {
+        background-position: -68px -1319px;
+      }
+    }
+  }
+  &--hammerPrice {
+    &:before {
+      background-position: -22px -518px;
+    }
+    &:hover, &.active {
+      &:before {
+        background-position: -72px -518px;
+      }
+    }
+  }
+  &--premiumPrice {
+    &:before {
+      background-position: -22px -570px;
+    }
+    &:hover, &.active {
+      &:before {
+        background-position: -72px -570px;
+      }
+    }
+  }
+  &--soldHigher {
+    &:before {
+      background-position: -20px -617px;
+    }
+    &:hover, &.active {
+      &:before {
+        background-position: -70px -617px;
+      }
+    }
+  }
+  &--soldLower {
+    &:before {
+      background-position: -20px -668px;
+    }
+    &:hover, &.active {
+      &:before {
+        background-position: -70px -668px;
+      }
+    }
+  }
+  &--unselectedAll {
+    &:before {
+      width: 16px !important;
+      height: 16px !important;
+      background-position: -117px -1117px;
+    }
+    &:hover, &.active {
+      &:before {
+        background-position: -117px -1117px;
+      }
+    }
+  }
+  &--saveLot {
+    &:before {
+      width: 15px !important;
+      height: 14px !important;
+      background-position: -117px -820px;
+    }
+  }
+  &--addToCollection {
+    &:before {
+      width: 14px !important;
+      height: 14px !important;
+      background-position: -68px -919px;
+    }
+  }
+  &--addToCollection {
+    &:before {
+      width: 14px !important;
+      height: 14px !important;
+      background-position: -68px -919px;
+    }
+  }
+  &--share {
+    &:before {
+      width: 15px !important;
+      height: 15px !important;
+      background-position: -68px -968px;
+    }
+  }
+  &--print {
+    &:before {
+      width: 14px !important;
+      height: 15px !important;
+      background-position: -69px -1018px;
+    }
+  }
+  &--toPDF {
+    &:before {
+      width: 14px !important;
+      height: 15px !important;
+      background-position: -69px -1068px;
+    }
+  }
+}
+
+$Collectrium-ColorPalette-colors: (
+  'primary': (
+    'base': #a80101,
+    'light': #d9534f,
+    'dark': #c9302c
+  ),
+  'accent': (
+    'base': #d98328,
+    'light': #dd8f3d,
+    'dark': #c57623
+  ),
+  'positive': (
+    'base': #228B22,
+  ),
+  'secondary': (
+    'base': #a4a4a4,
+    'light': #d0d0d0,
+    'dark': #888888
+  ),
+  'foreground': (
+    'base': #010101,
+    'light': #676767,
+    'dark': #000100,
+    'darker': #000000
+  ),
+  'background': (
+    'base': #ffffff,
+    'dark': #f0f0f0,
+    'darker': #ebebeb,
+    'darkest': #ccc
+  )
+);
+
+$Collectrium-ColorPalette-baseKey: 'base' !default;
+$Collectrium-ColorPalette-opacities: (
+  'light': 0.8,
+  'dark': 0.4,
+  'darker': 0.3
+);
+
+@function collectrium-palette-color(
+  $name: 'primary',
+  $variant: $Collectrium-ColorPalette-baseKey,
+  $opacity: 1
+) {
+  $color: null;
+
+  $colorVariants: map-get($Collectrium-ColorPalette-colors, $name);
+
+  @if $colorVariants {
+    $color: map-get($colorVariants, $variant);
+  }
+
+  $alpha: if(type-of($opacity) == 'number', $opacity, map-get($Collectrium-ColorPalette-opacities, $opacity));
+
+  @if $alpha {
+    $color: rgba($color, $alpha);
+  }
+
+  @return $color;
+}
+
+.AuctionSearchResult {
+  position: relative;
+  display: flex;
+  font-size: .625rem !important;
+  padding: .5rem 1rem !important;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: collectrium-palette-color('background');
+  border: 1px solid transparent;
+  height: auto !important;
+  border-bottom: solid 1px collectrium-palette-color('background', 'dark');
+  transition: all 0.2s ease;
+  &--lotCheck {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: z(middle);
+    .checkWrap {
+      position: relative;
+      display: block;
+      width: 37px !important;
+      height: 37px !important;
+      overflow: hidden;
+      input {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100% !important;
+        height: 100% !important;
+        opacity: 0;
+        cursor: pointer;
+        + .checkImitation {
+          position: relative;
+          display: none;
+          width: 37px !important;
+          height: 37px !important;
+          background-image: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/gavel-sprite.png);
+          background-repeat: no-repeat;
+          background-position: -57px -1357px;
+          z-index: z(below);
+          @media only screen and (max-width: 920px) {
+            display: block;
+          }
+          @media only screen and (-webkit-min-device-pixel-ratio: 2), not all {
+            background-image: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/gavel-sprite@2x.png);
+            background-repeat: no-repeat;
+            background-position: -57px -1357px;
+            background-size: 150px 1400px;
+          }
+        }
+      }
+      input:checked {
+        + .checkImitation {
+          display: block;
+          background-position: -7px -1357px;
+          @media only screen and (-webkit-min-device-pixel-ratio: 2), not all {
+            background-position: -7px -1357px;
+          }
+        }
+      }
+    }
+  }
+  &:hover {
+    .AuctionSearchResult--lotCheck {
+      .checkWrap {
+        input {
+          + .checkImitation {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  @include mappy-bp(large) {
+    &:hover {
+      transform: scale(1.01) translate3d(0,0,0);
+      z-index: z(middle);
+      border: 1px solid collectrium-palette-color('background', 'dark');
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+    }
+  }
+  @include mappy-bp(wide) {
+    flex-wrap: initial;
+    height: 13rem !important;
+    overflow: hidden;
+  }
+  // TODO: put result styles in separate place
+  &-artist {
+    font-weight: 800 !important;
+    font-size: .85rem !important;
+    text-transform: uppercase;
+  }
+
+  &-catalog {
+    font-size: .85rem !important;
+  }
+
+  &-title {
+    span {
+      font-style: italic;
+    }
+  }
+  &--LotPage {
+    .AuctionSearchResult-artist {
+      font-size: 1.2rem !important;
+      margin: 0 0 .3rem;
+    }
+    .AuctionSearchResult-catalog {
+      font-size: 1rem !important;
+      line-height: 1.35rem !important;
+    }
+  }
+  &-saleInfo {
+    flex-basis: 100%;
+    margin-top: .3rem;
+    font-size: .8rem !important;
+    font-weight: 200 !important;
+    color: collectrium-palette-color('secondary');
+  }
+
+  &-image {
+    position: relative;
+    flex-basis: 100%;
+    min-height: 100px !important;
+    text-align: center;
+    a {
+      position: relative;
+      display: block;
+    }
+    &:before {
+      content: '';
+      display: block;
+      left: 50%;
+      top: 50%;
+      width: 50px !important;
+      height: 50px !important;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      background: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/gavel-sprite.png) -50px -400px no-repeat;
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), not all {
+          background: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/gavel-sprite@2x.png) -50px -400px no-repeat;
+          background-size: 150px 1400px;
+      }
+    }
+    @include mappy-bp(wide) {
+      flex-basis: 25%;
+      width: 25% !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    @include mappy-bp(mega) {
+      flex-basis: 30%;
+      width: 30% !important;
+    }
+  }
+
+  &-objectImage {
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 11.5rem !important;
+    z-index: z(default);
+    position: relative;
+  }
+
+  &-left {
+    flex-basis: 100%;
+    padding-top: 1rem !important;
+    line-height: 1rem !important;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    font-size: .85rem !important;
+    @include mappy-bp(wide) {
+      flex-basis: auto;
+      flex: 1;
+      padding: .5rem .5rem .5rem 1rem !important;
+    }
+    .truncate-multiline--truncation-target {
+      white-space: normal;
+      .truncate-multiline--last-line-wrapper {
+        max-width: 300px !important;
+        @include mappy-bp(mega) {
+          max-width: 450px !important;
+        }
+      }
+      span {
+        display: inline;
+        white-space: normal;
+      }
+    }
+  }
+  &-right {
+    padding-top: 1rem !important;
+    font-size: 1rem !important;
+    @include mappy-bp(wide) {
+      padding: .5rem 0 .5rem 1rem !important;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+  }
+
+  &-filterCurrencyRow {
+    @include mappy-bp(wide) {
+      text-align:right;
+    }
+    .SoldValue {
+      display: inline-block;
+      font-size: .9rem !important;
+      font-weight: 700 !important;
+      vertical-align: top;
+    }
+  }
+  &-realCurrencyRow {
+    @include mappy-bp(wide) {
+      text-align:right;
+    }
+    .realCurrencyTitle {
+      display: inline-block;
+      vertical-align: top;
+      font-size: .8rem !important;
+      font-weight: 200 !important;
+      color: collectrium-palette-color('secondary', 'base');
+      line-height: .8rem !important;
+    }
+  }
+  &-pictRow {
+    position: relative;
+    margin: .5rem 0 0;
+    z-index: z(hightlight);
+    @include mappy-bp(wide) {
+      text-align: right;
+      margin: .6rem 0;
+    }
+    .pictName {
+      color: collectrium-palette-color('foreground', 'base');
+      font-size: .8rem !important;
+      display: inline-block;
+      margin: .2rem .5rem .2rem 0;
+      @include mappy-bp(wide) {
+        margin: .2rem 0;
+      }
+    }
+    .icon {
+      margin: 0 2px;
+    }
+  }
+  &-estimated {
+    &-estimateRow {
+      margin-top: 1rem;
+      @include mappy-bp(wide) {
+        text-align:right;
+      }
+      .EstimateTitle {
+        display: inline-block;
+        margin-right: 5px;
+        font-size: .8rem !important;
+        font-weight: 200 !important;
+        color: collectrium-palette-color('secondary', 'base');
+        line-height:1rem !important;
+        @include mappy-bp(wide) {
+          display: block;
+          margin: 0;
+          line-height: 1 !important;
+        }
+      }
+      .EstimateValue {
+        color: #333;
+        font-size: .8rem !important;
+        white-space: nowrap;
+      }
+    }
+    @include mappy-bp(wide) {
+      text-align:right;
+    }
+  }
+  .DetailLotInfo_link {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    left: 0;
+    top: 0;
+    z-index: z(default);
+  }
+  &-catFurniture {
+  background: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/category-icons/furniture.png) collectrium-palette-color('background') right bottom no-repeat;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), not all {
+      background: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/category-icons/furniture@2x.png) collectrium-palette-color('background') right bottom o-repeat;
+        background-size: 141px 195px;
+    }
+  }
+  &-catJewerly {
+  background: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/category-icons/Jewerly.png) collectrium-palette-color('background') right bottom no-repeat;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), not all {
+      background: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/category-icons/Jewerly@2x.png) collectrium-palette-color('background') right bottom no-repeat;
+        background-size: 195px 187px;
+    }
+  }
+  &-catPictures {
+  background: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/category-icons/Pictures.png) collectrium-palette-color('background') right bottom no-repeat;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), not all {
+      background: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/category-icons/Pictures@2x.png) collectrium-palette-color('background') right bottom no-repeat;
+        background-size: 152px 171px;
+    }
+  }
+  &-catTransportation {
+  background: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/category-icons/Transportation.png) collectrium-palette-color('background') right bottom no-repeat;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), not all {
+      background: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/category-icons/Transportation@2x.png) collectrium-palette-color('background') right bottom no-repeat;
+        background-size: 243px 139px;
+    }
+  }
+  &-catWatches {
+  background: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/category-icons/Watches.png) collectrium-palette-color('background') right bottom no-repeat;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), not all {
+      background: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/category-icons/Watches@2x.png) collectrium-palette-color('background') right bottom no-repeat;
+        background-size: 169px 206px;
+    }
+  }
+  &-catWines {
+  background: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/category-icons/Wines.png) collectrium-palette-color('background') right bottom no-repeat;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), not all {
+      background: url(/assets/images/presentations/living-style-guide-driven-development/auction-search-result/category-icons/Wines@2x.png) collectrium-palette-color('background') right bottom no-repeat;
+        background-size: 104px 205px;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{{#if document.similar_artworks}}
+  {{#if media.isWide}}
+    {{lsgdd/object-status-icons/status-tooltip hoverAt="similarObjects" data=this}}
+  {{else}}
+    <div class="pictName">
+      <i class="icon icon--similarObjects"></i> Has similar lots
+    </div>
+  {{/if}}
+{{/if}}
+{{#if document.status}}
+  {{#if media.isWide}}
+    {{#unless (eq document.status 'Sold')}}
+      {{lsgdd/object-status-icons/status-tooltip hoverAt="status" data=this}}
+    {{/unless}}
+  {{else}}
+    {{#if (eq document.status 'Unsold')}}
+      <div class="pictName"><i class="icon icon--unsold"></i> {{saleStatus}} lot</div>
+      {{else if (eq document.status 'Not Yet Available')}}
+        <div class="pictName"><i class="icon icon--notAvailable"></i> {{saleStatus}} lot</div>
+      {{else if (eq document.status 'Not Published')}}
+        <div class="pictName"><i class="icon icon--notPublished"></i> {{saleStatus}} lot</div>
+      {{else if (eq document.status 'Withdrawn')}}
+        <div class="pictName"><i class="icon icon--withdrawn"></i> {{saleStatus}} lot</div>
+      {{else if (eq document.status 'Amended')}}
+        <div class="pictName"><i class="icon icon--amended"></i> {{saleStatus}} lot</div>
+      {{/if}}
+    {{/if}}
+  {{/if}}
+  {{#if media.isWide}}
+    {{lsgdd/object-status-icons/status-tooltip hoverAt="price" data=this}}
+  {{else}}
+    <div class="pictName">
+      {{#if document.is_premium_price}}
+        <i class="icon icon--premiumPrice"></i> Premium price
+      {{else}}
+        <i class="icon icon--hammerPrice"></i> Hammer price
+      {{/if}}
+    </div>
+  {{/if}}
+  {{#if priceDiff}}
+    {{#if media.isWide}}
+      {{lsgdd/object-status-icons/status-tooltip hoverAt="diff" data=this}}
+    {{else}}
+      <div class="pictName">
+        {{#if (gte priceDiff 0)}}
+          <i class="icon icon--soldHigher"></i> Sold {{priceDiff}}% higher than high estimate
+        {{else}}
+          <i class="icon icon--soldLower"></i> Sold {{abs-number priceDiff}}% lower than low estimate
+        {{/if}}
+      </div>
+    {{/if}}
+  {{/if}}

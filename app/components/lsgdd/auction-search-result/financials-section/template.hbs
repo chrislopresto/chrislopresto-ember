@@ -1,0 +1,35 @@
+{{!-- TODO: refactor if logic later --}}
+<div class="AuctionSearchResult-sold">
+  {{#if calculatedPrice}}
+    <div class="AuctionSearchResult-filterCurrencyRow">
+      <span class="SoldValue">{{format-money calculatedPrice symbol=_soldCurrency.sign}}</span>
+    </div>
+  {{else if saleStatus}}
+    <div class="AuctionSearchResult-filterCurrencyRow">
+      <span class="SoldTitle"></span>
+      <span class="SoldValue">{{saleStatus}}</span>
+    </div>
+  {{/if}}
+
+  {{#if (and document.price document.original_currency)}}
+    <div class="AuctionSearchResult-realCurrencyRow">
+      <span class="realCurrencyTitle">
+        {{format-money document.price symbol=(iso-currency-to-symbol document.original_currency)}}
+      </span>
+    </div>
+  {{/if}}
+
+  {{lsgdd/object-status-icons document=document class="AuctionSearchResult-pictRow"}}
+</div>
+<div class="AuctionSearchResult-estimated">
+  {{#if (and calculatedEstimations.low calculatedEstimations.high )}}
+    <div class="AuctionSearchResult-estimated-estimateRow">
+      <span class="EstimateTitle">Estimated</span>
+      <span class="EstimateValue">
+        {{format-money calculatedEstimations.low symbol=_estimationCurrency.sign}}
+        -
+        {{format-money calculatedEstimations.high symbol=""}}
+      </span>
+    </div>
+  {{/if}}
+</div>

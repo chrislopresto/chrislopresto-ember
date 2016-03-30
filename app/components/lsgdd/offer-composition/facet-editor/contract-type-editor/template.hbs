@@ -1,0 +1,13 @@
+<div class='facet-editor-body'>
+  <div class='offer-composition-instructions'>What do you want to do?</div>
+
+  <div class='contract-type-options'>
+    {{#each options as |option|}}
+      <a {{action 'update' option}} class="allow-click">
+        <span class='contract-type-facet-option {{if (eq option currentValue) 'selected'}}' data-offer-facet={{if (eq option currentValue) 'contractType'}}>
+          {{option}}
+        </span>
+      </a><br>
+    {{/each}}
+  </div>
+</div>

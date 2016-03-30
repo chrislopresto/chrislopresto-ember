@@ -1,0 +1,13 @@
+<div class='offer-composition-instructions'>Allow buyer to remix?</div>
+
+{{lsgdd/circle-list items=remixChoices initialChoice=initialChoiceIndex readOnly=(not offerComposition.canTransferRemix)}}
+
+{{#if allowRemix}}
+  <p class='remix-instructions'>This work <span class='allow-phrase'>can be used</span> as editable source materials for derivative works.</p>
+{{else}}
+  <p class='remix-instructions'>This work <span class='prohibit-phrase'>cannot be used</span> as editable source materials for derivative works.</p>
+{{/if}}
+
+{{#unless offerComposition.canTransferRemix}}
+  <p class='remix-instructions' class="prohibit-phrase cant-transfer-remix">You do not possess the right to modify the remix privileges.</p>
+{{/unless}}

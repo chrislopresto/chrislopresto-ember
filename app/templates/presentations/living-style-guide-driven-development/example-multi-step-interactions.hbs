@@ -1,0 +1,18 @@
+{{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-UsageSlide"}}
+  {{presentations/slide-header
+    super="Example"
+    main="Multi-step Interactions"
+    sub="Living Style Guide"
+  }}
+  {{#presentations/slide-body columns=2}}
+    {{#presentations/slide-column class="lsgdd-ExampleMultiStepSlide-guideColumn"}}
+      {{freestyle-usage-controls showFocus=false}}
+      {{lsgdd/example-multi-step-interactions}}
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column}}
+      <div class="lsgdd-TightContainer lsgdd-ExampleMultiStepSlide-resultContainer">
+        <img class="lsgdd-Image lsgdd-ExampleMultiStepSlide-result" src="assets/images/presentations/living-style-guide-driven-development/monegraph-multi-step.gif" alt="Decomposition is a beautiful thing">
+      </div>
+    {{/presentations/slide-column}}
+  {{/presentations/slide-body}}
+{{/reveal-slide}}

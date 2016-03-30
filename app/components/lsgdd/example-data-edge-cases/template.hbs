@@ -1,0 +1,17 @@
+{{#freestyle-collection defaultKey='some' as |collection|}}
+  {{#freestyle-variant collection=collection key='some' class='lsgdd-ExampleDataEdgeCasesSlide-variant'}}
+    {{#freestyle-usage 'example-dataEdgeCases-some' title='Some' inline=(eq collection.activeKey 'all')}}
+      {{lsgdd/dashboard-tile label='Total Page Views' stat=683}}
+    {{/freestyle-usage}}
+  {{/freestyle-variant}}
+  {{#freestyle-variant collection=collection key='lots' class='lsgdd-ExampleDataEdgeCasesSlide-variant'}}
+    {{#freestyle-usage 'example-dataEdgeCases-lots' title='Lots' inline=(eq collection.activeKey 'all')}}
+      {{lsgdd/dashboard-tile label='Total Page Views' stat=100000}}
+    {{/freestyle-usage}}
+  {{/freestyle-variant}}
+  {{#freestyle-variant collection=collection key='wow' class='lsgdd-ExampleDataEdgeCasesSlide-variant'}}
+    {{#freestyle-usage 'example-dataEdgeCases-wow' title='Wow' inline=(eq collection.activeKey 'all')}}
+      {{lsgdd/dashboard-tile label='Total Page Views' stat=1425824324}}
+    {{/freestyle-usage}}
+  {{/freestyle-variant}}
+{{/freestyle-collection}}

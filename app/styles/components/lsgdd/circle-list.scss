@@ -1,0 +1,109 @@
+$slider-animation-duration: .4s;
+$circle-diameter: 150px;
+$circle-diameter-compact: 120px;
+$circle-margin: 30px;
+$circle-margin-compact: 20px;
+$circle-unselected-fade-in-duration: 1s;
+$circle-unselected-fade-out-duration: .05s;
+
+.liquid-animating {
+  .circle:not(.selected) {
+    opacity: 0;
+    // @include transition(
+    //   background-color $slider-animation-duration,
+    //   border-color $slider-animation-duration,
+    //   opacity $circle-unselected-fade-out-duration
+    // );
+  }
+}
+
+.circle-list {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+
+  // @include breakpoint($breakpoint-max-height-iphone-5-portrait) {
+  //   margin: 15px 0;
+  // }
+  // @include breakpoint($breakpoint-max-height-iphone-4-portrait) {
+  //   margin: 5px 0;
+  // }
+
+  .slider-tray {
+    // @include breakpoint($breakpoint-max-height-iphone-4-portrait) {
+    //   width: 2 * $circle-diameter-compact + 3 * $circle-margin-compact;
+    // }
+    &.read-only .circle {
+      cursor: default;
+    }
+  }
+
+  .circle {
+    border: 6px solid monegraph-palette-color(magenta);
+    position: relative;
+    width: $circle-diameter;
+    height: $circle-diameter;
+    color: monegraph-palette-color(magenta);
+    border-radius: 60%;
+    margin: 0 $circle-margin / 2 !important;
+    display: inline-block;
+    cursor: pointer;
+
+    &.disabled {
+      cursor: default;
+      opacity: .25;
+    }
+
+    // @include breakpoint($breakpoint-max-width-iphone-6-portrait) {
+    //   width: $circle-diameter-compact !important;
+    //   height: $circle-diameter-compact !important;
+    //   margin: 0 $circle-margin-compact / 2 !important;
+    // }
+    //
+    // @include breakpoint($breakpoint-max-height-iphone-4-portrait) {
+    //   width: $circle-diameter-compact !important;
+    //   height: $circle-diameter-compact !important;
+    //   margin: 0 $circle-margin-compact / 2 !important;
+    // }
+    //
+    // @include transition(
+    //   background-color $slider-animation-duration,
+    //   border-color $slider-animation-duration,
+    //   opacity $circle-unselected-fade-in-duration ease
+    // );
+
+    &.selected {
+      background-color: monegraph-palette-color(magenta);
+      color: monegraph-palette-color(light-gray);
+
+      &.prohibition {
+        border-color: monegraph-palette-color(red);
+        background: monegraph-palette-color(red);
+      }
+    }
+  }
+
+  .text {
+    font-size: 1.1rem !important;
+    padding: 0 10px !important;
+    margin-top: monegraph-gs(-1/2) !important;
+    position: absolute;
+    width: 100% !important;
+    top: 50%;
+    left: 0;
+    text-align: center;
+
+    // @include breakpoint($breakpoint-max-width-iphone-6-portrait) {
+    //   font-size: 1.2rem;
+    // }
+    //
+    // @include breakpoint($breakpoint-max-height-iphone-4-portrait) {
+    //   font-size: 1.2rem;
+    // }
+  }
+  .circle-list-detail {
+    position: absolute;
+    width: 100% !important;
+    bottom: monegraph-gs(2/3);
+  }
+}

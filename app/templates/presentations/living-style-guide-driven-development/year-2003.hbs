@@ -1,0 +1,26 @@
+{{#reveal-slide}}
+  {{presentations/slide-header
+    super=""
+    main="In The Year 2003"
+    sub="The web is at v1.0"
+  }}
+  {{#presentations/slide-body columns=1 display="flex"}}
+    {{#presentations/slide-list class="lsgdd-TightContainer"}}
+      {{#presentations/slide-list-item}}My buddy and I have a fledgling web development company.{{/presentations/slide-list-item}}
+      {{#presentations/slide-list-item}}He is the designer. I am the developer.{{/presentations/slide-list-item}}
+      {{#presentations/slide-list-item}}We land a big customer. {{/presentations/slide-list-item}}
+      {{#presentations/slide-list-item}}He designs the site.{{/presentations/slide-list-item}}
+    {{/presentations/slide-list}}
+  {{/presentations/slide-body}}
+  {{#presentations/slide-footer}}
+    <div class="lsgdd-TightContainer fragment">
+      <img class="lsgdd-Image u-rounded u-grayscale lsgdd-Year2003Slide-image--aviators" src="assets/images/presentations/living-style-guide-driven-development/dollar-sign-aviators.png" alt="Seeing dollar signs">
+    </div>
+  {{/presentations/slide-footer}}
+  {{#reveal-slide-notes}}
+- Never really understood web versioning
+- Clear we're not using SEMVER
+- Companies were paying my buddy and me hundreds of dollars to build websites
+- We thought this great
+  {{/reveal-slide-notes}}
+{{/reveal-slide}}

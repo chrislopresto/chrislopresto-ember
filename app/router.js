@@ -16,10 +16,12 @@ Router.map(function() {
     this.route('talks');
   });
   this.route('styleguide');
+  this.route('living-style-guide-driven-development-freestyle-guide');
   this.route('presentations', function() {
     this.route('ember-modal-dialog-intro');
     this.route('demo');
     this.route('code');
+    this.route('living-style-guide-driven-development');
   });
   this.route('resume');
 });

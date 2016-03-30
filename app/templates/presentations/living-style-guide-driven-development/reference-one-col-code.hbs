@@ -1,0 +1,16 @@
+{{#reveal-slide}}
+  {{presentations/slide-header
+    super=""
+    main="One Big Thing"
+    sub="A code block that takes up the whole slide"
+  }}
+  {{#presentations/slide-body}}
+    {{#reveal-code}}
+import Ember from 'ember';
+
+export default Ember.Component.extend({
+  classNames: ['SlideHeader']
+});
+    {{/reveal-code}}
+  {{/presentations/slide-body}}
+{{/reveal-slide}}

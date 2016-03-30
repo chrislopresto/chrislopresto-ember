@@ -1,0 +1,29 @@
+{{#if showCallout}}
+  <div class='dot'></div>
+  <div class='pulse {{if isPulsing 'pulsing' 'not-pulsing'}}'></div>
+  <div class='boundary'></div>
+{{/if}}
+{{#if showHint}}
+  <div class="hint-callout-content">
+    {{yield}}
+  </div>
+  {{!-- {{#feature-modal
+      title=title
+      translucentOverlay=false
+      container-class='ember-modal-panel feature-modal hint-callout-modal'
+      show-pointer=true
+      attachment=attachment
+      targetAttachment=targetAttachment
+      target=target
+      hasOverlay=true
+      close='dismiss'
+  }}
+    {{yield}}
+    <div class='hint-callout-opt-out'>
+      <label>
+        {{input type='checkbox' checked=keepShowingHints}} Keep showing hints
+      </label>
+    </div>
+    <button class='hint-callout-confirm-button yapp-button blue' {{action 'dismiss'}}>Got It!</button>
+  {{/feature-modal}} --}}
+{{/if}}
