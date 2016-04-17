@@ -5,37 +5,35 @@
   .resume-body
     resume-contact-info
     partial 'resume/intro'
-    partial 'resume/work'
 
     resume-work-item [
-      where='Yapp'
+      where='Yapp / Yapp Labs'
       from='March 2015'
       to='Present'
       learned='Where I do Yapp things'
       content='resume/work-items/yapp' ]
 
     resume-work-item [
-      where='Symonds & Son'
+      where='Elegant and Tasteful'
       from='September 2014'
       to='March 2015'
-      learned='Where I consulted on DevOps and learned about NASCAR'
-      content='resume/work-items/symonds-and-son' ]
+      learned='Where I embarked on a period of freelance consulting and learned about NASCAR'
+      content='resume/work-items/elegant-and-tasteful' ]
 
     resume-page-break
     resume-work-item [
       where='Plyfe'
       from='September 2011'
       to='September 2014'
-      learned='Where I co-founded a startup and learned about product development, user experience, and company communication'
+      learned='Where I co-founded a startup and delved into product development, user experience, and company communication'
       as='CTO & Co-Founder'
       content='resume/work-items/plyfe' ]
 
-    resume-page-break
     resume-work-item [
       where='InRhythm'
       from='December 2010'
       to='August 2011'
-      learned='Where I consulted on software processes and client projects'
+      learned='Where I consulted on technical and product development processes'
       as='Director of Product Development'
       content='resume/work-items/in-rhythm' ]
 
@@ -43,7 +41,7 @@
       where='News Corp'
       from='June 2010'
       to='September 2010'
-      learned='Where I consulted on Skiff IP acquisition and related system integrations'
+      learned='Where I consulted on Skiff IP acquisition'
       content='resume/work-items/news-corp' ]
 
     resume-page-break
@@ -51,7 +49,7 @@
       where='Skiff'
       from='May 2008'
       to='June 2010'
-      learned='Where I learned about team leadership, ePubs, and the publishing industry'
+      learned='Where I led teams and learned about ePubs and the publishing industry'
       as='Director of Content Publishing'
       content='resume/work-items/skiff' ]
 
@@ -59,31 +57,30 @@
       where='Microdesk'
       from='April 2005'
       to='May 2008'
-      learned='Where I learned about project management, system integrations, and the Patriot Missile System'
+      learned='Where I led projects and learned about the Patriot Missile System'
       as='Lead Software Engineer & Project Manager'
       content='resume/work-items/microdesk' ]
 
+    resume-page-break
     resume-work-item [
       where='Fantastic Damage'
       from='April 2003'
       to='April 2005'
-      learned='Where I learned about starting a business, web application development, and customer relationships'
+      learned='Where I started a business and learned about requirements discovery'
       as='Co-Founder & Software Engineer'
       content='resume/work-items/fantastic-damage' ]
 
-    resume-page-break
     resume-work-item [
       where='MBNA'
       from='August 2002'
       to='March 2004'
-      learned='Where I learned about team membership, manipulation of big datasets, security and regulations, and the benefits and importance of a healthy corporate culture'
+      learned='Where I learned about big datasets and the benefits of a healthy corporate culture'
       as='Software Engineer'
       content='resume/work-items/mbna' ]
 
+    resume-page-break
     partial 'resume/music'
 
-    resume-page-break
-    partial 'resume/elegant-and-tasteful'
     partial 'resume/miscellany'
 
     h1 Education

@@ -1,7 +1,8 @@
-p This was my first job out of school. I worked on a small team in the finance sector. We developed financial data processing workflows for the US, UK, and Ireland divisions. We also maintained a Classic ASP intranet web application.
+p
+  | This was my first job out of school. I worked on a small team in the finance sector. We developed large-scale
+  |  financial data processing workflows for the US, UK, and Ireland divisions. This was my first experience with
+  |  things that ran "overnight".
 
-h4 Technologies
-
-.things Microsoft SQL Server. DTS. Classic ASP. SourceSafe (these were olden times).
-
-blockquote If you fully expand the acronyms in MBNA America Bank, N.A. you end up with Maryland Bank National Association America Bank National Association.
+blockquote
+  | If you fully expand the acronyms in MBNA America Bank, N.A. you end up with
+  |  Maryland Bank National Association America Bank National Association.

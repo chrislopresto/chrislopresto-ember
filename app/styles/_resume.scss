@@ -20,6 +20,9 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
   font-size: .94rem;
   line-height: 1.3rem;
   min-width: 300px;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
 
   h1,
   h2,
@@ -81,6 +84,7 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
 
   .resume-body {
     padding: 0 $resume-padding;
+    text-align: left;
   }
 
   p {
@@ -93,10 +97,10 @@ $breakpoint-mobile-landscape:  max-width $width-mobile-landscape;
     border-left: solid 2px $md-grey-200;
     color: $md-grey-500;
     font-family: 'Roboto';
-    font-size: 10px;
+    font-size: 12px;
     font-style: italic;
     margin-left: 0;
-    max-width: 50%;
+    max-width: 60%;
     padding: 20px;
     line-height: 1.3rem;
     letter-spacing: initial;
