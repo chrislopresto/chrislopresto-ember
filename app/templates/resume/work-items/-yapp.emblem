@@ -1,1 +1,11 @@
-p I am currently working for Yapp and Yapp Labs.
+p
+  | I am currently working for <a href='https://www.yapp.us/'>Yapp</a> and <a href='http://www.yapplabs.com/'>Yapp Labs</a>. Yapp is a web-based mobile app building platform.
+  |  Yapp Labs is the consulting arm of the company, which has served as an alternative to traditional
+  |  venture funding.
+
+h4 Highlights
+
+ul
+  li: span Helped <a href='https://monegraph.com/'>Monegraph</a> launch their blockchain-backed media licensing platform web, mobile, and tv apps.
+  li: span Helped <a href='http://www.collectrium.com/'>Collectrium</a> rework development processes and launch an art auction search web app.
+  li: span Presented <a href='https://youtu.be/Z1lL_Zo62h0'>Living Style Guide Driven Development</a> talk at <a href='http://emberconf.com/'>EmberConf 2016</a>.
